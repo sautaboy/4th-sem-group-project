@@ -1,0 +1,244 @@
+#content-body {
+    padding: 0 7%;
+}
+
+
+#content-body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.first-page {
+    width: 100%;
+    height: calc(100vh - 6rem);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.left-and-right-side {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.first-page .left-side,
+.first-page .right-side {
+    width: 50%;
+    height: 100%;
+}
+
+.first-page .left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-page .left-side .typewriter-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    gap: .5rem;
+
+}
+
+.first-page .left-side .typewriter-container h2 {
+    color: crimson;
+}
+
+.first-page .left-side .typewriter-container h1 {
+    letter-spacing: -1px;
+    color: crimson;
+}
+
+.first-page .left-side .typewriter-container h1 span {
+    color: green;
+}
+
+
+.first-page .left-side .typewriter-container h3 {
+    height: fit-content;
+    width: fit-content;
+    letter-spacing: 1px;
+    color: crimson;
+}
+
+.first-page .left-side .typewriter-container h3 span {
+    color: green;
+}
+
+.first-page .left-side .typewriter-container p {
+    line-height: 30px;
+    width: 90%;
+    font-weight: 300;
+    color: rgb(88, 47, 55);
+}
+
+.first-page .right-side {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-page .right-side .giffy-img-wrap {
+    width: 80%;
+    height: 70%;
+    border-radius: 2rem 10px 1rem 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+
+#see-more {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+
+#see-more:hover i {
+    scale: 1.5;
+}
+
+
+
+
+
+
+
+
+.second-page {
+    border-top: 1px solid rgba(0, 0, 0, 0.197);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    /* background: #dadada; */
+    align-items: flex-start;
+    padding: 10% 0 10% 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.197);
+    position: relative;
+
+}
+
+.second-page .introduction {
+    width: auto;
+}
+
+.second-page .introduction p {
+    width: 80%;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.second-page .introduction p span.img {
+    padding: 2rem 0;
+    position: relative;
+    height: 2rem;
+    background: red;
+    width: 3rem;
+}
+
+.second-page .introduction p span.img img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    position: absolute;
+    top: 28%;
+
+}
+
+.second-page .notice-board {
+    padding: 1rem;
+    width: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.043);
+    margin-top: 2rem;
+    float: left;
+    margin-top: 5rem;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+
+    filter: drop-shadow(1px 1px 1px black);
+
+}
+
+.notice-board span {
+    text-align: center;
+    width: 100%;
+    color: purple;
+    font-size: 18px;
+    text-transform: capitalize;
+
+}
+
+.introduction .dancing-boy-wrap {
+    width: 50%;
+    height: 25%;
+    float: right;
+    margin-top: 5rem;
+}
+
+
+
+
+
+.second-page .semister-name-container h2 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.second-page .semister-name-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    /* background: pink; */
+}
+
+.second-page .semister-name-container a {
+    background: hsl(0, 0%, 90%);
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.508));
+    width: 300px;
+    height: 60px;
+
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    #content-body {
+        padding: 7rem 10px 1rem 10px;
+        text-align: left;
+    }
+}

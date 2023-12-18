@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href="/stylesheets/footer.css">
+
+<div class="footer">
+
+    <div class="top">
+
+        <div class="bytespedia">
+
+            <span class="bytes">
+                Bytes <span class="pedia">
+
+                    Pedia </span>
+            </span>
+            <p class="slogan">
+                <span class="first-cot">" </span>Elevate Your Learning Experience with Our Semester Notes. <span
+                    class="last-cot">"</span>
+            </p>
+        </div>
+
+        <div class="quick-links">
+            <a class="qucik-links-heading">
+                Quick Links
+            </a>
+            <a href="">log in</a>
+            <a href="">sign up</a>
+            <a href="">Home</a>
+            <a href="" class="contact-us-button">Contac Us
+            </a>
+        </div>
+    </div>
+    <img src="/images/calling.gif" alt="" class="calling-gif">
+    <p class="copyright">© 2023 <span class="bytes" style="font-size: initial;">bytes</span> <span class="pedia" style="font-size: initial;">pedia</span>
+    </p>
+</div>
+<script>
+    document.querySelector(".contact-us-button").addEventListener("mouseenter", function () {
+        document.querySelector(".calling-gif").classList.toggle("open")
+    })
+    document.querySelector(".contact-us-button").addEventListener("mouseleave", function () {
+        document.querySelector(".calling-gif").classList.toggle("open")
+    })
+</script>

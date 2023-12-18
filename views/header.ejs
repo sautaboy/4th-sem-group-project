@@ -1,0 +1,129 @@
+<link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href="/stylesheets/header.css">
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<header>
+
+    <a href="#" id="logo">
+        <h3>Logo Name</h3>
+        <img src="/images/logo .gif" alt="">
+    </a>
+
+    <ul id="center-nav-list">
+        <li class="hover-bca-note">
+            <a href="#">BCA Notes
+                <i class="ri-arrow-down-s-fill"></i>
+            </a>
+
+            <ul class="hover-me">
+                <li>
+                    <a href="#">Past Year Questions</a>
+                </li>
+                <li>
+                    <a href="">Sylabus</a>
+                </li>
+                <li>
+                    <a href="#">Exam Schedule</a>
+                </li>
+            </ul>
+
+
+        </li>
+
+        <li class="contact">
+            <a href="#">Contact Us
+            </a>
+        </li>
+    </ul>
+
+
+
+
+
+    <!-- ham buttoon is here -->
+    <i class="ri-menu-line ham-menu-button"></i>
+
+
+    <!-- login signuup buttons -->
+    <div id="navbar-buttons">
+        <input type="submit" value="sign Up">
+        <input type="submit" value="log in">
+    </div>
+
+
+
+
+
+
+
+    <!-- this will only be shown on phone when clicked on navbar -->
+    <div id="phone-view-navlist">
+
+        <a id="phone-view-semister-note-button">Past Year Questions</a>
+        <a href="">Sylabus</a>
+        <a href="">Exam Schedule</a>
+
+
+        <!-- login signuup buttons -->
+        <input type="submit" value="sign Up">
+        <input type="submit" value="log in">
+
+    </div>
+
+</header>
+<script>
+
+
+
+
+
+    document.querySelector(".ham-menu-button").addEventListener("click", function (e) {
+        document.querySelector("#phone-view-navlist").classList.toggle("open")
+        document.querySelector(".ham-menu-button").classList.add("ri-menu-line")
+    })
+
+
+    document.querySelector("#phone-view-semister-note-button").addEventListener("click", function () {
+        document.querySelector(".semister-notes-container").classList.toggle("open");
+        document.querySelector("#phone-view-navlist").classList.remove("open")
+
+
+        document.querySelector(".ham-menu-button").classList.remove("ri-menu-line")
+        document.querySelector(".ham-menu-button").classList.add("ri-close-line")
+
+    });
+
+
+    document.querySelector(".ham-menu-button").addEventListener("click", function () {
+        document.querySelector(".semister-notes-container").classList.remove("open");
+    });
+
+
+    document.querySelector(".semister-notes-container-close-button").addEventListener("click", function (e) {
+        document.querySelector(".semister-notes-container").classList.remove("open");
+        e.target.style.display = "none";
+    })
+
+
+    document.querySelector(".semister-notes-button").addEventListener("click", function (e) {
+        document.querySelector(".semister-notes-container").classList.add("open");
+        document.querySelector(".semister-notes-container-close-button").style.display = "block";
+    })
+
+    document.querySelector(".semister-notes-button").addEventListener("mouseover", function (e) {
+        document.querySelector(".semister-notes-container").classList.add("open");
+        document.querySelector(".semister-notes-container-close-button").style.display = "block";
+    })
+
+
+
+
+
+
+</script>

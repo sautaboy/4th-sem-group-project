@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/index.css">
+
+</head>
+
+<body>
+  <!-- including header -->
+  <% include header.ejs%>
+
+    <div id="content-body">
+
+      <div class="first-page">
+
+        <div class="left-and-right-side">
+
+          <div class="left-side">
+
+            <div class="typewriter-container">
+              <h1>Welcome To <span>BCA</span> Nepal</h1>
+
+              <h2>Student can here:</h2>
+              <h3>
+                Find: <span id="typewriter-text"></span>
+              </h3>
+              <p>
+                Welcome to <strong>BytesPedia</strong> , your go-to platform for semester-wise educational notes. We're
+                passionate about simplifying learning, offering meticulously curated notes for each semester. Whether
+                you're a registered user enjoying personalized features like bookmarking or a guest user benefiting from
+                direct downloads, our goal is to empower every student's academic journey.
+              </p>
+              <p>
+                For those seeking an organized study approach, registered users can take advantage of our bookmarking
+                feature, creating a personalized study plan with ease. Not registered? No worries! All users, logged in
+                or not, can seamlessly download and view notes directly from our website. Explore our collection,
+                enhance your understanding of complex concepts, and make your academic experience smoother with [Your
+                Website Name].
+
+              </p>
+              <p>
+                Your success matters to us. For questions, suggestions, or support, reach out to our dedicated team.
+                Thank you for choosing [Your Website Name] – where learning is made simple and accessible for everyone.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="right-side">
+            <div class="giffy-img-wrap">
+              <img src="/images/lets read.gif" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div id="see-more">
+          <span>see more</span>
+          <i class="ri-arrow-down-line"></i>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="second-page">
+        <div class="introduction">
+          <p>Welcome to our
+            <span class="bytes">Bytes</span>
+            <span class="pedia">Pedia</span>
+            Click on your specific semester link to discover
+            subjects and access notes
+            tailored for your academic needs. Navigate seamlessly through past-year questions for each subject,
+            enhancing your preparation. It's your one-stop destination for organized study materials and exam resources.
+            Explore, learn, and excel in your BCA journey with ease.
+            <span class="img">
+              <!-- <img src="/images/dancing boy.gif.crdownload" alt=""> -->
+              <img src="/images/girl reading book gif.gif" alt="">
+            </span>
+          </p>
+
+          <div class="notice-board">
+            <span class="notice-headline">
+              notice board
+            </span>
+          </div>
+
+          <div class="dancing-boy-wrap">
+            <img src="/images/dancing boy.gif" alt="">
+          </div>
+        </div>
+
+        <div class="semister-name-container">
+          <h2>Go To Your Semister</h2>
+          <a href="#">
+            first Semister
+          </a>
+          <a href="#">
+            first Semister
+          </a>
+          <a href="#">
+            first Semister
+          </a>
+          <a href="#">
+            first Semister
+          </a>
+          <a href="#">
+            first Semister
+          </a>
+          <a href="#">
+            first Semister
+          </a>
+          <a href="#">
+            first Semister
+          </a>
+          <a href="#">
+            first Semister
+          </a>
+        </div>
+      </div>
+
+
+
+      <% include footer.ejs%>
+
+
+        <script>
+
+          document.addEventListener('DOMContentLoaded', function () {
+            const textElement = document.getElementById('typewriter-text');
+            const texts = ["Each Semister Notes", "Every Subject Past Year Questions", "Exam Shedule"];
+            let speed = 80; // Adjust the typing speed (milliseconds)
+            let textIndex = 0;
+            let charIndex = 0;
+
+            function typeWriter() {
+              if (charIndex < texts[textIndex].length) {
+                textElement.innerHTML += texts[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeWriter, speed);
+              } else {
+                // Pause before starting to erase
+                setTimeout(eraseText, 1000);
+              }
+            }
+
+            function eraseText() {
+              if (charIndex > 0) {
+                textElement.innerHTML = texts[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(eraseText, speed);
+              } else {
+                // Move to the next text or start over
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(typeWriter, speed);
+              }
+            }
+
+            typeWriter(); // Start the typing animation
+          });
+        </script>
+
+
+        <!-- crausel -->
+
+
+
+</body>
+
+</html>

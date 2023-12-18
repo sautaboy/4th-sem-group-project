@@ -1,0 +1,180 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7%;
+    height: 6rem;
+    align-items: center;
+    width: 100%;
+}
+
+.ham-menu-button {
+    display: none;
+}
+
+header a#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: fit-content;
+    gap: 5px;
+}
+
+header a#logo h3 {
+    text-wrap: nowrap;
+    letter-spacing: 2px;
+}
+
+header a#logo img {
+    width: 2rem;
+    height: 2rem;
+    /* border-radius: 50%; */
+
+}
+
+header #center-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-semister-name {
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+header #navbar-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+header #navbar-buttons input {
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+#phone-view-navlist {
+    display: none;
+}
+
+#center-nav-list {
+    position: relative;
+    width: fit-content;
+    white-space: nowrap;
+}
+li.contact
+{
+    margin-left: 2rem;
+}
+
+
+#center-nav-list>* ul {
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 150%;
+    padding-top: 10px;
+    /* display: none; */
+    transition: .3s ease-in;
+    /* transform: translateX(-70vw); */
+    /* opacity: 0; */
+    z-index: -1;
+    top: 20vw;
+    left: 20vw;
+}
+
+#center-nav-list>* ul li {
+    padding: 5px 20px;
+    border-radius: 5px;
+    background: #dadada;
+}
+
+
+#center-nav-list li.hover-bca-note:hover .hover-me {
+    display: flex;
+    transition: .3s ease-in-out;
+
+    z-index: 0;
+    top: 100%;
+    left: 0;
+}
+
+
+
+
+
+
+
+@media (max-width: 920px) {
+    .navbar-semister-name {
+        display: none;
+    }
+
+    header {
+        position: fixed;
+    }
+
+
+
+
+
+    header #navbar-buttons {
+
+        display: none;
+    }
+
+    .ham-menu-button {
+        font-size: 2rem;
+        color: crimson;
+
+        display: block;
+    }
+
+    /*  <!-- this will only be shown on phone when clicked on navbar --> */
+    #phone-view-navlist {
+        height: calc(100vh - 6rem);
+        width: 100%;
+        background: pink;
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+        align-items: center;
+        padding: 2rem 10px;
+        transform: translate(-100%);
+        transition: .3s linear;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 6rem;
+    }
+
+    #phone-view-navlist.open {
+        transform: translate(0%);
+    }
+
+
+    #phone-view-navlist input {
+        width: 50%;
+        padding: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+
+}
