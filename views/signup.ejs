@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/loginsignup.css">
+
+
+</head>
+
+<body>
+    <% include header.ejs%>
+
+        <div id="content-body">
+
+            <form action="">
+                <h1>Sign up</h1>
+
+                <div class="input-field">
+                    <label for="">
+                        username
+                        <div class="input">
+                            <i class="ri-user-line"></i>
+                            <input type="text" placeholder="type your username">
+                        </div>
+                    </label>
+                    <label for="">
+                        password
+                        <div class="input">
+                            <i class="ri-lock-line"></i>
+                            <input type="text" placeholder=" type your password">
+                        </div>
+                    </label>
+                </div>
+
+                <input type="submit" name="" class="submit-button" value="submit">
+
+                <a href="">login</a>
+            </form>
+        </div>
+
+        <% include footer.ejs%>
+</body>
+
+</html>

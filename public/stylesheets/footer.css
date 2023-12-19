@@ -1,6 +1,5 @@
 .footer {
     border-top: 1px solid rgba(0, 0, 0, 0.197);
-
     width: 100vw;
     height: fit-content;
     display: flex;
@@ -52,10 +51,10 @@
 
 @media (max-width:920px) {
 
-    .bytespedia
-    {
+    .bytespedia {
         width: 100%;
     }
+
     .bytespedia p.slogan {
         white-space: initial;
         font-size: initial;
