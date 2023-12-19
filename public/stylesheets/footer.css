@@ -1,13 +1,14 @@
 .footer {
-    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.197);
+
+    width: 100vw;
     height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 4rem;
     position: relative;
-
     overflow: hidden;
-    padding: 2rem 0;
+    padding: 5rem 0;
     background: hsl(0, 0%, 99%);
 }
 
@@ -37,6 +38,7 @@
     white-space: nowrap;
     font-size: 20px;
     letter-spacing: 1px;
+    padding: 10px;
 }
 
 .bytespedia p.slogan span.first-cot {

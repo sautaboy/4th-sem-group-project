@@ -9,6 +9,9 @@ header {
     height: 6rem;
     align-items: center;
     width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.197);
+    margin-bottom: 3rem;
+
 }
 
 .ham-menu-button {
@@ -86,6 +89,7 @@ li.contact {
     z-index: -1;
     top: 20vw;
     left: 20vw;
+    opacity: 0;
 }
 
 #center-nav-list>* ul li {
@@ -111,6 +115,8 @@ li.contact {
     z-index: 1;
     top: 100%;
     left: 0;
+    opacity: 1;
+
 }
 
 .phonoe-view-nav-list {
@@ -150,6 +156,8 @@ li.contact {
     }
 
     .phonoe-view-nav-list {
+        overflow-y: scroll;
+
         height: 100vh;
         top: 6rem;
         background: hsl(0, 0%, 98%);
@@ -181,8 +189,6 @@ li.contact {
 
     .phone-view-semister-list {
         border-top: 1px solid rgba(128, 128, 128, 0.242);
-
-
         padding-top: 1rem;
         display: flex;
         flex-direction: column;

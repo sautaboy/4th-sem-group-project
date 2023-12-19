@@ -1,5 +1,6 @@
 #content-body {
     padding: 0 7%;
+    /* background: rebeccapurple; */
 }
 
 
@@ -138,7 +139,6 @@
     /* background: #dadada; */
     align-items: flex-start;
     padding: 10% 0 10% 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.197);
     position: relative;
 
 }
@@ -263,7 +263,7 @@
         flex-direction: column;
         min-height: 100vh;
         gap: 1rem;
-        padding-bottom:13px ;
+        padding-bottom: 13px;
     }
 
     .first-page {
