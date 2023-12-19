@@ -15,6 +15,7 @@
         <img src="/images/logo .gif" alt="">
     </a>
 
+
     <ul id="center-nav-list">
         <li class="hover-bca-note">
             <a href="#">BCA Notes
@@ -62,20 +63,65 @@
 
 
 
-    <!-- this will only be shown on phone when clicked on navbar -->
-    <div id="phone-view-navlist">
+    <!-- this is for phoen view only -->
+    <div class="phonoe-view-nav-list ">
+        <a href="">home</a>
+        <a href="">notices</a>
+        <a href="">past year questions</a>
+        <a href="">contact</a>
 
-        <a id="phone-view-semister-note-button">Past Year Questions</a>
-        <a href="">Sylabus</a>
-        <a href="">Exam Schedule</a>
+        <ul class="phone-view-semister-list">
+            <li>
+                <a class="down-icon">
 
+                    get notes
+                    <i class="ri-arrow-down-s-fill"></i>
+                </a>
 
-        <!-- login signuup buttons -->
-        <input type="submit" value="sign Up">
-        <input type="submit" value="log in">
+                <ul class="semister-list">
+                    <li>
+                        <a href="">First Semister</a>
+                    </li>
 
+                    <li>
+                        <a href="">Second Semister</a>
+                    </li>
+
+                    <li>
+                        <a href="">Third Semister</a>
+                    </li>
+
+                    <li>
+                        <a href="">Fourth Semister</a>
+                    </li>
+
+                    <li>
+                        <a href="">Fifth Semister</a>
+                    </li>
+
+                    <li>
+                        <a href="">Sixth Semister</a>
+                    </li>
+
+                    <li>
+                        <a href="">Seventh Semister</a>
+                    </li>
+
+                    <li>
+                        <a href="">Eight Semister</a>
+                    </li>
+
+                </ul>
+            </li>
+
+        </ul>
+
+        <div class="phone-view-buttons">
+            <input type="submit" value="sign Up">
+            <input type="submit" value="log in">
+        </div>
+        <p> - you will have the bookmark features when you crean an account -</p>
     </div>
-
 </header>
 <script>
 
@@ -84,42 +130,11 @@
 
 
     document.querySelector(".ham-menu-button").addEventListener("click", function (e) {
-        document.querySelector("#phone-view-navlist").classList.toggle("open")
-        document.querySelector(".ham-menu-button").classList.add("ri-menu-line")
+        document.querySelector(".phonoe-view-nav-list").classList.toggle("open")
+        document.querySelector(".ham-menu-button").classList.toggle("ri-menu-line");
+        document.querySelector(".ham-menu-button").classList.toggle("ri-close-line");
     })
 
-
-    document.querySelector("#phone-view-semister-note-button").addEventListener("click", function () {
-        document.querySelector(".semister-notes-container").classList.toggle("open");
-        document.querySelector("#phone-view-navlist").classList.remove("open")
-
-
-        document.querySelector(".ham-menu-button").classList.remove("ri-menu-line")
-        document.querySelector(".ham-menu-button").classList.add("ri-close-line")
-
-    });
-
-
-    document.querySelector(".ham-menu-button").addEventListener("click", function () {
-        document.querySelector(".semister-notes-container").classList.remove("open");
-    });
-
-
-    document.querySelector(".semister-notes-container-close-button").addEventListener("click", function (e) {
-        document.querySelector(".semister-notes-container").classList.remove("open");
-        e.target.style.display = "none";
-    })
-
-
-    document.querySelector(".semister-notes-button").addEventListener("click", function (e) {
-        document.querySelector(".semister-notes-container").classList.add("open");
-        document.querySelector(".semister-notes-container-close-button").style.display = "block";
-    })
-
-    document.querySelector(".semister-notes-button").addEventListener("mouseover", function (e) {
-        document.querySelector(".semister-notes-container").classList.add("open");
-        document.querySelector(".semister-notes-container-close-button").style.display = "block";
-    })
 
 
 
