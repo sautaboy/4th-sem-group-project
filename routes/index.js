@@ -33,8 +33,11 @@ passport.use(new localStrategy(
 
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express', isAuthenticated: req.isAuthenticated() });
+router.get('/', async function (req, res, next) {
+  const user = await userModel.findOne({ username: req.session.passport.user });
+
+
+  res.render('index', { title: 'Express', isAuthenticated: req.isAuthenticated(), user });
 });
 
 
@@ -57,19 +60,23 @@ router.get("/user", isLoggedIn, async function (req, res, next) {
 
 
 
-router.get("/semister", function (req, res, next) {
-  res.render("semister", { isAuthenticated: req.isAuthenticated() });
+router.get("/semister", async function (req, res, next) {
+  const user = await userModel.findOne({ username: req.session.passport.user });
+  res.render("semister", { isAuthenticated: req.isAuthenticated(), user });
 
 })
 
 
-router.get("/signup", function (req, res, next) {
-  res.render("signup", { isAuthenticated: req.isAuthenticated() });
+router.get("/signup", async function (req, res, next) {
+  const user = await userModel.findOne({ username: req.session.passport.user });
+
+  res.render("signup", { isAuthenticated: req.isAuthenticated(), user });
 });
 
 // editing profile 
-router.get("/editprofile", isLoggedIn, function (req, res, next) {
-  res.render("editprofile", { isAuthenticated: req.isAuthenticated() });
+router.get("/editprofile", isLoggedIn, async function (req, res, next) {
+  const user = await userModel.findOne({ username: req.session.passport.user });
+  res.render("editprofile", { isAuthenticated: req.isAuthenticated(), user });
 
 });
 
