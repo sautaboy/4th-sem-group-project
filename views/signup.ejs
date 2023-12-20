@@ -17,29 +17,28 @@
 
         <div id="content-body">
 
-            <form action="">
-                <h1>Sign up</h1>
-
-                <div class="input-field">
+            <form action="/signup/" class="signup-form form " method="post">
+                <h1>Log In</h1>
+                <div class="submitted-field">
                     <label for="">
-                        username
-                        <div class="input">
-                            <i class="ri-user-line"></i>
-                            <input type="text" placeholder="type your username">
-                        </div>
+                        <i class="ri-user-fill"></i>
+                        <input type="text" name="username" id="" placeholder="Username">
                     </label>
                     <label for="">
-                        password
-                        <div class="input">
-                            <i class="ri-lock-line"></i>
-                            <input type="text" placeholder=" type your password">
-                        </div>
+                        <i class="ri-user-heart-line"></i>
+                        <input type="text" name="name" id="" placeholder="Full name">
                     </label>
+                    <label for="">
+                        <i class="ri-mail-fill"></i>
+                        <input type="email" name="email" id="" placeholder="Email">
+                    </label>
+                    <label for="">
+                        <i class="ri-lock-unlock-fill"></i>
+                        <input type="password" name="password" id="" placeholder="Password">
+                    </label>
+                    <input type="submit" value="Sign Up" class="submit-button">
+                    <a href="#" class="log-in-button">log in</a>
                 </div>
-
-                <input type="submit" name="" class="submit-button" value="submit">
-
-                <a href="">login</a>
             </form>
         </div>
 

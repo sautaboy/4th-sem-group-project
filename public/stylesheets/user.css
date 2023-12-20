@@ -25,11 +25,27 @@
 
 }
 
-.edit-profile-button {
-    padding: 5px;
-    text-transform: capitalize;
-    cursor: pointer;
+h3.user-full-name {
+    text-transform: uppercase;
+    color: red;
 }
+
+
+
+.edit-profile-button-and-logout-button-container
+{   
+    display: flex;
+    gap: 1rem;
+}
+.edit-profile-button-and-logout-button-container input
+{
+    width: 9rem;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
 
 
 .user-profile p {
@@ -62,6 +78,7 @@
     background-color: #dadada;
     border-radius: 10px;
 }
+
 
 
 

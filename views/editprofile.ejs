@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/loginsignup.css">
+
+</head>
+
+<body>
+    <% include header.ejs%>
+
+        <div id="content-body">
+
+            <form action="/editprofile" class="signup-form form " method="post" enctype="multipart/form-data">
+                <h1>Update Your Profile </h1>
+                <div class="submitted-field">
+                    <label for="">
+                        <i class="ri-user-fill"></i>
+                        <input type="text" name="username" id="" placeholder="Username">
+                    </label>
+                    <label for="">
+                        <i class="ri-user-heart-line"></i>
+                        <input type="text" name="name" id="" placeholder="Full name">
+                    </label>
+                    <!-- <label for="">
+                        <i class="ri-lock-unlock-fill"></i>
+                        <input type="password" name="password" id="" placeholder="Password">
+                    </label> -->
+                   
+                    <label for="">
+                        <i class="ri-lock-unlock-fill"></i>
+                        <input type="text" name="bio" id="" placeholder="Your Bio">
+                    </label>
+
+                    <label for="">
+                        <i class="ri-file-image-fill"></i>
+                        <input type="button" class="choose-image-button" value="Change Photo">
+                        <input type="file" name="image" id="" hidden>
+                    </label>
+
+                    <input type="submit" value="Update " class="submit-button">
+                </div>
+            </form>
+        </div>
+
+        <% include footer.ejs%>
+
+
+            <script>
+                document.querySelector(".choose-image-button").addEventListener("click", function () {
+                    document.querySelector("input[type=file]").click();
+                })
+            </script>
+</body>
+
+
+</html>

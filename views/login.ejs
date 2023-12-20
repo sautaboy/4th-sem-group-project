@@ -17,33 +17,30 @@
 
         <div id="content-body">
 
-            <form action="">
-                <h1>Login</h1>
-
-                <div class="input-field">
+            <form action="/login" class="signup-form form " method="post">
+                <h1>Log In</h1>
+                <div class="submitted-field">
                     <label for="">
-                        username
-                        <div class="input">
-                            <i class="ri-user-line"></i>
-                            <input type="text" placeholder="type your username">
-                        </div>
+                        <i class="ri-user-fill"></i>
+                        <input type="text" name="username" id="" placeholder="Username">
                     </label>
+                    
                     <label for="">
-                        password
-                        <div class="input">
-                            <i class="ri-lock-line"></i>
-                            <input type="text" placeholder=" type your password">
-                        </div>
+                        <i class="ri-lock-unlock-fill"></i>
+                        <input type="password" name="password" id="" placeholder="Password">
                     </label>
+                    <input type="submit" value="Log In" class="submit-button">
+                    <a href="/signup" class="log-in-button">sign up</a>
+                    <% if (message && message.length > 0) { %>
+                        <p class="error-message"><%= message[0] %></p>
+                      <% } %>
                 </div>
-                
-                <input type="submit" name="" class="submit-button" value="submit">
-
-                <a href="">signup</a>
             </form>
         </div>
 
         <% include footer.ejs%>
 </body>
+
+<script></script>
 
 </html>

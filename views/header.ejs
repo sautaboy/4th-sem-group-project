@@ -7,10 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
 <header>
 
-    <a href="#" id="logo">
+    <a href="/" id="logo">
         <h3>Logo Name</h3>
         <img src="/images/logo .gif" alt="">
     </a>
@@ -27,7 +26,8 @@
                     <a href="#">Past Year Questions</a>
                 </li>
                 <li>
-                    <a href="">Sylabus</a>
+                    <a href="/semister">Semister</a>
+                    <!-- thsi is test -->
                 </li>
                 <li>
                     <a href="#">Exam Schedule</a>
@@ -53,8 +53,18 @@
 
     <!-- login signuup buttons -->
     <div id="navbar-buttons">
-        <input type="submit" value="sign Up">
-        <input type="submit" value="log in">
+        <% if (isAuthenticated) { %>
+            <a href="/user" class="user-profile-picture">
+                <img src="/images/lets read.gif" alt="">
+            </a>
+            <% } else { %>
+                <a href="/login">
+                    <input type="submit" value="Log In">
+                </a>
+                <a href="/signup">
+                    <input type="submit" value=" Sign Up">
+                </a>
+                <% } %>
     </div>
 
 
@@ -117,8 +127,18 @@
         </ul>
 
         <div class="phone-view-buttons">
-            <input type="submit" value="sign Up">
-            <input type="submit" value="log in">
+            <% if (isAuthenticated) { %>
+                <a href="/user" class="user-profile-picture">
+                    <img src="/images/lets read.gif" alt="">
+                </a>
+                <% } else { %>
+                    <a href="/login">
+                        <input type="submit" value="Log In">
+                    </a>
+                    <a href="/signup">
+                        <input type="submit" value=" Sign Up">
+                    </a>
+                    <% } %>
         </div>
         <p> - you will have the bookmark features when you crean an account -</p>
     </div>
