@@ -55,7 +55,7 @@
     <div id="navbar-buttons">
         <% if (isAuthenticated) { %>
             <a href="/user" class="user-profile-picture">
-                <img src="/images/uploads/<%= user.image%>" alt="">
+                <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'s Profile Image" width="200">
 
             </a>
             <% } else { %>
@@ -130,7 +130,8 @@
         <div class="phone-view-buttons">
             <% if (isAuthenticated) { %>
                 <a href="/user" class="user-profile-picture">
-                    <img src="/images/uploads/<%= user.image%>" alt="">
+                    <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'s Profile Image"
+                    width="200">
 
                 </a>
                 <% } else { %>

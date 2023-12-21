@@ -18,9 +18,17 @@
         <div id="content-body">
 
             <div class="user-profile">
+                <!-- views/user.ejs -->
                 <div class="user-profile-img-wrap">
-                    <img src="/images/uploads/<%= user.image%>" alt="">
+                    <% if (user.image) { %>
+                        <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'s Profile Image"
+                            width="200">
+                        <% } else { %>
+                            <p>Upload Yoor Profile Pricture.</p>
+                            <% } %>
                 </div>
+
+
 
                 <h3 class="user-full-name">
 

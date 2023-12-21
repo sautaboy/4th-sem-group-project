@@ -11,6 +11,7 @@ const userSchema = mongoose.Schema({
   image: String,
   email: String,
   bio: String,
+  profileImg: String,
 })
 
 userSchema.plugin(plm);

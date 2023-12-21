@@ -6,10 +6,11 @@ const localStrategy = require("passport-local")
 const flash = require('express-flash');
 // passport.use(new localStrategy(userModel.authenticate()))
 
-
+const userPhotoModel = require("./userphoto")
 
 const uploads = require("./multer");
-const e = require('express');
+
+
 
 
 
@@ -34,50 +35,65 @@ passport.use(new localStrategy(
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-  const user = await userModel.findOne({ username: req.session.passport.user });
+  try {
 
+    // Check if the user is authenticated
+    const isAuthenticated = req.isAuthenticated();
 
-  res.render('index', { title: 'Express', isAuthenticated: req.isAuthenticated(), user });
+    // If the user is authenticated, retrieve user information from the database
+    let user = null;
+    if (isAuthenticated) {
+      user = await userModel.findOne({ username: req.user.username });
+    }
+
+    // Render the 'index' view with data
+    res.render('index', { title: 'Bytes Pedia', isAuthenticated, user });
+  } catch (err) {
+    // Handle any errors that may occur during the database query or rendering
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 
-
 router.get("/user", isLoggedIn, async function (req, res, next) {
-
-  const user = await userModel.findOne({ username: req.session.passport.user });
-
-
-  const authenticatedUser = req.user;
-
-  if (authenticatedUser) {
-    const user = await userModel.findOne({ username: authenticatedUser.username });
-
+  try {
+    const user = await userModel.findOne({ username: req.user.username });
     res.render("user", { isAuthenticated: req.isAuthenticated(), user });
-  } else {
-    res.redirect("/login", { user });
+  } catch (err) {
+    console.error(err);
+    res.redirect("/login");
   }
 });
 
 
 
-router.get("/semister", async function (req, res, next) {
-  const user = await userModel.findOne({ username: req.session.passport.user });
-  res.render("semister", { isAuthenticated: req.isAuthenticated(), user });
 
-})
+router.get("/semister", isLoggedIn, async function (req, res, next) {
+  try {
+    const user = await userModel.findOne({ username: req.user.username });
+    res.render("semister", { isAuthenticated: req.isAuthenticated(), user });
+  } catch (err) {
+    console.error(err);
+    res.redirect("/login");
+  }
+});
+
 
 
 router.get("/signup", async function (req, res, next) {
-  const user = await userModel.findOne({ username: req.session.passport.user });
-
-  res.render("signup", { isAuthenticated: req.isAuthenticated(), user });
+  res.render("signup", { isAuthenticated: req.isAuthenticated() });
 });
 
 // editing profile 
 router.get("/editprofile", isLoggedIn, async function (req, res, next) {
-  const user = await userModel.findOne({ username: req.session.passport.user });
-  res.render("editprofile", { isAuthenticated: req.isAuthenticated(), user });
-
+  try {
+    const user = await userModel.findOne({ username: req.user.username });
+    res.render("editprofile", { isAuthenticated: req.isAuthenticated(), user });
+  } catch (err) {
+    console.error(err);
+    res.redirect("/login");
+  }
 });
 
 
@@ -131,6 +147,12 @@ router.post('/logout', function (req, res, next) {
 });
 router.post("/editprofile", isLoggedIn, uploads.single('image'), async function (req, res, next) {
   try {
+    const userphoto = new userPhotoModel({
+      filename: req.file.filename,
+      originalname: req.file.originalname,
+      path: req.file.path,
+    })
+
     // Find the user by username
     const user = await userModel.findOne({ username: req.session.passport.user });
 
@@ -146,6 +168,7 @@ router.post("/editprofile", isLoggedIn, uploads.single('image'), async function 
 
     // Save the updated user
     await user.save();
+    await userphoto.save();
     res.redirect("/user");
   } catch (err) {
     console.error(err);
