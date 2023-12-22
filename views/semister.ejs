@@ -19,22 +19,22 @@
                 <h2>
                     Qucik Links
                 </h2>
-                <a href="">
+                <a href="#<%= semisterContent.subOne %>">
                     <%= semisterContent.subOne %>
                 </a>
-                <a href="">
+                <a href="#<%= semisterContent.subTwo %>">
                     <%= semisterContent.subTwo %>
 
                 </a>
-                <a href="">
+                <a href="#<%= semisterContent.subThree %>">
                     <%= semisterContent.subThree %>
 
                 </a>
-                <a href="">
+                <a href="#<%= semisterContent.subFour %>">
                     <%= semisterContent.subFour %>
 
                 </a>
-                <a href="">
+                <a href="#<%= semisterContent.subFive %>">
                     <%= semisterContent.subFive %>
 
                 </a>
@@ -42,23 +42,108 @@
             </div>
 
 
+            <div id="content-container">
 
-            <div class="content">
-                <div class="notes-container">
-                    <h2>Subject Name</h2>
-                    <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
 
-                    </iframe>
-                    <div class="book-mark-section">
-                        <p>
-                            Create an account to bookmark notes. Your bookmarked notes will be stored in your profile,
-                            allowing you to quickly view them anytime.
-                        </p>
-                        <i class="ri-bookmark-line bookmark-button"></i>
+                <div class="content" id="<%= semisterContent.subOne %>">
+                    <div class="notes-container">
+                        <h2><%= semisterContent.subOne %></h2>
+                        <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
 
+                        </iframe>
+                        <div class="book-mark-section">
+                            <p>
+                                Create an account to bookmark notes. Your bookmarked notes will be stored in your
+                                profile,
+                                allowing you to quickly view them anytime.
+                            </p>
+                            <i class="ri-bookmark-line bookmark-button"></i>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="content" id="<%= semisterContent.subTwo %>">
+                    <div class="notes-container">
+                        <h2><%= semisterContent.subTwo %></h2>
+                        <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
+
+                        </iframe>
+                        <div class="book-mark-section">
+                            <p>
+                                Create an account to bookmark notes. Your bookmarked notes will be stored in your
+                                profile,
+                                allowing you to quickly view them anytime.
+                            </p>
+                            <i class="ri-bookmark-line bookmark-button"></i>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="content" id="<%= semisterContent.subThree %>">
+                    <div class="notes-container">
+                        <h2><%= semisterContent.subThree %></h2>
+                        <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
+
+                        </iframe>
+                        <div class="book-mark-section">
+                            <p>
+                                Create an account to bookmark notes. Your bookmarked notes will be stored in your
+                                profile,
+                                allowing you to quickly view them anytime.
+                            </p>
+                            <i class="ri-bookmark-line bookmark-button"></i>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="content" id="<%= semisterContent.subFour %>">
+                    <div class="notes-container">
+                        <h2><%= semisterContent.subFour %></h2>
+                        <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
+
+                        </iframe>
+                        <div class="book-mark-section">
+                            <p>
+                                Create an account to bookmark notes. Your bookmarked notes will be stored in your
+                                profile,
+                                allowing you to quickly view them anytime.
+                            </p>
+                            <i class="ri-bookmark-line bookmark-button"></i>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="content" id="<%= semisterContent.subFive %>">
+                    <div class="notes-container">
+                        <h2><%= semisterContent.subFive %></h2>
+                        <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
+
+                        </iframe>
+                        <div class="book-mark-section">
+                            <p>
+                                Create an account to bookmark notes. Your bookmarked notes will be stored in your
+                                profile,
+                                allowing you to quickly view them anytime.
+                            </p>
+                            <i class="ri-bookmark-line bookmark-button"></i>
+
+                        </div>
                     </div>
                 </div>
             </div>
+
 
         </div>
 

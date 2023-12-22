@@ -5,7 +5,15 @@
     justify-content: flex-start;
     width: 100%;
     position: relative;
-    height: 100vh;
+
+    min-height: 100vh;
+
+}
+
+#content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 }
 
 .quick-links {
@@ -13,7 +21,7 @@
     flex-direction: column;
     gap: 10px;
     height: fit-content;
-    width: 15%;
+    width: 25%;
     background: #fff;
     filter: drop-shadow(0px 1px 1px #888888);
     padding: 10px;
@@ -33,12 +41,12 @@
 
 .content {
     height: fit-content;
-    width: 60%;
+    width: 80%;
     background: #fff;
     filter: drop-shadow(0px 1px 1px #888888);
-    padding: 1rem;
     border-radius: 16px;
-
+    border-bottom: 2px solid red;
+    padding: 2rem 1rem 1rem 1rem;
 }
 
 .content h2 {
@@ -52,6 +60,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+    align-items: center;
 }
 
 .content .notes-container h2 {
@@ -107,8 +116,11 @@
     }
 
     .quick-links {
-        position: initial;
+        /* position: initial; */
         width: 100%;
+        z-index: 9;
+        top: 6rem;
+        border-radius: initial;
     }
 
 
@@ -116,5 +128,6 @@
     .content {
         width: 100%;
         height: fit-content;
+        padding: 1rem;
     }
 }

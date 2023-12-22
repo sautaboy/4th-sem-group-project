@@ -91,6 +91,31 @@ router.get("/semister/:changableSemisterRoute", async function (req, res, next) 
 });
 
 
+router.get("/semister/:changableSemisterRoute/:changableSubject", async function (req, res, next) {
+  try {
+    const changableSemisterRoute = req.params.changableSemisterRoute;
+
+    // Assuming semisterData is defined
+    const semisterContent = semisterData[changableSemisterRoute];
+
+    if (semisterContent) {
+      const user = await userModel.findOne({ username: req.user ? req.user.username : null });
+      res.render("subject", { isAuthenticated: req.isAuthenticated(), user, semisterContent });
+    } else {
+      res.status(404).send('Semester not found');
+    }
+  } catch (err) {
+    console.error(err);
+    res.redirect("/login");
+  }
+});
+
+
+
+
+
+
+
 
 
 router.get("/signup", async function (req, res, next) {
