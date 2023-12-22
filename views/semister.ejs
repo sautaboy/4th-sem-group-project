@@ -16,12 +16,28 @@
 
         <div id="content-body">
             <div class="quick-links">
-                <h2>Qucik Links</h2>
-                <a href="">semister</a>
-                <a href="">semister</a>
-                <a href="">semister</a>
-                <a href="">semister</a>
-                <a href="">semister</a>
+                <h2>
+                    Qucik Links
+                </h2>
+                <a href="">
+                    <%= semisterContent.subOne %>
+                </a>
+                <a href="">
+                    <%= semisterContent.subTwo %>
+
+                </a>
+                <a href="">
+                    <%= semisterContent.subThree %>
+
+                </a>
+                <a href="">
+                    <%= semisterContent.subFour %>
+
+                </a>
+                <a href="">
+                    <%= semisterContent.subFive %>
+
+                </a>
 
             </div>
 
@@ -30,7 +46,8 @@
             <div class="content">
                 <div class="notes-container">
                     <h2>Subject Name</h2>
-                    <iframe src="/notes/seminar_paper.pdf" frameborder="0">
+                    <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
+
                     </iframe>
                     <div class="book-mark-section">
                         <p>

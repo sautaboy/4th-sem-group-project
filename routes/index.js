@@ -11,6 +11,8 @@ const userPhotoModel = require("./userphoto")
 const uploads = require("./multer");
 
 
+const semisterData = require("../views/content/semister")
+
 
 
 
@@ -69,15 +71,25 @@ router.get("/user", isLoggedIn, async function (req, res, next) {
 
 
 
-router.get("/semister", isLoggedIn, async function (req, res, next) {
+router.get("/semister/:changableSemisterRoute", async function (req, res, next) {
   try {
-    const user = await userModel.findOne({ username: req.user.username });
-    res.render("semister", { isAuthenticated: req.isAuthenticated(), user });
+    const changableSemisterRoute = req.params.changableSemisterRoute;
+
+    // Assuming semisterData is defined
+    const semisterContent = semisterData[changableSemisterRoute];
+
+    if (semisterContent) {
+      const user = await userModel.findOne({ username: req.user ? req.user.username : null });
+      res.render("semister", { isAuthenticated: req.isAuthenticated(), user, semisterContent });
+    } else {
+      res.status(404).send('Semester not found');
+    }
   } catch (err) {
     console.error(err);
     res.redirect("/login");
   }
 });
+
 
 
 
