@@ -47,19 +47,22 @@
 
                 <div class="content" id="<%= semisterContent.subOne %>">
                     <div class="notes-container">
-                        <h2><%= semisterContent.subOne %></h2>
+                        <h2>
+                            <%= semisterContent.subOne %>
+                        </h2>
                         <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
 
                         </iframe>
                         <div class="book-mark-section">
-                            <p>
-                                Create an account to bookmark notes. Your bookmarked notes will be stored in your
-                                profile,
-                                allowing you to quickly view them anytime.
-                            </p>
-                            <i class="ri-bookmark-line bookmark-button"></i>
-
+                            <% if (isAuthenticated) { %>
+                                <p>You can see your bookmarks on your profile.</p>
+                                <i class="ri-bookmark-line bookmark-button"
+                                    id="bookmarkButton<%= semisterContent.subOne %>"></i>
+                                <% } else { %>
+                                    <p>You have to be logged in to bookmark the notes.</p>
+                                    <% } %>
                         </div>
+
                     </div>
                 </div>
 
@@ -67,19 +70,22 @@
 
                 <div class="content" id="<%= semisterContent.subTwo %>">
                     <div class="notes-container">
-                        <h2><%= semisterContent.subTwo %></h2>
+                        <h2>
+                            <%= semisterContent.subTwo %>
+                        </h2>
                         <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
 
                         </iframe>
                         <div class="book-mark-section">
-                            <p>
-                                Create an account to bookmark notes. Your bookmarked notes will be stored in your
-                                profile,
-                                allowing you to quickly view them anytime.
-                            </p>
-                            <i class="ri-bookmark-line bookmark-button"></i>
-
+                            <% if (isAuthenticated) { %>
+                                <p>You can see your bookmarks on your profile.</p>
+                                <i class="ri-bookmark-line bookmark-button"
+                                    id="bookmarkButton<%= semisterContent.subTwo %>"></i>
+                                <% } else { %>
+                                    <p>You have to be logged in to bookmark the notes.</p>
+                                    <% } %>
                         </div>
+
                     </div>
                 </div>
 
@@ -87,19 +93,22 @@
 
                 <div class="content" id="<%= semisterContent.subThree %>">
                     <div class="notes-container">
-                        <h2><%= semisterContent.subThree %></h2>
+                        <h2>
+                            <%= semisterContent.subThree %>
+                        </h2>
                         <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
 
                         </iframe>
                         <div class="book-mark-section">
-                            <p>
-                                Create an account to bookmark notes. Your bookmarked notes will be stored in your
-                                profile,
-                                allowing you to quickly view them anytime.
-                            </p>
-                            <i class="ri-bookmark-line bookmark-button"></i>
-
+                            <% if (isAuthenticated) { %>
+                                <p>You can see your bookmarks on your profile.</p>
+                                <i class="ri-bookmark-line bookmark-button"
+                                    id="bookmarkButton<%= semisterContent.subThree %>"></i>
+                                <% } else { %>
+                                    <p>You have to be logged in to bookmark the notes.</p>
+                                    <% } %>
                         </div>
+
                     </div>
                 </div>
 
@@ -107,19 +116,22 @@
 
                 <div class="content" id="<%= semisterContent.subFour %>">
                     <div class="notes-container">
-                        <h2><%= semisterContent.subFour %></h2>
+                        <h2>
+                            <%= semisterContent.subFour %>
+                        </h2>
                         <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
 
                         </iframe>
                         <div class="book-mark-section">
-                            <p>
-                                Create an account to bookmark notes. Your bookmarked notes will be stored in your
-                                profile,
-                                allowing you to quickly view them anytime.
-                            </p>
-                            <i class="ri-bookmark-line bookmark-button"></i>
-
+                            <% if (isAuthenticated) { %>
+                                <p>You can see your bookmarks on your profile.</p>
+                                <i class="ri-bookmark-line bookmark-button"
+                                    id="bookmarkButton<%= semisterContent.subFour %>"></i>
+                                <% } else { %>
+                                    <p>You have to be logged in to bookmark the notes.</p>
+                                    <% } %>
                         </div>
+
                     </div>
                 </div>
 
@@ -127,19 +139,22 @@
 
                 <div class="content" id="<%= semisterContent.subFive %>">
                     <div class="notes-container">
-                        <h2><%= semisterContent.subFive %></h2>
+                        <h2>
+                            <%= semisterContent.subFive %>
+                        </h2>
                         <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
 
                         </iframe>
                         <div class="book-mark-section">
-                            <p>
-                                Create an account to bookmark notes. Your bookmarked notes will be stored in your
-                                profile,
-                                allowing you to quickly view them anytime.
-                            </p>
-                            <i class="ri-bookmark-line bookmark-button"></i>
-
+                            <% if (isAuthenticated) { %>
+                                <p>You can see your bookmarks on your profile.</p>
+                                <i class="ri-bookmark-line bookmark-button"
+                                    id="bookmarkButton<%= semisterContent.subFive %>"></i>
+                                <% } else { %>
+                                    <p>You have to be logged in to bookmark the notes.</p>
+                                    <% } %>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -148,6 +163,60 @@
         </div>
 
         <% include footer.ejs%>
+
+
+            <!-- Other HTML content above -->
+
+            <!-- Other HTML content above -->
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Get all bookmark buttons by class name
+                    const bookmarkButtons = document.querySelectorAll('.bookmark-button');
+
+                    // Add an event listener to each bookmark button
+                    bookmarkButtons.forEach(button => {
+                        button.addEventListener('click', function (e) {
+                            // Implement bookmark logic here
+                            // You might want to make an AJAX request to your server to handle the bookmark action
+                            // Example: Fetch API
+
+                            // Extract subject title and URL from the button's id
+                            const subjectTitle = button.id.replace('bookmarkButton', ''); // Remove 'bookmarkButton' prefix
+                            const subjectUrl = '/usernotes/<%= semisterContent.pdfUrl %>';
+
+                            fetch('/bookmark', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({
+                                    title: subjectTitle,
+                                    url: subjectUrl,
+                                }),
+                            })
+                                .then(response => {
+                                    if (response.ok) {
+                                        console.log('Subject bookmarked successfully');
+                                    } else {
+                                        console.error('Failed to bookmark subject');
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Error bookmarking subject:', error);
+                                });
+
+                            e.target.classList.remove("ri-bookmark-line")
+                            e.target.classList.add("ri-bookmark-fill")
+                        });
+                    });
+                });
+            </script>
+
+            <!-- Other HTML content below -->
+
+
+            <!-- Other HTML content below -->
 
 </body>
 

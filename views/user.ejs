@@ -54,31 +54,74 @@
 
             <div class="bookmarks">
                 <h2>Your Book Marks</h2>
-                <div class="booksmark-list">
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
+                <ul class="bookmark-list">
+                    <% user.bookmarks.forEach(bookmark=> { %>
+                        <li>
+                            <a href="<%= bookmark.url %>">
+                                <%= bookmark.title %>
+                            </a>
+                            <button class="remove-bookmark" data-title="<%= bookmark.title %>"
+                                data-url="<%= bookmark.url %>">
+                                Remove this
+                            </button>
+                        </li>
+                        <% }); %>
+                </ul>
 
 
-                </div>
             </div>
 
         </div>
         <% include footer.ejs%>
-
-
-
 
             <script>
                 document.querySelector(".edit-profile-button").addEventListener("click", function () {
                     document.querySelector(".upload-profile-input").click();
                 })
             </script>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Get all remove bookmark buttons by class name
+                    const removeBookmarkButtons = document.querySelectorAll('.remove-bookmark');
+
+                    // Add an event listener to each remove bookmark button
+                    removeBookmarkButtons.forEach(button => {
+                        button.addEventListener('click', function () {
+                            // Extract bookmark title and URL from the button's data attributes
+                            const title = button.dataset.title;
+                            const url = button.dataset.url;
+
+                            // Make an AJAX request to remove the bookmark
+                            fetch('/removeBookmark', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({
+                                    title,
+                                    url,
+                                }),
+                            })
+                                .then(response => {
+                                    if (response.ok) {
+                                        console.log('Bookmark removed successfully');
+                                        // Optionally, you can update the UI or perform other actions
+                                        // For example, remove the corresponding list item from the UI
+                                        const listItem = button.closest('li');
+                                        listItem.remove();
+                                    } else {
+                                        console.error('Failed to remove bookmark');
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Error removing bookmark:', error);
+                                });
+                        });
+                    });
+                });
+            </script>
+
 
 
 

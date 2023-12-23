@@ -91,25 +91,55 @@ router.get("/semister/:changableSemisterRoute", async function (req, res, next) 
 });
 
 
-router.get("/semister/:changableSemisterRoute/:changableSubject", async function (req, res, next) {
+
+
+// Assuming you have a route for bookmarking subjects
+router.post("/bookmark", isLoggedIn, async function (req, res, next) {
   try {
-    const changableSemisterRoute = req.params.changableSemisterRoute;
+    const { title, url } = req.body;
 
-    // Assuming semisterData is defined
-    const semisterContent = semisterData[changableSemisterRoute];
+    // Find the user by username
+    const user = await userModel.findOne({ username: req.user.username });
 
-    if (semisterContent) {
-      const user = await userModel.findOne({ username: req.user ? req.user.username : null });
-      res.render("subject", { isAuthenticated: req.isAuthenticated(), user, semisterContent });
+    // Check if the subject is already bookmarked
+    const isBookmarked = user.bookmarks.some(bookmark => bookmark.title === title);
+
+    if (!isBookmarked) {
+      // If not bookmarked, add it to the user's bookmarks
+      user.bookmarks.push({ title, url });
+      await user.save();
+      res.status(200).send('Subject bookmarked successfully');
     } else {
-      res.status(404).send('Semester not found');
+      // Subject is already bookmarked, you can handle this case accordingly
+      res.status(400).send('Subject already bookmarked');
     }
   } catch (err) {
     console.error(err);
-    res.redirect("/login");
+    res.status(500).send('Internal Server Error');
   }
 });
 
+
+// Assume you have a route like '/removeBookmark' that handles bookmark removal
+router.post('/removeBookmark', isLoggedIn, async function (req, res, next) {
+  try {
+    const user = await userModel.findOne({ username: req.user.username });
+
+    // Get the bookmark title and URL from the request body
+    const { title, url } = req.body;
+
+    // Remove the bookmark from the user's bookmarks array
+    user.bookmarks = user.bookmarks.filter(bookmark => !(bookmark.title === title && bookmark.url === url));
+
+    // Save the updated user
+    await user.save();
+
+    res.status(200).json({ message: 'Bookmark removed successfully' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
 
 
 
@@ -121,6 +151,8 @@ router.get("/semister/:changableSemisterRoute/:changableSubject", async function
 router.get("/signup", async function (req, res, next) {
   res.render("signup", { isAuthenticated: req.isAuthenticated() });
 });
+
+
 
 // editing profile 
 router.get("/editprofile", isLoggedIn, async function (req, res, next) {

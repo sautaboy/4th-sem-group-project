@@ -12,6 +12,10 @@ const userSchema = mongoose.Schema({
   email: String,
   bio: String,
   profileImg: String,
+  bookmarks: [{
+    title: String, // Title of the bookmarked subject
+    url: String,   // URL of the bookmarked subject
+  }],
 })
 
 userSchema.plugin(plm);
