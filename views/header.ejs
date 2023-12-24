@@ -91,37 +91,53 @@
 
                 <ul class="semister-list">
                     <li>
-                        <a href="">First Semister</a>
+                        <a href="/semister/firstSemister">
+                            first Semister
+                        </a>
+                    </li>
+                    <li>
+
+                        <a href="/semister/secondSemister">
+                            Second Semister
+                        </a>
                     </li>
 
                     <li>
-                        <a href="">Second Semister</a>
+
+                        <a href="/semister/thirdSemister">
+                            Third Semister
+                        </a>
                     </li>
 
                     <li>
-                        <a href="">Third Semister</a>
+
+                        <a href="/semister/fourthSemister">
+                            Fourth Semister
+                        </a>
                     </li>
 
                     <li>
-                        <a href="">Fourth Semister</a>
+
+                        <a href="/semister/fifthSemister">
+                            Fifth Semister
+                        </a>
                     </li>
+
+                    <a href="/semister/sixthSemister">
+                        Sixth Semister
+                    </a>
 
                     <li>
-                        <a href="">Fifth Semister</a>
-                    </li>
 
+                        <a href="/semister/seventhSemister">
+                            Seventh Semister
+                        </a>
+                    </li>
                     <li>
-                        <a href="">Sixth Semister</a>
+                        <a href="/semister/eightSemister">
+                            Eight Semister
+                        </a>
                     </li>
-
-                    <li>
-                        <a href="">Seventh Semister</a>
-                    </li>
-
-                    <li>
-                        <a href="">Eight Semister</a>
-                    </li>
-
                 </ul>
             </li>
 
@@ -130,8 +146,7 @@
         <div class="phone-view-buttons">
             <% if (isAuthenticated) { %>
                 <a href="/user" class="user-profile-picture">
-                    <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'s Profile Image"
-                    width="200">
+                    <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'s Profile Image" width="200">
 
                 </a>
                 <% } else { %>

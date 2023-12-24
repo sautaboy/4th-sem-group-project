@@ -16,25 +16,25 @@
 
         <div id="content-body">
 
-            <form action="/editprofile" class="signup-form form " method="post" enctype="multipart/form-data">
+            <form action="/editprofile" class="signup-form form" method="post" enctype="multipart/form-data">
                 <h1>Update Your Profile </h1>
                 <div class="submitted-field">
                     <label for="">
                         <i class="ri-user-fill"></i>
-                        <input type="text" name="username" id="" placeholder="Username">
+                        <input type="text" name="username" id="" placeholder="Username" value="<%= user.username%>">
                     </label>
                     <label for="">
                         <i class="ri-user-heart-line"></i>
-                        <input type="text" name="name" id="" placeholder="Full name">
+                        <input type="text" name="name" id="" placeholder="Full name" value="<%= user.name%>">
                     </label>
                     <!-- <label for="">
                         <i class="ri-lock-unlock-fill"></i>
                         <input type="password" name="password" id="" placeholder="Password">
                     </label> -->
-                   
+
                     <label for="">
                         <i class="ri-lock-unlock-fill"></i>
-                        <input type="text" name="bio" id="" placeholder="Your Bio">
+                        <input type="text" name="bio" id="" placeholder="Your Bio" value="<%= user.bio%>">
                     </label>
 
                     <label for="">

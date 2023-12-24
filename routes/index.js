@@ -216,34 +216,44 @@ router.post('/logout', function (req, res, next) {
 });
 router.post("/editprofile", isLoggedIn, uploads.single('image'), async function (req, res, next) {
   try {
-    const userphoto = new userPhotoModel({
-      filename: req.file.filename,
-      originalname: req.file.originalname,
-      path: req.file.path,
-    })
-
     // Find the user by username
     const user = await userModel.findOne({ username: req.session.passport.user });
 
-    // Update user information
-    user.username = req.body.username || user.username; // Use existing value if not provided
-    user.name = req.body.name || user.name; // Use existing value if not provided
-    user.bio = req.body.bio || user.bio; // Use existing value if not provided
+    // Update user information based on the provided fields
+    if (req.body.username) {
+      user.username = req.body.username;
+    }
+
+    if (req.body.name) {
+      user.name = req.body.name;
+    }
+
+    if (req.body.bio) {
+      user.bio = req.body.bio;
+    }
 
     // If a new avatar is uploaded, update the image field
     if (req.file) {
+      const userphoto = new userPhotoModel({
+        filename: req.file.filename,
+        originalname: req.file.originalname,
+        path: req.file.path,
+      });
       user.image = req.file.filename;
+
+      // Save the user photo
+      await userphoto.save();
     }
 
     // Save the updated user
     await user.save();
-    await userphoto.save();
     res.redirect("/user");
   } catch (err) {
     console.error(err);
     res.redirect("/user");
   }
 });
+
 
 
 

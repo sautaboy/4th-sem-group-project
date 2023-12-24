@@ -15,6 +15,8 @@
 
 
         <div id="content-body">
+            <i class="ri-arrow-left-double-fill show-subject-list"></i>
+
             <div class="quick-links">
                 <h2>
                     Qucik Links
@@ -213,10 +215,27 @@
                 });
             </script>
 
-            <!-- Other HTML content below -->
+            <script>
+
+                document.querySelector(".show-subject-list").addEventListener("click", function (e) {
+                    document.querySelector(".quick-links").classList.toggle("open");
+                    e.target.classList.toggle("ri-arrow-right-double-fill")
+                    e.target.classList.toggle("ri-arrow-left-double-fill")
+                })
+            </script>
+
+            <script>
 
 
-            <!-- Other HTML content below -->
+                document.querySelectorAll(".quick-links a").forEach(function (e) {
+                    e.addEventListener("click", function () {
+                        document.querySelector(".quick-links").classList.remove("open");
+                        
+                        document.querySelector(".show-subject-list").classList.toggle("ri-arrow-right-double-fill")
+                        document.querySelector(".show-subject-list").classList.toggle("ri-arrow-left-double-fill")
+                    });
+                });
+            </script>
 
 </body>
 
