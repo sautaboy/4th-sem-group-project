@@ -4,7 +4,6 @@ const userModel = require("./users");
 const passport = require('passport');
 const localStrategy = require("passport-local")
 const flash = require('express-flash');
-// passport.use(new localStrategy(userModel.authenticate()))
 
 const userPhotoModel = require("./userphoto")
 
