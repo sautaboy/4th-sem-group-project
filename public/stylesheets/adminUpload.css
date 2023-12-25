@@ -1,0 +1,34 @@
+
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    /* background: red; */
+}
+
+
+input.upload-admin-file {
+    width: 30%;
+    padding: 15px;
+    margin: 0 auto;
+    cursor: pointer;
+
+}
+
+i.ri-upload-cloud-fill {
+    z-index: 1;
+    font-size: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+i.ri-upload-cloud-fill:hover {
+
+    color: #222;
+    cursor: pointer;
+}

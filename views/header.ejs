@@ -26,7 +26,7 @@
                     <a href="#">Past Year Questions</a>
                 </li>
                 <li>
-                    <a href="/semister">Semister</a>
+                    <a href="#semister-list-link">Semister</a>
                     <!-- thsi is test -->
                 </li>
                 <li>
@@ -84,7 +84,6 @@
         <ul class="phone-view-semister-list">
             <li>
                 <a class="down-icon">
-
                     get notes
                     <i class="ri-arrow-down-s-fill"></i>
                 </a>
@@ -158,7 +157,13 @@
                     </a>
                     <% } %>
         </div>
-        <p> - you will have the bookmark features when you crean an account -</p>
+        <% if(isAuthenticated){%>
+            <p>
+                - go to your profile to see bookmarks -
+            </p>
+            <%} else {%>
+                <p> - you will have the bookmark features when you create an account -</p>
+                <% } %>
     </div>
 </header>
 <script>

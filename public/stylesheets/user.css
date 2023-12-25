@@ -70,7 +70,6 @@ h3.user-full-name {
     margin-left: 4%;
     padding: 1rem 0;
     display: flex;
-
 }
 
 
@@ -82,7 +81,7 @@ h3.user-full-name {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 8px 8px 0 0 ;
+    border-radius: 8px 8px 0 0;
     flex-direction: column;
 }
 
@@ -101,7 +100,7 @@ h3.user-full-name {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px 8px 0 0 ;
+    border-radius: 8px 8px 0 0;
 }
 
 
@@ -117,21 +116,20 @@ h3.user-full-name {
         width: 100%;
     }
 
+    .bookmarks .bookmark-list
+    {
+        justify-content: center;
+    }
     .user-profile .user-profile-img-wrap {
         width: 15vh;
         height: 15vh;
         position: relative;
     }
 
-
-    .bookmarks .booksmark-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 3px;
-        width: 100%;
-        padding: 1rem 0;
+    .bookmarks li {
+        width: 40%;
     }
+
 
     .bookmarks a {
         width: calc(100% / 3 - 9px);

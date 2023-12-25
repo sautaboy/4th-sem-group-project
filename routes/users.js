@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const plm = require("passport-local-mongoose");
 
-mongoose.connect("mongodb+srv://sautaboy:sautaboy@cluster0.hbnbxtj.mongodb.net/sem4")
+mongoose.connect("mongodb://localhost:27017/sem-four-database")
 
 const userSchema = mongoose.Schema({
   username: String,

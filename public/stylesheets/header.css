@@ -168,7 +168,7 @@ li.contact {
 
     .phonoe-view-nav-list {
         overflow-y: scroll;
-
+        padding-top: 2rem;
         height: 100vh;
         top: 6rem;
         background: hsl(0, 0%, 98%);
@@ -178,13 +178,14 @@ li.contact {
         left: 0;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.3rem;
+        height: calc(100vh - 6rem);
         align-items: center;
-        padding-top: 2rem;
         width: 100%;
         margin: 0 auto;
         transform: translateX(-100%);
         transition: .3s linear;
+        padding-bottom: 2rem;
     }
 
     .phonoe-view-nav-list.open {
