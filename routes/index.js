@@ -34,6 +34,8 @@ passport.use(new localStrategy(
 
 
 
+
+
 /* GET home page. */
 router.get('/', async function (req, res, next) {
   try {
@@ -55,6 +57,33 @@ router.get('/', async function (req, res, next) {
     res.status(500).send('Internal Server Error');
   }
 });
+
+
+/* GET home page. */
+router.get('/allSemisterPastYearQuestions', async function (req, res, next) {
+  try {
+
+    // Check if the user is authenticated
+    const isAuthenticated = req.isAuthenticated();
+
+    // If the user is authenticated, retrieve user information from the database
+    let user = null;
+    if (isAuthenticated) {
+      user = await userModel.findOne({ username: req.user.username });
+    }
+
+    // Render the 'index' view with data
+    res.render('allSemisterPastYearQuestions', { title: 'Bytes Pedia', isAuthenticated, user });
+  } catch (err) {
+    // Handle any errors that may occur during the database query or rendering
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+
+
+
 
 
 router.get("/user", isLoggedIn, async function (req, res, next) {

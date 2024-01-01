@@ -40,6 +40,39 @@
                     <%= semisterContent.subFive %>
 
                 </a>
+
+
+                <h3>
+                    Past Year Questions
+                </h3>
+                <div class="quick-links-past-year-questions">
+
+
+                    <% if (semisterContent.firstLink) { %>
+                        <a href="<%= semisterContent.firstLink %>" target="_blank">
+                            <%= semisterContent.firstLinkDate %>
+                        </a>
+                        <% } %>
+                            <% if (semisterContent.secondLink) { %>
+                                <a href="<%= semisterContent.secondLink %>" target="_blank">
+                                    <%= semisterContent.secondLinkDate %>
+                                </a>
+                                <% } %>
+
+                                    <% if (semisterContent.thirdLink) { %>
+                                        <a href="<%= semisterContent.thirdLink %>" target="_blank">
+                                            <%= semisterContent.thirdLinkDate %>
+                                        </a>
+                                        <% } %>
+
+                                            <% if (semisterContent.fourthLink) { %>
+                                                <a href="<%= semisterContent.fourthLink %>" target="_blank">
+                                                    <%= semisterContent.fourthLinkDate %>
+                                                </a>
+                                                <% } %>
+
+
+                </div>
             </div>
 
 
@@ -63,16 +96,6 @@
                                     <p>You have to be logged in to bookmark the notes.</p>
                                     <% } %>
                         </div>
-
-                        <div class="past-year-questions">
-                            <h4>Past Year Questions</h4>
-                            <div class="each-subject-questions-list">
-                                <a href="">2018</a>
-                                <a href="">2018</a>
-                                <a href="">2018</a>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
@@ -94,14 +117,6 @@
                                 <% } else { %>
                                     <p>You have to be logged in to bookmark the notes.</p>
                                     <% } %>
-                        </div>
-                       <div class="past-year-questions">
-                            <h4>Past Year Questions</h4>
-                            <div class="each-subject-questions-list">
-                                <a href="">2018</a>
-                                <a href="">2018</a>
-                                <a href="">2018</a>
-                            </div>
                         </div>
 
                     </div>
@@ -126,14 +141,7 @@
                                     <p>You have to be logged in to bookmark the notes.</p>
                                     <% } %>
                         </div>
-                       <div class="past-year-questions">
-                            <h4>Past Year Questions</h4>
-                            <div class="each-subject-questions-list">
-                                <a href="">2018</a>
-                                <a href="">2018</a>
-                                <a href="">2018</a>
-                            </div>
-                        </div>
+
 
                     </div>
                 </div>
@@ -158,14 +166,7 @@
                                     <% } %>
                         </div>
 
-                       <div class="past-year-questions">
-                            <h4>Past Year Questions</h4>
-                            <div class="each-subject-questions-list">
-                                <a href="">2018</a>
-                                <a href="">2018</a>
-                                <a href="">2018</a>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 
@@ -187,14 +188,6 @@
                                 <% } else { %>
                                     <p>You have to be logged in to bookmark the notes.</p>
                                     <% } %>
-                        </div>
-                       <div class="past-year-questions">
-                            <h4>Past Year Questions</h4>
-                            <div class="each-subject-questions-list">
-                                <a href="">2018</a>
-                                <a href="">2018</a>
-                                <a href="">2018</a>
-                            </div>
                         </div>
 
                     </div>

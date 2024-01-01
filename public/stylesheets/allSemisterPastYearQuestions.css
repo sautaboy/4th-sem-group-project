@@ -1,0 +1,77 @@
+#allSemisterPastYearQuestions {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 7%;
+}
+
+.all-semister-div-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.all-semister-div-container .question-sem-div {
+    width: 30%;
+    /* background: #dadada; */
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.all-semister-div-container .question-sem-div h3 {
+    color: crimson;
+    padding-left: .5rem;
+}
+
+.all-semister-div-container .question-sem-div ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.all-semister-div-container .question-sem-div ul li {
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px #888888;
+    background-color: #f5f5f5;
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.all-semister-div-container .question-sem-div ul li span {
+    color: green;
+    margin-right: 1rem;
+}
+
+.all-semister-div-container .question-sem-div ul li span.question-year {
+    display: flex;
+    align-items: center;
+    gap:1.2rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.all-semister-div-container .question-sem-div ul li a {
+    color: slateblue;
+    border-bottom: 1px solid green;
+}
+
+.all-semister-div-container .question-sem-div ul li a:hover {
+    color: blue;
+}
+
+@media (max-width:920px) {
+    #allSemisterPastYearQuestions {
+        padding: 7rem 7%;
+    }
+
+
+    .all-semister-div-container .question-sem-div {
+        width: 100%;
+    }
+
+}

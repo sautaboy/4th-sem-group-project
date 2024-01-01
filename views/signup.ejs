@@ -18,7 +18,7 @@
         <div id="content-body">
 
             <form action="/signup/" class="signup-form form" method="post" onsubmit="return validateForm()">
-                <h1>Log In</h1>
+                <h1>Sign Up</h1>
                 <div class="submitted-field">
                     <label for="">
                         <i class="ri-user-fill"></i>
@@ -44,23 +44,11 @@
 
         <% include footer.ejs%>
             <script>
-                function validateForm() {
-                    // Get form inputs
-                    var username = document.getElementById("username").value;
-                    var name = document.getElementById("name").value;
-                    var email = document.getElementById("email").value;
-                    var password = document.getElementById("password").value;
-
-                    // Check if any of the fields is empty
-                    if (username === '' || name === '' || email === '' || password === '') {
-                        alert("Please fill in all fields before submitting.");
-                        return false; // Prevent form submission
-                    }
-
-                    // Additional validation logic can be added if needed
-
-                    return true; // Allow form submission
-                }
+                // Get form inputs
+                var username = document.getElementById("username").value;
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
             </script>
 </body>
 

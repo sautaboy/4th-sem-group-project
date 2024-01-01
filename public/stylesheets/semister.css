@@ -109,40 +109,10 @@
     display: none;
 }
 
-.past-year-questions
- {
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 5px #888888;
-    background-color: #f5f5f5;
-    padding: .5rem 1rem;
-    width: 100%;
-    flex-direction: column;
+.quick-links-past-year-questions {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    overflow: scroll;
-    text-align: center;
-    border-radius: 16px;
-
-}
-.past-year-questions h4 
-{
-    border-bottom: 1px solid rgba(128, 128, 128, 0.308);
-}
-
-
-
-.each-subject-questions-list {
-    display: flex;
+    gap: 1.3rem;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-}
-
-.each-subject-questions-list a {
-    width: 20%;
-    scale: 1.2;
 }
 
 
@@ -209,4 +179,4 @@
     }
 
 
-}   
+}
