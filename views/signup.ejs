@@ -17,24 +17,24 @@
 
         <div id="content-body">
 
-            <form action="/signup/" class="signup-form form " method="post">
+            <form action="/signup/" class="signup-form form" method="post" onsubmit="return validateForm()">
                 <h1>Log In</h1>
                 <div class="submitted-field">
                     <label for="">
                         <i class="ri-user-fill"></i>
-                        <input type="text" name="username" id="" placeholder="Username">
+                        <input type="text" name="username" id="username" placeholder="Username" required>
                     </label>
                     <label for="">
                         <i class="ri-user-heart-line"></i>
-                        <input type="text" name="name" id="" placeholder="Full name">
+                        <input type="text" name="name" id="name" placeholder="Full name" required>
                     </label>
                     <label for="">
                         <i class="ri-mail-fill"></i>
-                        <input type="email" name="email" id="" placeholder="Email">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
                     </label>
                     <label for="">
                         <i class="ri-lock-unlock-fill"></i>
-                        <input type="password" name="password" id="" placeholder="Password">
+                        <input type="password" name="password" id="password" placeholder="Password" required>
                     </label>
                     <input type="submit" value="Sign Up" class="submit-button">
                     <a href="#" class="log-in-button">log in</a>
@@ -43,6 +43,25 @@
         </div>
 
         <% include footer.ejs%>
+            <script>
+                function validateForm() {
+                    // Get form inputs
+                    var username = document.getElementById("username").value;
+                    var name = document.getElementById("name").value;
+                    var email = document.getElementById("email").value;
+                    var password = document.getElementById("password").value;
+
+                    // Check if any of the fields is empty
+                    if (username === '' || name === '' || email === '' || password === '') {
+                        alert("Please fill in all fields before submitting.");
+                        return false; // Prevent form submission
+                    }
+
+                    // Additional validation logic can be added if needed
+
+                    return true; // Allow form submission
+                }
+            </script>
 </body>
 
 </html>

@@ -224,7 +224,7 @@ router.post("/editprofile", isLoggedIn, uploads.single('image'), async function 
     }
 
     if (req.body.name) {
-      user.name = req.body.name;
+      user.name = req .body.name;
     }
 
     if (req.body.bio) {
