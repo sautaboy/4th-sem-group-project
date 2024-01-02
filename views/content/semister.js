@@ -6,7 +6,19 @@
 
 const semisterData = {
     firstSemister: {
-        pdfUrl: 'dsa.pdf',
+        // past year question pdf url
+        subOnePdfUrl: 'https://drive.google.com/file/d/1AcT7q0liNwD2g87sA_QmD6KrXfzqGfmU/preview',
+
+
+        subTwoPdfUrl: 'https://drive.google.com/file/d/1qg28azt-wNljS1W73yTf93TkaTdW24fh/preview',
+
+
+        subThirdPdfUrl: 'https://drive.google.com/file/d/1rjx5a0QU1w6d6s4UKTxglRqrtHWNTZdK/preview',
+
+        subFourPdfUrl: 'https://drive.google.com/file/d/1bZUUEq8QUQN2ehft5gbz3HO_-cahMkSh/preview',
+
+        subFivePdfUrl: 'https://drive.google.com/file/d/1Z6pr4LLFAv_4K4lejKXFUzbqoLrGuWOS/preview',
+
         subOne: "Computer Fundamental",
         subTwo: "Social Science",
         subThree: "Math",
@@ -18,12 +30,29 @@ const semisterData = {
 
         secondLink: "https://drive.google.com/drive/folders/1-nuj_ZAaXJNheQ1hopLtvW-V31zJEAoQ?usp=drive_link",
 
+        thirdLink: "https://drive.google.com/drive/folders/1_a2KYu6ntxzWZqatSrv64N6gOFRV-E0S?usp=sharing",
+
+        fourthLink: "https://drive.google.com/drive/folders/1NeMz-WLEeq0LRhT8LxQ7SkrdwioaMsqo?usp=drive_link",
+
+        fifthLink: "https://drive.google.com/drive/folders/1k9nbnBfUpq9IKO2rEZw06sOheTRIHWrP?usp=drive_link",
+
+
         firstLinkDate: "2019",
-        secondLinkDate: "2020"
+        secondLinkDate: "2020",
+        thirdLinkDate: "2019 NCCS",
+        fourthLinkDate: "2019 ACHS",
+        fifthLinkDate: "2020 Mechi"
 
     },
     secondSemister: {
-        pdfUrl: 'seminar.pdf',
+
+        // pdf file url
+        subOnePdfUrl: 'dsa.pdf',
+        subTwoPdfUrl: 'dsa.pdf',
+        subThirdPdfUrl: 'dsa.pdf',
+        subFourPdfUrl: 'dsa.pdf',
+
+
         subOne: "c Programming",
         subTwo: "Math II",
         subThree: "English II",
@@ -36,14 +65,25 @@ const semisterData = {
         secondLink: "https://drive.google.com/drive/folders/1gXNRqct-t8d4A2sB_slAAyW0gZ1JNSVa?usp=sharing",
 
         firstLinkDate: "2018",
-        secondLinkDate: "2019",
+        secondLinkDate: "2020",
 
 
 
     },
     thirdSemister: {
+        // question pdf url
+        firstPdfUrl: 'dsa.pdf',
+        secondPdfUrl: 'dsa.pdf',
+        thirdPdfUrl: 'dsa.pdf',
+        fourthPdfUrl: 'dsa.pdf',
+        fifthPdfUrl: 'dsa.pdf',
+        sixthPdfUrl: 'dsa.pdf',
+        seventhPdfUrl: 'dsa.pdf',
+
+
+
+
         title: '+2 in Science',
-        pdfUrl: 'seminar.pdf',
         subOne: "Subject Name",
         subTwo: "Subject Name",
         subThree: "Subject Name",
@@ -67,6 +107,17 @@ const semisterData = {
 
     },
     fourthSemister: {
+
+        // question pdf url
+        firstPdfUrl: 'dsa.pdf',
+        secondPdfUrl: 'dsa.pdf',
+        thirdPdfUrl: 'dsa.pdf',
+        fourthPdfUrl: 'dsa.pdf',
+        fifthPdfUrl: 'dsa.pdf',
+        sixthPdfUrl: 'dsa.pdf',
+        seventhPdfUrl: 'dsa.pdf',
+
+
         title: '+2 in Science',
         pdfUrl: 'seminar.pdf',
         subOne: "Subject Name",
@@ -77,13 +128,13 @@ const semisterData = {
 
 
         // 
-        firstLink: "",
+        firstLink: "https://drive.google.com/drive/folders/1xlMFSTCo8p3Dd1jlcvKGF23FTFzXIcaQ?usp=drive_link",
 
-        secondLink: "",
+        secondLink: "https://drive.google.com/file/d/1y27mkde-EkJcBSJx5K0l4lmA06gkbWnT/view?usp=drive_link",
 
-        thirdLink: ""
+        thirdLink: "https://drive.google.com/drive/folders/1ZiOLTeToBPXpf33qnTxNhV-2ToHbMIPc?usp=drive_link"
         ,
-        firstLinkDate: "2023 ",
+        firstLinkDate: "2023",
         secondLinkDate: "2019",
         thirdLinkDate: "2020",
 
@@ -91,6 +142,17 @@ const semisterData = {
 
     }
     , fifthSemister: {
+
+        // question pdf url
+        firstPdfUrl: 'dsa.pdf',
+        secondPdfUrl: 'dsa.pdf',
+        thirdPdfUrl: 'dsa.pdf',
+        fourthPdfUrl: 'dsa.pdf',
+        fifthPdfUrl: 'dsa.pdf',
+        sixthPdfUrl: 'dsa.pdf',
+        seventhPdfUrl: 'dsa.pdf',
+
+
         title: '+2 in Science',
         pdfUrl: 'seminar.pdf',
         subOne: "Subject Name",
@@ -105,6 +167,17 @@ const semisterData = {
 
     }
     , sixthSemister: {
+
+        // question pdf url
+        firstPdfUrl: 'dsa.pdf',
+        secondPdfUrl: 'dsa.pdf',
+        thirdPdfUrl: 'dsa.pdf',
+        fourthPdfUrl: 'dsa.pdf',
+        fifthPdfUrl: 'dsa.pdf',
+        sixthPdfUrl: 'dsa.pdf',
+        seventhPdfUrl: 'dsa.pdf',
+
+
         title: '+2 in Science',
         pdfUrl: 'seminar.pdf',
         subOne: "Subject Name",
@@ -124,6 +197,17 @@ const semisterData = {
 
     }
     , seventhSemister: {
+
+        // question pdf url
+        firstPdfUrl: 'dsa.pdf',
+        secondPdfUrl: 'dsa.pdf',
+        thirdPdfUrl: 'dsa.pdf',
+        fourthPdfUrl: 'dsa.pdf',
+        fifthPdfUrl: 'dsa.pdf',
+        sixthPdfUrl: 'dsa.pdf',
+        seventhPdfUrl: 'dsa.pdf',
+
+
         title: '+2 in Science',
         pdfUrl: 'seminar.pdf',
         subOne: "Subject Name",
@@ -146,6 +230,17 @@ const semisterData = {
         thirdLinkDate: "2023 Nagaarjuna"
     },
     eightSemister: {
+
+        // question pdf url
+        firstPdfUrl: 'dsa.pdf',
+        secondPdfUrl: 'dsa.pdf',
+        thirdPdfUrl: 'dsa.pdf',
+        fourthPdfUrl: 'dsa.pdf',
+        fifthPdfUrl: 'dsa.pdf',
+        sixthPdfUrl: 'dsa.pdf',
+        seventhPdfUrl: 'dsa.pdf',
+
+
         title: '+2 in Science',
         pdfUrl: 'seminar.pdf',
         subOne: "Subject Name",

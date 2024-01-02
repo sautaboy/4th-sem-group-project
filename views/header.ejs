@@ -7,11 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 <header>
 
     <a href="/" id="logo">
         <h3>Bytes Pedia</h3>
-        <img src="/images/logo .gif" alt="">
+        <img src="/images/logo .gif" alt="bytespedia">
     </a>
 
 
@@ -36,6 +37,10 @@
         <li class="contact">
             <a href="#">Contact Us
             </a>
+        </li>
+        <br>
+        <li>
+            <a href="/developer">Developers</a>
         </li>
     </ul>
 
@@ -72,10 +77,11 @@
 
     <!-- this is for phoen view only -->
     <div class="phonoe-view-nav-list ">
-        <a href="">home</a>
-        <a href="">notices</a>
+        <a href="/">home</a>
+        <a href="#">notices</a>
         <a href="/allSemisterPastYearQuestions">all semister past year questions</a>
-        <a href="">contact</a>
+        <a href="/developer">Developers</a>
+        <a href="#">contact</a>
 
         <ul class="phone-view-semister-list">
             <li>
@@ -162,22 +168,15 @@
                 <% } %>
     </div>
 </header>
+
+
+
+
+
 <script>
-
-
-
-
-
     document.querySelector(".ham-menu-button").addEventListener("click", function (e) {
         document.querySelector(".phonoe-view-nav-list").classList.toggle("open")
         document.querySelector(".ham-menu-button").classList.toggle("ri-menu-line");
         document.querySelector(".ham-menu-button").classList.toggle("ri-close-line");
     })
-
-
-
-
-
-
-
 </script>

@@ -38,7 +38,6 @@
                 </a>
                 <a href="#<%= semisterContent.subFive %>">
                     <%= semisterContent.subFive %>
-
                 </a>
 
 
@@ -71,6 +70,12 @@
                                                 </a>
                                                 <% } %>
 
+                                                    <% if (semisterContent.fifthLink) { %>
+                                                        <a href="<%= semisterContent.fifthLink %>" target="_blank">
+                                                            <%= semisterContent.fifthLinkDate %>
+                                                        </a>
+                                                        <% } %>
+
 
                 </div>
             </div>
@@ -84,8 +89,7 @@
                         <h2>
                             <%= semisterContent.subOne %>
                         </h2>
-                        <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
-
+                        <iframe src="<%= semisterContent.subOnePdfUrl %>" frameborder="0"></iframe>
                         </iframe>
                         <div class="book-mark-section">
                             <% if (isAuthenticated) { %>
@@ -106,7 +110,7 @@
                         <h2>
                             <%= semisterContent.subTwo %>
                         </h2>
-                        <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
+                        <iframe src="<%= semisterContent.subTwoPdfUrl %>" frameborder="0"></iframe>
 
                         </iframe>
                         <div class="book-mark-section">
@@ -129,7 +133,7 @@
                         <h2>
                             <%= semisterContent.subThree %>
                         </h2>
-                        <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
+                        <iframe src="<%= semisterContent.subThirdPdfUrl %>" frameborder="0"></iframe>
 
                         </iframe>
                         <div class="book-mark-section">
@@ -153,7 +157,7 @@
                         <h2>
                             <%= semisterContent.subFour %>
                         </h2>
-                        <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
+                        <iframe src="<%= semisterContent.subFourPdfUrl %>" frameborder="0"></iframe>
 
                         </iframe>
                         <div class="book-mark-section">
@@ -177,7 +181,7 @@
                         <h2>
                             <%= semisterContent.subFive %>
                         </h2>
-                        <iframe src="/notes/<%= semisterContent.pdfUrl %>" frameborder="0"></iframe>
+                        <iframe src="<%= semisterContent.subFivePdfUrl %>" frameborder="0"></iframe>
 
                         </iframe>
                         <div class="book-mark-section">
@@ -212,13 +216,24 @@
                     // Add an event listener to each bookmark button
                     bookmarkButtons.forEach(button => {
                         button.addEventListener('click', function (e) {
+                            // Find the parent div of the clicked bookmark button
+                            const parentDiv = button.closest('.content');
+
+                            // Find the iframe within the parent div
+                            const iframe = parentDiv.querySelector('iframe');
+
+                            // Extract the iframe URL
+                            const subjectUrl = iframe ? iframe.src : null;
+
+                            if (!subjectUrl) {
+                                console.error('Failed to get iframe URL');
+                                return;
+                            }
+
                             // Implement bookmark logic here
                             // You might want to make an AJAX request to your server to handle the bookmark action
                             // Example: Fetch API
-
-                            // Extract subject title and URL from the button's id
                             const subjectTitle = button.id.replace('bookmarkButton', ''); // Remove 'bookmarkButton' prefix
-                            const subjectUrl = '/usernotes/<%= semisterContent.pdfUrl %>';
 
                             fetch('/bookmark', {
                                 method: 'POST',
@@ -241,11 +256,13 @@
                                     console.error('Error bookmarking subject:', error);
                                 });
 
-                            e.target.classList.remove("ri-bookmark-line")
-                            e.target.classList.add("ri-bookmark-fill")
+                            // Update the bookmark button's class
+                            e.target.classList.remove('ri-bookmark-line');
+                            e.target.classList.add('ri-bookmark-fill');
                         });
                     });
                 });
+
             </script>
 
             <script>
