@@ -17,24 +17,24 @@
 
         <div id="content-body">
 
-            <form action="/signup/" class="signup-form form" method="post" onsubmit="return validateForm()">
+            <form action="/signup" id="signup-form" class="signup-form form" method="post">
                 <h1>Sign Up</h1>
-                <div class="submitted-field">
-                    <label for="">
+                <div class=" submitted-field">
+                    <label for="username">
                         <i class="ri-user-fill"></i>
-                        <input type="text" name="username" id="username" placeholder="Username" required>
+                        <input type="text" name="username" id="username" placeholder="Username">
                     </label>
-                    <label for="">
+                    <label for="name">
                         <i class="ri-user-heart-line"></i>
-                        <input type="text" name="name" id="name" placeholder="Full name" required>
+                        <input type="text" name="name" id="name" placeholder="Full name">
                     </label>
-                    <label for="">
+                    <label for="email">
                         <i class="ri-mail-fill"></i>
-                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <input type="email" name="email" id="email" placeholder="Email">
                     </label>
-                    <label for="">
+                    <label for="password">
                         <i class="ri-lock-unlock-fill"></i>
-                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <input type="password" name="password" id="password" placeholder="Password">
                     </label>
                     <input type="submit" value="Sign Up" class="submit-button">
                     <a href="#" class="log-in-button">log in</a>
@@ -44,11 +44,38 @@
 
         <% include footer.ejs%>
             <script>
-                // Get form inputs
-                var username = document.getElementById("username").value;
-                var name = document.getElementById("name").value;
-                var email = document.getElementById("email").value;
-                var password = document.getElementById("password").value;
+                /// Get form inputs
+                let username = document.getElementById("username");
+                let name = document.getElementById("name");
+                let email = document.getElementById("email");
+                let password = document.getElementById("password");
+
+                const form = document.getElementById("signup-form");
+                form.addEventListener("submit", function (event) {
+                    let errorMessage = [];
+
+                    if (username.value === '' || username.value == null || username.value.trim().length === 0) {
+                        errorMessage.push("Username must be filled");
+                    }
+
+                    if (name.value === '' || name.value == null || name.value.trim().length === 0) {
+                        errorMessage.push("Name must be filled");
+                    }
+
+                    if (email.value === '' || email.value == null || email.value.trim().length === 0) {
+                        errorMessage.push("Email must be filled");
+                    }
+
+                    if (password.value === '' || password.value == null || password.value.trim().length === 0) {
+                        errorMessage.push("Password must be filled");
+                    }
+
+                    if (errorMessage.length > 0) {
+                        event.preventDefault();
+                        form.style.backgroundColor="crimson"
+                    }
+                });
+
             </script>
 </body>
 

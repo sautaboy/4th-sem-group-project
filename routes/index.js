@@ -202,9 +202,16 @@ router.post('/removeBookmark', isLoggedIn, async function (req, res, next) {
 
 
 
+// Assuming you have a route for the signup page
+router.get('/signup', function (req, res, next) {
+  // Check if the user is authenticated
+  if (req.isAuthenticated()) {
+    // If authenticated, redirect to the user's profile page
+    return res.redirect('/user');
+  }
 
-router.get("/signup", async function (req, res, next) {
-  res.render("signup", { isAuthenticated: req.isAuthenticated() });
+  // If not authenticated, render the signup page
+  res.render('signup', { isAuthenticated: req.isAuthenticated() });
 });
 
 

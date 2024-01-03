@@ -31,14 +31,20 @@
                     </label>
                     <input type="submit" value="Log In" class="submit-button">
                     <a href="/signup" class="log-in-button">sign up</a>
-                    <% if (message && message.length > 0) { %>
-                        <p class="error-message"><%= message[0] %></p>
-                      <% } %>
+                    <center>
+                        <% if (message && message.length > 0) { %>
+                            <p class="error-message"><%= message[0] %></p>
+                            <% } %>
+                        </center>
                 </div>
             </form>
         </div>
 
         <% include footer.ejs%>
+
+
+
+
 </body>
 
 <script></script>

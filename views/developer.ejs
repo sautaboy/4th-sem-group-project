@@ -163,11 +163,8 @@
 
 
                 const diapnshuImageLIst = [
-                    "/images/Developers Photos/aavash1.jpg",
-                    "/images/Developers Photos/aavash2.jpg",
-                    "/images/Developers Photos/aavash3.jpg",
-                    "/images/Developers Photos/aavash4.jpg",
-                    "/images/Developers Photos/aavash5.jpg"
+                    "/images/Developers Photos/dipanshu1.jpg",
+                    "/images/Developers Photos/dipanshu2.jpg",
                 ]
 
 
@@ -181,11 +178,10 @@
 
 
                 const ashokImageLIst = [
-                    "/images/Developers Photos/aavash1.jpg",
-                    "/images/Developers Photos/aavash2.jpg",
-                    "/images/Developers Photos/aavash3.jpg",
-                    "/images/Developers Photos/aavash4.jpg",
-                    "/images/Developers Photos/aavash5.jpg"
+                    "/images/Developers Photos/ashok1.jpeg",
+                    "/images/Developers Photos/ashok2.jpg",
+                    "/images/Developers Photos/ashok3.jpeg",
+                    "/images/Developers Photos/ashok4.jpg",
                 ]
 
                 const joshnaImage = document.querySelector(".joshna-image")
@@ -194,59 +190,64 @@
                 const dipanshuImage = document.querySelector(".dipanshu-image")
                 const ashokImage = document.querySelector(".ashok-image")
 
-                let randomNumber = Math.floor(Math.random() * 5)
-                let i = randomNumber;
+                
+                let randomNumberForJoshna = Math.floor(Math.random() * joshnaImageLIst.length - 1)
+                let randomNumberForAavash = Math.floor(Math.random() * aavashImageLIst.length - 1)
+                let randomNumberForKarub = Math.floor(Math.random() * karubImageLIst.length - 1)
+                let randomNumberForDipanshu = Math.floor(Math.random() * diapnshuImageLIst.length - 1)
+                let randomNumberForAshok = Math.floor(Math.random() * ashokImageLIst.length - 1)
+
 
 
                 // joshna
-                joshnaImage.setAttribute("src", joshnaImageLIst[i])
+                joshnaImage.setAttribute("src", joshnaImageLIst[randomNumberForJoshna])
                 setInterval(() => {
-                    i++
+                    randomNumberForJoshna++
                     joshnaImage.setAttribute("src", joshnaImageLIst[i])
-                    if (i == aavashImageLIst.length - 1) {
-                        i = 0
+                    if (randomNumberForJoshna == joshnaImageLIst.length - 1) {
+                        randomNumberForJoshna = 0
                     }
                 }, 15000)
 
                 // aavash
-                aavashImage.setAttribute("src", aavashImageLIst[i])
+                aavashImage.setAttribute("src", aavashImageLIst[randomNumberForAavash])
                 setInterval(() => {
-                    i++
-                    aavashImage.setAttribute("src", aavashImageLIst[i])
-                    if (i == aavashImageLIst.length - 1) {
-                        i = 0
+                    randomNumberForAavash++
+                    aavashImage.setAttribute("src", aavashImageLIst[randomNumberForAavash])
+                    if (randomNumberForAavash == aavashImageLIst.length - 1) {
+                        randomNumberForAavash = 0
                     }
                 }, 15000)
 
 
                 // karub
-                karubImage.setAttribute("src", karubImageLIst[i])
+                karubImage.setAttribute("src", karubImageLIst[randomNumberForKarub])
                 setInterval(() => {
-                    i++
-                    karubImage.setAttribute("src", karubImageLIst[i])
-                    if (i == aavashImageLIst.length - 1) {
-                        i = 0
+                    randomNumberForKarub++
+                    karubImage.setAttribute("src", karubImageLIst[randomNumberForKarub])
+                    if (randomNumberForKarub == karubImageLIst.length - 1) {
+                        randomNumberForKarub = 0
                     }
                 }, 15000)
 
 
                 // dipanshu
-                dipanshuImage.setAttribute("src", diapnshuImageLIst[i])
+                dipanshuImage.setAttribute("src", diapnshuImageLIst[randomNumberForDipanshu])
                 setInterval(() => {
-                    i++
-                    dipanshuImage.setAttribute("src", diapnshuImageLIst[i])
-                    if (i == aavashImageLIst.length - 1) {
-                        i = 0
+                    randomNumberForDipanshu++
+                    dipanshuImage.setAttribute("src", diapnshuImageLIst[randomNumberForDipanshu])
+                    if (randomNumberForDipanshu == diapnshuImageLIst.length - 1) {
+                        randomNumberForDipanshu = 0
                     }
                 }, 15000)
 
-                // dipanshu
-                ashokImage.setAttribute("src", ashokImageLIst[i])
+                // ashok
+                ashokImage.setAttribute("src", ashokImageLIst[randomNumberForAshok])
                 setInterval(() => {
-                    i++
-                    ashokImage.setAttribute("src", ashokImageLIst[i])
-                    if (i == aavashImageLIst.length - 1) {
-                        i = 0
+                    randomNumberForAshok++
+                    ashokImage.setAttribute("src", ashokImageLIst[randomNumberForAshok])
+                    if (randomNumberForAshok == ashokImageLIst.length - 1) {
+                        randomNumberForAshok= 0
                     }
                 }, 15000)
 

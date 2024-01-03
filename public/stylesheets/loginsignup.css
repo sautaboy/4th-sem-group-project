@@ -2,6 +2,7 @@
     min-height: 100vh;
 }
 
+
 .form {
     width: fit-content;
     /* background: var(--button-background); */
@@ -22,111 +23,117 @@
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.402);
     border: 1px solid gray;
-}
 
-.form h1 {
-    height: 6rem;
-    background: var(--purple);
-    text-transform: uppercase;
-    color: #111;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    animation: Shake 0.5s linear infinite;
 
-.submitted-field {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
-    padding: 20px;
-}
 
-.form label {
-    display: flex;
-    font-size: 20px;
-    letter-spacing: 1px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    height: 3rem;
-    background: green;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-}
-
-.form label i {
-    width: 10%;
-    background: var(--purple);
-    height: 100%;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-}
-
-.form label input {
-    width: 90%;
-    padding: 0 10px;
-    outline: none;
-    border-radius: 0 5px 5px 0;
-    border: green 1px solid;
 }
 
 
 
-
-.form label input {
-    height: 100%;
-    border: .5px solid rgba(0, 0, 0, 0.342);
-    border-left: none;
-    letter-spacing: 1px;
-
-}
-
-.form input.submit-button {
-    height: 3rem;
-    cursor: pointer;
-    letter-spacing: 1px;
-    background: var(--purple);
-    border-radius: 10px;
-    border: none;
-    color: #fff;
-    letter-spacing: 1px;
-    font-weight: bold;
-    background: green;
-}
-
-.form input.submit-button:hover {
-
-    background: hsl(197, 86%, 22%);
-
-}
-input.choose-image-button
-{
-    width: 90%;
-    height: 100%;
-    border: none;
-    border: .5px solid rgba(0, 0, 0, 0.342);
-    cursor: pointer;
-}
-input[type="file"]
-{
-    position: absolute;
-
-}
-
-
-.log-in-button {
-    text-align: center;
-    text-transform: capitalize;
-}
-
-@media (max-width: 920px) {
-    .form {
-        width: 95%;
+    .form h1 {
+        height: 6rem;
+        background: var(--purple);
+        text-transform: uppercase;
+        color: #111;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-}
+
+    .submitted-field {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .form label {
+        display: flex;
+        font-size: 20px;
+        letter-spacing: 1px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        height: 3rem;
+        background: green;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .form label i {
+        width: 10%;
+        background: var(--purple);
+        height: 100%;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+
+    .form label input {
+        width: 90%;
+        padding: 0 10px;
+        outline: none;
+        border-radius: 0 5px 5px 0;
+        border: green 1px solid;
+    }
+
+
+
+
+    .form label input {
+        height: 100%;
+        border: .5px solid rgba(0, 0, 0, 0.342);
+        border-left: none;
+        letter-spacing: 1px;
+
+    }
+
+    .form input.submit-button {
+        height: 3rem;
+        cursor: pointer;
+        letter-spacing: 1px;
+        background: var(--purple);
+        border-radius: 10px;
+        border: none;
+        color: #fff;
+        letter-spacing: 1px;
+        font-weight: bold;
+        background: green;
+    }
+
+    .form input.submit-button:hover {
+
+        background: hsl(197, 86%, 22%);
+
+    }
+
+    input.choose-image-button {
+        width: 90%;
+        height: 100%;
+        border: none;
+        border: .5px solid rgba(0, 0, 0, 0.342);
+        cursor: pointer;
+    }
+
+    input[type="file"] {
+        position: absolute;
+
+    }
+
+
+    .log-in-button {
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    @media (max-width: 920px) {
+        .form {
+            width: 95%;
+        }
+    }

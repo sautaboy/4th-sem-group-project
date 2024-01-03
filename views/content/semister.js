@@ -6,18 +6,17 @@
 
 const semisterData = {
     firstSemister: {
-        // past year question pdf url
-        subOnePdfUrl: 'https://drive.google.com/file/d/1AcT7q0liNwD2g87sA_QmD6KrXfzqGfmU/preview',
+        subOnePdfUrl: '',
 
 
-        subTwoPdfUrl: 'https://drive.google.com/file/d/1qg28azt-wNljS1W73yTf93TkaTdW24fh/preview',
+        subTwoPdfUrl: '',
 
 
-        subThirdPdfUrl: 'https://drive.google.com/file/d/1rjx5a0QU1w6d6s4UKTxglRqrtHWNTZdK/preview',
+        subThirdPdfUrl: '',
 
-        subFourPdfUrl: 'https://drive.google.com/file/d/1bZUUEq8QUQN2ehft5gbz3HO_-cahMkSh/preview',
+        subFourPdfUrl: 'https://drive.google.com/file/d/1N8VyNmFLBX56WtwkqIj566hlGGja4Sal/preview',
 
-        subFivePdfUrl: 'https://drive.google.com/file/d/1Z6pr4LLFAv_4K4lejKXFUzbqoLrGuWOS/preview',
+        subFivePdfUrl: '',
 
         subOne: "Computer Fundamental",
         subTwo: "Social Science",
@@ -35,13 +34,15 @@ const semisterData = {
         fourthLink: "https://drive.google.com/drive/folders/1NeMz-WLEeq0LRhT8LxQ7SkrdwioaMsqo?usp=drive_link",
 
         fifthLink: "https://drive.google.com/drive/folders/1k9nbnBfUpq9IKO2rEZw06sOheTRIHWrP?usp=drive_link",
+        sixthLink: "https://drive.google.com/file/d/1cbbFxqmYFtulwTmJ0uMoOhsBtbtAghhU/view?usp=drive_link",
 
 
         firstLinkDate: "2019",
         secondLinkDate: "2020",
         thirdLinkDate: "2019 NCCS",
         fourthLinkDate: "2019 ACHS",
-        fifthLinkDate: "2020 Mechi"
+        fifthLinkDate: "2020 Mechi",
+        sixthLinkDate: "2021"
 
     },
     secondSemister: {
@@ -63,9 +64,11 @@ const semisterData = {
         firstLink: "https://drive.google.com/drive/folders/1L1TTW7SBmkDvdxf3AaU49gXp5RwAm6Pu?usp=sharing",
 
         secondLink: "https://drive.google.com/drive/folders/1gXNRqct-t8d4A2sB_slAAyW0gZ1JNSVa?usp=sharing",
+        thirdLink: "https://drive.google.com/file/d/1p2Ct9Xv_wm1_GWqDqwr5VbgGO_NSORKL/view?usp=drive_link",
 
         firstLinkDate: "2018",
         secondLinkDate: "2020",
+        thirdLinkDate: "2021"
 
 
 
