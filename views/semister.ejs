@@ -14,6 +14,7 @@
     <% include header.ejs %>
 
 
+
         <div id="content-body">
             <i class="ri-arrow-left-double-fill show-subject-list"></i>
 
@@ -76,20 +77,22 @@
                                                             <%= semisterContent.fifthLinkDate %>
                                                         </a>
                                                         <% } %>
-                                                        
 
-                                                        <% if (semisterContent.fifthLink) { %>
-                                                            <a href="<%= semisterContent.fifthLink %>" target="_blank">
-                                                                <%= semisterContent.fifthLinkDate %>
-                                                            </a>
-                                                            <% } %>
 
-                                                            <% if (semisterContent.sixthLink) { %>
-                                                                <a href="<%= semisterContent.sixthLink %>" target="_blank">
-                                                                    <%= semisterContent.sixthLinkDate %>
+                                                            <% if (semisterContent.fifthLink) { %>
+                                                                <a href="<%= semisterContent.fifthLink %>"
+                                                                    target="_blank">
+                                                                    <%= semisterContent.fifthLinkDate %>
                                                                 </a>
                                                                 <% } %>
-                                                            
+
+                                                                    <% if (semisterContent.sixthLink) { %>
+                                                                        <a href="<%= semisterContent.sixthLink %>"
+                                                                            target="_blank">
+                                                                            <%= semisterContent.sixthLinkDate %>
+                                                                        </a>
+                                                                        <% } %>
+
 
 
                 </div>
@@ -224,14 +227,17 @@
             <!-- Other HTML content above -->
 
             <script>
+                const bookmarkButtons = document.querySelectorAll('.bookmark-button');
                 document.addEventListener('DOMContentLoaded', function () {
                     // Get all bookmark buttons by class name
-                    const bookmarkButtons = document.querySelectorAll('.bookmark-button');
+                    // bookmarkButtons=localStorage.getItem('bookmarkButtons');    
 
                     // Add an event listener to each bookmark button
                     bookmarkButtons.forEach(button => {
                         button.addEventListener('click', function (e) {
                             // Find the parent div of the clicked bookmark button
+
+                            // bookmarkButtons.style.backgroundColor="black"
                             const parentDiv = button.closest('.content');
 
                             // Find the iframe within the parent div
@@ -292,15 +298,48 @@
             <script>
 
 
-                document.querySelectorAll(".quick-links a").forEach(function (e) {
-                    e.addEventListener("click", function () {
-                        document.querySelector(".quick-links").classList.remove("open");
+                // document.querySelectorAll(".quick-links a").forEach(function (e) {
+                //     e.addEventListener("click", function () {
+                //         document.querySelector(".quick-links").classList.remove("open");
 
-                        document.querySelector(".show-subject-list").classList.toggle("ri-arrow-right-double-fill")
-                        document.querySelector(".show-subject-list").classList.toggle("ri-arrow-left-double-fill")
+                //         document.querySelector(".show-subject-list").classList.toggle("ri-arrow-right-double-fill")
+                //         document.querySelector(".show-subject-list").classList.toggle("ri-arrow-left-double-fill")
+                //     });
+                // });
+            </script>
+
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Get all bookmark buttons
+                    var bookmarkButtons = document.querySelectorAll('.bookmark-button');
+
+                    // Loop through each bookmark button
+                    bookmarkButtons.forEach(function (eachButton) {
+                        // Create a unique key for each button based on its id or some other identifier
+                        var buttonKey = "blackBackslashBookmark_" + eachButton.id;
+
+                        // Check if the button is bookmarked
+                        var isBookmarked = localStorage.getItem(buttonKey);
+
+                        // Set the initial color based on the bookmarked state
+                        if (isBookmarked) {
+                            eachButton.style.color = "red";
+                        }
+
+                        // Add click event listener to each bookmark button
+                        eachButton.addEventListener("click", function (e) {
+                            eachButton.style.color = "red";
+
+                            // Set the bookmarked state in localStorage for this specific button
+                            localStorage.setItem(buttonKey, true);
+                        });
                     });
                 });
+
+
             </script>
+
 
 </body>
 
