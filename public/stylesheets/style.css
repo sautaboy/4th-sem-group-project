@@ -21,7 +21,7 @@ body {
 }
 
 .bytes {
-  color: crimson;
+  color: #dc143c;
   font-size: 24px;
   letter-spacing: 1px;
 }

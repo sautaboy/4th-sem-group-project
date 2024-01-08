@@ -3,13 +3,9 @@ var router = express.Router();
 const userModel = require("./users");
 const passport = require('passport');
 const localStrategy = require("passport-local")
-const flash = require('express-flash');
 
 const userPhotoModel = require("./userphoto")
-
 const uploads = require("./multer");
-
-
 const semisterData = require("../views/content/semister")
 
 

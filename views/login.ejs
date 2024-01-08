@@ -24,7 +24,7 @@
                         <i class="ri-user-fill"></i>
                         <input type="text" name="username" id="" placeholder="Username">
                     </label>
-                    
+
                     <label for="">
                         <i class="ri-lock-unlock-fill"></i>
                         <input type="password" name="password" id="" placeholder="Password">
@@ -32,10 +32,12 @@
                     <input type="submit" value="Log In" class="submit-button">
                     <a href="/signup" class="log-in-button">sign up</a>
                     <center>
-                        <% if (message && message.length > 0) { %>
-                            <p class="error-message"><%= message[0] %></p>
+                        <% if (message && message.length> 0) { %>
+                            <p class="error-message">
+                                <%= message[0] %>
+                            </p>
                             <% } %>
-                        </center>
+                    </center>
                 </div>
             </form>
         </div>
