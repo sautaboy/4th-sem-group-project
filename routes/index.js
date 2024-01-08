@@ -3,9 +3,13 @@ var router = express.Router();
 const userModel = require("./users");
 const passport = require('passport');
 const localStrategy = require("passport-local")
+const flash = require('express-flash');
 
 const userPhotoModel = require("./userphoto")
+
 const uploads = require("./multer");
+
+
 const semisterData = require("../views/content/semister")
 
 
@@ -243,16 +247,25 @@ router.post("/signup", function (req, res, next) {
 
 
 
-// logi in router
+// Login route
 router.get("/login", function (req, res, next) {
+  // Check if the user is already authenticated
+  if (req.isAuthenticated()) {
+    // If authenticated, redirect to the user page
+    return res.redirect("/user");
+  }
+
+  // If not authenticated, render the login page
   res.render("login", { isAuthenticated: req.isAuthenticated(), message: req.flash("error") });
 });
+
 
 // check the user is there or not
 router.post("/login", passport.authenticate("local", {
   successRedirect: "/user",
   failureRedirect: "/login",
   failureFlash: true, // Enable flash messages for failed login
+  
 }));
 
 

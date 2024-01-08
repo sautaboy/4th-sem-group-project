@@ -5,7 +5,7 @@ const plm = require("passport-local-mongoose");
 mongoose.connect("mongodb://localhost:27017/sem-four-database")
 
 const userSchema = mongoose.Schema({
-  username: String,
+  username: { type: String, unique: true },
   name: String,
   password: String,
   image: String,
