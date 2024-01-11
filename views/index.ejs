@@ -73,76 +73,21 @@
 
         <div class="wrapper">
           <h1>
-            " Highlighted Notes "
+            " People Feedback "
           </h1>
           <!-- left arrow -->
           <i class="ri-arrow-left-s-line"></i>
 
           <ul class="carousel">
-            <a href="#" class="card">
-              <div class="img">
-                <img src="https://i.pinimg.com/564x/bc/1d/5a/bc1d5ac98c4ac16f14ad4083f0254feb.jpg" alt=""
-                  draggable="false" />
-              </div>
-              <h2>Eren Yeager</h2>
-              <span>The Antagonist</span>
-            </a>
-            <a href="#" class="card">
-              <div class="img">
-                <img src="https://i.pinimg.com/564x/0f/66/48/0f66486f2e23f367acf86d53f4207746.jpg" alt=""
-                  draggable="false" />
-              </div>
-              <h2>Eren Yeager</h2>
-              <span>The Antagonist</span>
-            </a>
-            <a href="#" class="card">
-              <div class="img">
-                <img src="https://i.pinimg.com/564x/48/90/79/489079d2add7bab6a2d7f7c128922b16.jpg" alt=""
-                  draggable="false" />
-              </div>
-              <h2>Eren Yeager</h2>
-              <span>The Antagonist</span>
-            </a>
-            <a href="#" class="card">
-              <div class="img">
-                <img src="https://i.pinimg.com/564x/1f/f7/f9/1ff7f99ab588d3238f5a977050b09299.jpg" alt=""
-                  draggable="false" />
-              </div>
-              <h2>Eren Yeager</h2>
-              <span>The Antagonist</span>
-            </a>
-            <a href="#" class="card">
-              <div class="img">
-                <img src="https://i.pinimg.com/564x/bc/1d/5a/bc1d5ac98c4ac16f14ad4083f0254feb.jpg" alt=""
-                  draggable="false" />
-              </div>
-              <h2>Eren Yeager</h2>
-              <span>The Antagonist</span>
-            </a>
-            <a href="#" class="card">
-              <div class="img">
-                <img src="https://i.pinimg.com/564x/0f/66/48/0f66486f2e23f367acf86d53f4207746.jpg" alt=""
-                  draggable="false" />
-              </div>
-              <h2>Eren Yeager</h2>
-              <span>The Antagonist</span>
-            </a>
-            <a href="#" class="card">
-              <div class="img">
-                <img src="https://i.pinimg.com/564x/48/90/79/489079d2add7bab6a2d7f7c128922b16.jpg" alt=""
-                  draggable="false" />
-              </div>
-              <h2>Eren Yeager</h2>
-              <span>The Antagonist</span>
-            </a>
-            <a href="#" class="card">
-              <div class="img">
-                <img src="https://i.pinimg.com/564x/1f/f7/f9/1ff7f99ab588d3238f5a977050b09299.jpg" alt=""
-                  draggable="false" />
-              </div>
-              <h2>Eren Yeager</h2>
-              <span>The Antagonist</span>
-            </a>
+            <% feedback.forEach(function(e){ %>
+              <a href="#" class="card">
+                <div class="img">
+                  <img src="/images/userPhoto/<%= e.user.image%>" alt="<%= e.user.name %>'" width="200">
+                </div>
+                <h2><%= e.user.username%></h2>
+                <span><%= e.comment%></span>
+              </a>
+              <% }) %>
           </ul>
           <i class="ri-arrow-right-s-line"></i>
         </div>

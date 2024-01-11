@@ -6,6 +6,7 @@ const localStrategy = require("passport-local")
 const flash = require('express-flash');
 
 const userPhotoModel = require("./userphoto")
+const feedbackModel = require('./feedback')
 
 const uploads = require("./multer");
 
@@ -38,6 +39,11 @@ passport.use(new localStrategy(
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
+
+  const feedback = await feedbackModel.find().populate("user")
+  console.log(feedback)
+
+
   try {
 
     // Check if the user is authenticated
@@ -50,12 +56,26 @@ router.get('/', async function (req, res, next) {
     }
 
     // Render the 'index' view with data
-    res.render('index', { title: 'Bytes Pedia', isAuthenticated, user });
+    res.render('index', { title: 'Bytes Pedia', isAuthenticated, user, feedback });
   } catch (err) {
     // Handle any errors that may occur during the database query or rendering
     console.error(err);
     res.status(500).send('Internal Server Error');
   }
+});
+
+router.post("/feedback", isLoggedIn, async function (req, res, next) {
+
+  const user = await userModel.findOne({ username: req.user.username });
+  const feedback = feedbackModel.create({
+    comment: req.body.comment,
+    user: user._id
+  })
+
+
+  user.feedback.push((feedback)._id);
+  user.save()
+  res.redirect("/")
 });
 
 
@@ -265,7 +285,7 @@ router.post("/login", passport.authenticate("local", {
   successRedirect: "/user",
   failureRedirect: "/login",
   failureFlash: true, // Enable flash messages for failed login
-  
+
 }));
 
 

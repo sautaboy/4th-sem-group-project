@@ -17,7 +17,7 @@
 
     <ul id="center-nav-list">
         <li class="hover-bca-note">
-            <a href="#">BCA Notes
+            <a href="#">Your Semister
                 <i class="ri-arrow-down-s-fill"></i>
             </a>
 
@@ -26,7 +26,7 @@
                     <a href="/allSemisterPastYearQuestions">All Semister Past Year Questions</a>
                 </li>
                 <li>
-                    <a href="#">Exam Schedule</a>
+                    <a href="#">Exam Routine</a>
                 </li>
             </ul>
 
@@ -34,8 +34,9 @@
         </li>
 
         <li class="contact">
-            <a href="#">Contact Us
-            </a>
+            <% if(isAuthenticated) {%>
+                <a class="feedback-form-button">Feedback    
+            <%}%>
         </li>
         <br>
         <li>
@@ -55,7 +56,7 @@
     <div id="navbar-buttons">
         <% if (isAuthenticated) { %>
             <a href="/user" class="user-profile-picture">
-                <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'s Profile Image" width="200">
+                <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'" width="200">
 
             </a>
             <% } else { %>
@@ -77,10 +78,12 @@
     <!-- this is for phoen view only -->
     <div class="phonoe-view-nav-list ">
         <a href="/">home</a>
-        <a href="#">notices</a>
         <a href="/allSemisterPastYearQuestions">all semister past year questions</a>
         <a href="/developer">Developers</a>
-        <a href="#">contact</a>
+        <% if(isAuthenticated) {%>
+            <a class="feedback-form-button">Feedback    
+        <%}%>
+        </a>
 
         <ul class="phone-view-semister-list">
             <li>
@@ -166,22 +169,67 @@
                 <p> - you will have the bookmark features when you create an account -</p>
                 <% } %>
     </div>
+
+
 </header>
 
 
+<form action="feedback" method="post" id="feedback-form" enctype="multipart/form-data">
+     <!-- Add a hidden input field for the current URL -->
+  <input type="hidden" name="currentUrl" id="currentUrl" value="">
+    <i class="ri-close-line close-feedback-form"></i>
+    <h2>
+        Give Your Feedback or Suggestions 😊
+    </h2>
+
+    <select id="feedback-option">
+        <option value="">Rate Us</option>
+        <option value="best">✩ ✩ ✩</option>
+        <option value="notbad">✩ ✩</option>
+        <option value="needtoclear">✩</option>
+    </select>
+
+    <div class="feedback-comment">
+        <h3>Write Suggestions</h3>
+        <textarea name="comment" id="" cols="30" rows="10" placeholder="your must have write something..."></textarea>
+    </div>
+    <button>
+        Submit
+    </button>
+</form>
 
 
+<!-- Include jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script>
-    document.querySelector(".ham-menu-button").addEventListener("click", function (e) {
-        document.querySelector(".phonoe-view-nav-list").classList.toggle("open")
-        document.querySelector(".ham-menu-button").classList.toggle("ri-menu-line");
-        document.querySelector(".ham-menu-button").classList.toggle("ri-close-line");
-    })
+    $(document).ready(function () {
+        // Set the current URL in the hidden input field
+        $("#currentUrl").val(window.location.href);
 
+        // Submit the form using AJAX
+        $("#feedback-form").submit(function (e) {
+            e.preventDefault();
 
+            $.ajax({
+                type: "POST",
+                url: "/feedback",
+                data: $(this).serialize(),
+                success: function (response) {
+                    // Handle success if needed
+                    console.log("Feedback submitted successfully");
 
-
-
-
+                    // Redirect to the original URL
+                    window.location.href = $("#currentUrl").val();
+                },
+                error: function (error) {
+                    // Handle error if needed
+                    console.error("Error submitting feedback", error);
+                }
+            });
+        });
+    });
 </script>
+
+
+<script src="/javascripts/header.js"></script>
