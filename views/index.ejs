@@ -27,7 +27,7 @@
 
             <div class="typewriter-container">
               <div class="text">
-                <h1>Welcome To <span>BCA</span> Nepal</h1>
+                <h1>Welcome To <span>" Bytes</span> Pedia "</h1>
               </div>
 
               <h2>Student can here:</h2>
@@ -44,13 +44,14 @@
                 For those seeking an organized study approach, registered users can take advantage of our bookmarking
                 feature, creating a personalized study plan with ease. Not registered? No worries! All users, logged in
                 or not, can seamlessly download and view notes directly from our website. Explore our collection,
-                enhance your understanding of complex concepts, and make your academic experience smoother with [Your
-                Website Name].
+                enhance your understanding of complex concepts, and make your academic experience smoother with
+                <span class="bytes index">Bytes</span> <span class="pedia index">Pedia </span>
 
               </p>
               <p>
                 Your success matters to us. For questions, suggestions, or support, reach out to our dedicated team.
-                Thank you for choosing [Your Website Name] – where learning is made simple and accessible for everyone.
+                Thank you for choosing <span class="bytes index">Bytes</span> <span class="pedia index">Pedia </span>
+                where learning is made simple and accessible for everyone.
               </p>
 
             </div>
@@ -58,16 +59,94 @@
           </div>
 
           <div class="right-side">
+
             <div class="giffy-img-wrap">
+              <img src="/images/hi.gif" alt="book is self turning the page giffy image">
+
               <img src="/images/lets read.gif" alt="book is self turning the page giffy image">
             </div>
           </div>
         </div>
 
-        <div id="see-more">
-          <span>see more</span>
-          <i class="ri-arrow-down-line"></i>
+
+        <!-- carousel is here -->
+
+        <div class="wrapper">
+          <h1>
+            " Highlighted Notes "
+          </h1>
+          <!-- left arrow -->
+          <i class="ri-arrow-left-s-line"></i>
+
+          <ul class="carousel">
+            <a href="#" class="card">
+              <div class="img">
+                <img src="https://i.pinimg.com/564x/bc/1d/5a/bc1d5ac98c4ac16f14ad4083f0254feb.jpg" alt=""
+                  draggable="false" />
+              </div>
+              <h2>Eren Yeager</h2>
+              <span>The Antagonist</span>
+            </a>
+            <a href="#" class="card">
+              <div class="img">
+                <img src="https://i.pinimg.com/564x/0f/66/48/0f66486f2e23f367acf86d53f4207746.jpg" alt=""
+                  draggable="false" />
+              </div>
+              <h2>Eren Yeager</h2>
+              <span>The Antagonist</span>
+            </a>
+            <a href="#" class="card">
+              <div class="img">
+                <img src="https://i.pinimg.com/564x/48/90/79/489079d2add7bab6a2d7f7c128922b16.jpg" alt=""
+                  draggable="false" />
+              </div>
+              <h2>Eren Yeager</h2>
+              <span>The Antagonist</span>
+            </a>
+            <a href="#" class="card">
+              <div class="img">
+                <img src="https://i.pinimg.com/564x/1f/f7/f9/1ff7f99ab588d3238f5a977050b09299.jpg" alt=""
+                  draggable="false" />
+              </div>
+              <h2>Eren Yeager</h2>
+              <span>The Antagonist</span>
+            </a>
+            <a href="#" class="card">
+              <div class="img">
+                <img src="https://i.pinimg.com/564x/bc/1d/5a/bc1d5ac98c4ac16f14ad4083f0254feb.jpg" alt=""
+                  draggable="false" />
+              </div>
+              <h2>Eren Yeager</h2>
+              <span>The Antagonist</span>
+            </a>
+            <a href="#" class="card">
+              <div class="img">
+                <img src="https://i.pinimg.com/564x/0f/66/48/0f66486f2e23f367acf86d53f4207746.jpg" alt=""
+                  draggable="false" />
+              </div>
+              <h2>Eren Yeager</h2>
+              <span>The Antagonist</span>
+            </a>
+            <a href="#" class="card">
+              <div class="img">
+                <img src="https://i.pinimg.com/564x/48/90/79/489079d2add7bab6a2d7f7c128922b16.jpg" alt=""
+                  draggable="false" />
+              </div>
+              <h2>Eren Yeager</h2>
+              <span>The Antagonist</span>
+            </a>
+            <a href="#" class="card">
+              <div class="img">
+                <img src="https://i.pinimg.com/564x/1f/f7/f9/1ff7f99ab588d3238f5a977050b09299.jpg" alt=""
+                  draggable="false" />
+              </div>
+              <h2>Eren Yeager</h2>
+              <span>The Antagonist</span>
+            </a>
+          </ul>
+          <i class="ri-arrow-right-s-line"></i>
         </div>
+
       </div>
 
 
@@ -79,15 +158,13 @@
       <div class="second-page" id="semister-list-link">
         <div class="introduction">
           <p>Welcome to our
-            <span class="bytes">Bytes</span>
-            <span class="pedia">Pedia</span>
+            <span class="bytes index">Bytes</span> <span class="pedia index">Pedia </span>
             Click on your specific semester link to discover
             subjects and access notes
             tailored for your academic needs. Navigate seamlessly through past-year questions for each subject,
             enhancing your preparation. It's your one-stop destination for organized study materials and exam resources.
             Explore, learn, and excel in your BCA journey with ease.
             <span class="img">
-              <!-- <img src="/images/dancing boy.gif.crdownload" alt=""> -->
               <img src="/images/girl reading book gif.gif" alt="gir is reading a book giffy">
             </span>
           </p>
@@ -137,52 +214,7 @@
 
     <% include footer.ejs%>
 
-
-      <script>
-
-        document.addEventListener('DOMContentLoaded', function () {
-          const textElement = document.getElementById('typewriter-text');
-          const texts = ["Each Semister Notes", "Every Subject Past Year Questions", "Exam Shedule"];
-          let speed = 80; // Adjust the typing speed (milliseconds)
-          let textIndex = 0;
-          let charIndex = 0;
-
-          function typeWriter() {
-            if (charIndex < texts[textIndex].length) {
-              textElement.innerHTML += texts[textIndex].charAt(charIndex);
-              charIndex++;
-              setTimeout(typeWriter, speed);
-            } else {
-              // Pause before starting to erase
-              setTimeout(eraseText, 1000);
-            }
-          }
-
-          function eraseText() {
-            if (charIndex > 0) {
-              textElement.innerHTML = texts[textIndex].substring(0, charIndex - 1);
-              charIndex--;
-              setTimeout(eraseText, speed);
-            } else {
-              // Move to the next text or start over
-              textIndex = (textIndex + 1) % texts.length;
-              setTimeout(typeWriter, speed);
-            }
-          }
-
-          typeWriter(); // Start the typing animation
-        });
-      </script>
-
-
-
-      <script>
-      </script>
-
-      <!-- crausel -->
-
-
-
+      <script src="/javascripts/index.js"></script>
 </body>
 
 </html>
