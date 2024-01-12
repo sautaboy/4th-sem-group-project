@@ -35,8 +35,8 @@
 
         <li class="contact">
             <% if(isAuthenticated) {%>
-                <a class="feedback-form-button">Feedback    
-            <%}%>
+                <a class="feedback-form-button">Feedback
+                    <%}%>
         </li>
         <br>
         <li>
@@ -81,155 +81,119 @@
         <a href="/allSemisterPastYearQuestions">all semister past year questions</a>
         <a href="/developer">Developers</a>
         <% if(isAuthenticated) {%>
-            <a class="feedback-form-button">Feedback    
-        <%}%>
-        </a>
+            <a class="feedback-form-button">Feedback
+                <%}%>
+            </a>
 
-        <ul class="phone-view-semister-list">
-            <li>
-                <a class="down-icon">
-                    get notes
-                    <i class="ri-arrow-down-s-fill"></i>
-                </a>
-
-                <ul class="semister-list">
-                    <li>
-                        <a href="/semister/firstSemister">
-                            first Semister
-                        </a>
-                    </li>
-                    <li>
-
-                        <a href="/semister/secondSemister">
-                            Second Semister
-                        </a>
-                    </li>
-
-                    <li>
-
-                        <a href="/semister/thirdSemister">
-                            Third Semister
-                        </a>
-                    </li>
-
-                    <li>
-
-                        <a href="/semister/fourthSemister">
-                            Fourth Semister
-                        </a>
-                    </li>
-
-                    <li>
-
-                        <a href="/semister/fifthSemister">
-                            Fifth Semister
-                        </a>
-                    </li>
-
-                    <a href="/semister/sixthSemister">
-                        Sixth Semister
+            <ul class="phone-view-semister-list">
+                <li>
+                    <a class="down-icon">
+                        get notes
+                        <i class="ri-arrow-down-s-fill"></i>
                     </a>
 
-                    <li>
+                    <ul class="semister-list">
+                        <li>
+                            <a href="/semister/firstSemister">
+                                first Semister
+                            </a>
+                        </li>
+                        <li>
 
-                        <a href="/semister/seventhSemister">
-                            Seventh Semister
+                            <a href="/semister/secondSemister">
+                                Second Semister
+                            </a>
+                        </li>
+
+                        <li>
+
+                            <a href="/semister/thirdSemister">
+                                Third Semister
+                            </a>
+                        </li>
+
+                        <li>
+
+                            <a href="/semister/fourthSemister">
+                                Fourth Semister
+                            </a>
+                        </li>
+
+                        <li>
+
+                            <a href="/semister/fifthSemister">
+                                Fifth Semister
+                            </a>
+                        </li>
+
+                        <a href="/semister/sixthSemister">
+                            Sixth Semister
                         </a>
-                    </li>
-                    <li>
-                        <a href="/semister/eightSemister">
-                            Eight Semister
+
+                        <li>
+
+                            <a href="/semister/seventhSemister">
+                                Seventh Semister
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/semister/eightSemister">
+                                Eight Semister
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <div class="phone-view-buttons">
+                <% if (isAuthenticated) { %>
+                    <a href="/user" class="user-profile-picture">
+                        <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'s Profile Image"
+                            width="200">
+
+                    </a>
+                    <% } else { %>
+                        <a href="/login">
+                            <input type="submit" value="Log In">
                         </a>
-                    </li>
-                </ul>
-            </li>
-
-        </ul>
-
-        <div class="phone-view-buttons">
-            <% if (isAuthenticated) { %>
-                <a href="/user" class="user-profile-picture">
-                    <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'s Profile Image" width="200">
-
-                </a>
-                <% } else { %>
-                    <a href="/login">
-                        <input type="submit" value="Log In">
-                    </a>
-                    <a href="/signup">
-                        <input type="submit" value=" Sign Up">
-                    </a>
+                        <a href="/signup">
+                            <input type="submit" value=" Sign Up">
+                        </a>
+                        <% } %>
+            </div>
+            <% if(isAuthenticated){%>
+                <p>
+                    - go to your profile to see bookmarks -
+                </p>
+                <%} else {%>
+                    <p> - you will have the bookmark features when you create an account -</p>
                     <% } %>
-        </div>
-        <% if(isAuthenticated){%>
-            <p>
-                - go to your profile to see bookmarks -
-            </p>
-            <%} else {%>
-                <p> - you will have the bookmark features when you create an account -</p>
-                <% } %>
     </div>
 
 
 </header>
 
 
-<form action="feedback" method="post" id="feedback-form" enctype="multipart/form-data">
-     <!-- Add a hidden input field for the current URL -->
-  <input type="hidden" name="currentUrl" id="currentUrl" value="">
+<form action="/feedback" method="post" id="feedback-form" enctype="multipart/form-data">
+    <!-- Add a hidden input field for the current URL -->
+    <input type="hidden" name="currentUrl" id="currentUrl" value="">
     <i class="ri-close-line close-feedback-form"></i>
     <h2>
         Give Your Feedback or Suggestions 😊
     </h2>
 
-    <select id="feedback-option">
-        <option value="">Rate Us</option>
-        <option value="best">✩ ✩ ✩</option>
-        <option value="notbad">✩ ✩</option>
-        <option value="needtoclear">✩</option>
-    </select>
 
     <div class="feedback-comment">
-        <h3>Write Suggestions</h3>
-        <textarea name="comment" id="" cols="30" rows="10" placeholder="your must have write something..."></textarea>
+        <textarea name="comment" class="feedback-value" cols="30" rows="10"
+            placeholder="your must have write something..."></textarea>
+        <p class="feedback-error"></p>
     </div>
-    <button>
-        Submit
-    </button>
+
+    <input type="submit" name="" id="feedback-submit-button" value="Submit">
 </form>
 
 
 <!-- Include jQuery library -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-<script>
-    $(document).ready(function () {
-        // Set the current URL in the hidden input field
-        $("#currentUrl").val(window.location.href);
-
-        // Submit the form using AJAX
-        $("#feedback-form").submit(function (e) {
-            e.preventDefault();
-
-            $.ajax({
-                type: "POST",
-                url: "/feedback",
-                data: $(this).serialize(),
-                success: function (response) {
-                    // Handle success if needed
-                    console.log("Feedback submitted successfully");
-
-                    // Redirect to the original URL
-                    window.location.href = $("#currentUrl").val();
-                },
-                error: function (error) {
-                    // Handle error if needed
-                    console.error("Error submitting feedback", error);
-                }
-            });
-        });
-    });
-</script>
-
-
 <script src="/javascripts/header.js"></script>

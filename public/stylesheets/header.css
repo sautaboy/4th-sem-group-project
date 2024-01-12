@@ -59,6 +59,56 @@ a.user-profile-picture img {
 
 }
 
+.feedback-error {
+    color: crimson;
+}
+
+#feedback-submit-button {
+    background: hsl(0, 0%, 95%);
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.377));
+    height: 55px;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+    transition: .1s linear;
+    border: none;
+
+    background: linear-gradient(-45deg, hsl(120, 100%, 95%), hsl(348, 83%, 90%), hsl(60, 100%, 90%));
+
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #805353;
+    cursor: pointer;
+
+}
+
+#feedback-submit-button:hover {
+    filter: drop-shadow(-1px 1px 3px rgba(0, 0, 0, 0.672));
+    color: #747373;
+    letter-spacing: 2px;
+    border: 1px solid #00804014;
+
+    background: linear-gradient(-45deg, hsl(120, 100%, 95%), hsl(348, 83%, 90%), hsl(60, 100%, 90%));
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 
 
 
@@ -156,6 +206,8 @@ li.contact {
     display: none;
     z-index: 99999;
 
+
+
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0);
     border-radius: 16px;
@@ -164,6 +216,9 @@ li.contact {
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border: black 1px solid;
+
+    background: linear-gradient(-45deg, hsla(120, 100%, 95%, rgba(251, 208, 217, 0.028)3%rgba(255, 255, 204, 0.091)0%, 90%));
+
 }
 
 #feedback-form h2 {
@@ -171,8 +226,8 @@ li.contact {
     padding: 1rem 0;
     letter-spacing: 2px;
 }
-#feedback-form h3
-{
+
+#feedback-form h3 {
     margin-bottom: 5px;
 }
 
@@ -203,6 +258,14 @@ li.contact {
     padding: 1rem;
     outline: none;
     text-transform: capitalize;
+    background-image: url("/images/writing.gif");
+    background-repeat: no-repeat;
+    background-size:cover;    
+    background-position: center;
+    filter: grayscale(100%);
+    font-size: large;
+    color: green;
+    letter-spacing: 2px;
 }
 
 #feedback-form button {

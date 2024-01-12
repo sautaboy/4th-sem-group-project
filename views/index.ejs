@@ -77,15 +77,16 @@
           </h1>
           <!-- left arrow -->
           <i class="ri-arrow-left-s-line"></i>
+          
 
           <ul class="carousel">
-            <% feedback.forEach(function(e){ %>
+            <% feedback.reverse().forEach(function(e){ %>
               <a href="#" class="card">
                 <div class="img">
                   <img src="/images/userPhoto/<%= e.user.image%>" alt="<%= e.user.name %>'" width="200">
                 </div>
                 <h2><%= e.user.username%></h2>
-                <span><%= e.comment%></span>
+                <span class="feedback-comment"><%= e.comment%></span>
               </a>
               <% }) %>
           </ul>

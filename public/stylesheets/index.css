@@ -114,7 +114,7 @@
 
 
 
-
+/* crausel */
 .wrapper {
     position: relative;
     width: 100%;
@@ -198,7 +198,14 @@
     list-style: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: .5s ease-in-out;
 }
+
+.carousel .card.go-left {
+    transform: translateX(-100%);
+}
+
+
 
 .card .img {
     background: #8b53ff;
@@ -225,6 +232,12 @@
 .card span {
     color: #6a6d78;
     font-size: 1.21rem;
+    width: 60%;
+
+    text-align: center;
+    text-transform: capitalize;
+    font-size: small;
+    margin: 0 auto;
 }
 
 
