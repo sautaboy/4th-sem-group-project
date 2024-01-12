@@ -77,7 +77,7 @@
           </h1>
           <!-- left arrow -->
           <i class="ri-arrow-left-s-line"></i>
-          
+
 
           <ul class="carousel">
             <% feedback.reverse().forEach(function(e){ %>
@@ -85,8 +85,12 @@
                 <div class="img">
                   <img src="/images/userPhoto/<%= e.user.image%>" alt="<%= e.user.name %>'" width="200">
                 </div>
-                <h2><%= e.user.username%></h2>
-                <span class="feedback-comment"><%= e.comment%></span>
+                <h2>
+                  <%= e.user.username%>
+                </h2>
+                <span class="feedback-comment">
+                  <%= e.comment%>
+                </span>
               </a>
               <% }) %>
           </ul>
@@ -127,30 +131,18 @@
         </div>
 
         <div class="semister-name-container">
-          <h2>Go To Your Semister</h2>
-          <a href="/semister/firstSemister">
-            first Semister
+          <h2>Go To Your faculty</h2>
+          <a href="/bca">
+            bca
           </a>
-          <a href="/semister/secondSemister">
-            Second Semister
+          <a href="/bsccsit">
+            bsccsit
           </a>
-          <a href="/semister/thirdSemister">
-            Third Semister
+          <a href="/bit">
+            bit
           </a>
-          <a href="/semister/fourthSemister">
-            Fourth Semister
-          </a>
-          <a href="/semister/fifthSemister">
-            Fifth Semister
-          </a>
-          <a href="/semister/sixthSemister">
-            Sixth Semister
-          </a>
-          <a href="/semister/seventhSemister">
-            Seventh Semister
-          </a>
-          <a href="/semister/eightSemister">
-            Eight Semister
+          <a href="/bbm">
+            bbm
           </a>
         </div>
       </div>

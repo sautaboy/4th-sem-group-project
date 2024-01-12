@@ -2,18 +2,11 @@
 const semisterData = {
     firstSemister: {
         subOnePdfUrl: '',
-
-
         subTwoPdfUrl: '',
-
-
         subThirdPdfUrl: '',
-
         subFourPdfUrl: 'https://drive.google.com/file/d/1N8VyNmFLBX56WtwkqIj566hlGGja4Sal/preview',
-
         subFivePdfUrl: '',
-
-        subOne: "Computer Fundamental",
+        subOne: "bbm Subject",
         subTwo: "Social Science",
         subThree: "Math",
         subFour: "Digital Logic",

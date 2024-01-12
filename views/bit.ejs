@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title%>
+    </title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/faculty.css">
+</head>
+
+<body>
+    <% include header.ejs%>
+
+        <div id="faculty-main">
+            <center>
+                <h1>Welcome to <%= title %></h1>
+
+            </center>
+            <div class="second-page" id="semister-list-link">
+                <div class="introduction">
+                    <p>Welcome to our
+                        <span class="bytes index">Bytes</span> <span class="pedia index">Pedia </span>
+                        Click on your specific semester link to discover
+                        subjects and access notes
+                        tailored for your academic needs. Navigate seamlessly through past-year questions for each
+                        subject,
+                        enhancing your preparation. It's your one-stop destination for organized study materials and
+                        exam resources.
+                        Explore, learn, and excel in your BCA journey with ease.
+                        <span class="img">
+                            <img src="/images/girl reading book gif.gif" alt="gir is reading a book giffy">
+                        </span>
+                    </p>
+
+                    <div class="notice-board">
+                        <span class="notice-headline">
+                            notice board
+                        </span>
+                    </div>
+
+                    <div class="dancing-boy-wrap">
+                        <img src="/images/dancing boy.gif" alt="dancing boy image">
+                    </div>
+                </div>
+
+                <div class="semister-name-container">
+                    <h2>Go To Your Semister</h2>
+                    <a href="/bit/firstSemister">
+                        first Semister
+                    </a>
+                    <a href="/bit/secondSemister">
+                        Second Semister
+                    </a>
+                    <a href="/bit/thirdSemister">
+                        Third Semister
+                    </a>
+                    <a href="/bit/fourthSemister">
+                        Fourth Semister
+                    </a>
+                    <a href="/bit/fifthSemister">
+                        Fifth Semister
+                    </a>
+                    <a href="/bit/sixthSemister">
+                        Sixth Semister
+                    </a>
+                    <a href="/bit/seventhSemister">
+                        Seventh Semister
+                    </a>
+                    <a href="/bit/eightSemister">
+                        Eight Semister
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <% include footer.ejs%>
+</body>
+
+</html>

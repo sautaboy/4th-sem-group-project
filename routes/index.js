@@ -10,11 +10,10 @@ const feedbackModel = require('./feedback')
 
 const uploads = require("./multer");
 
-
-const semisterData = require("../views/content/semister")
-
-
-
+const bcaData = require("../views/content/semister")
+const bsccsitData = require("../views/content/bsccsit")
+const bbmData = require("../views/content/bbm")
+const bitData = require("../views/content/bit")
 
 passport.use(new localStrategy(
   { passReqToCallback: true },
@@ -41,8 +40,6 @@ passport.use(new localStrategy(
 router.get('/', async function (req, res, next) {
 
   const feedback = await feedbackModel.find().populate("user")
-  console.log(feedback)
-
 
   try {
 
@@ -64,6 +61,8 @@ router.get('/', async function (req, res, next) {
   }
 });
 
+
+// feedback
 router.post("/feedback", isLoggedIn, async function (req, res, next) {
 
   const user = await userModel.findOne({ username: req.user.username });
@@ -77,7 +76,6 @@ router.post("/feedback", isLoggedIn, async function (req, res, next) {
   user.save()
   res.redirect("/")
 });
-
 
 /* GET allSemisterPastYearQuestions page. */
 router.get('/allSemisterPastYearQuestions', async function (req, res, next) {
@@ -124,15 +122,7 @@ router.get('/developer', async function (req, res, next) {
   }
 });
 
-
-
-
-
-
-
-
-
-
+// get user page
 router.get("/user", isLoggedIn, async function (req, res, next) {
   try {
     const user = await userModel.findOne({ username: req.user.username });
@@ -145,13 +135,76 @@ router.get("/user", isLoggedIn, async function (req, res, next) {
 
 
 
+// bca route
+router.get("/bca", async function (req, res) {
+  try {
+    const isAuthenticated = req.isAuthenticated();
+    let user = null;
+    if (isAuthenticated) {
+      user = await userModel.findOne({ username: req.user.username });
+    }
+    res.render('bca', { title: 'BCA / Bachelor in Computer Application', isAuthenticated, user });
+  } catch (err) {
+    res.status(500).send('Internal Server Error');
+  }
+});
 
-router.get("/semister/:changableSemisterRoute", async function (req, res, next) {
+// bsccsit route
+router.get("/bsccsit", async function (req, res) {
+  try {
+    const isAuthenticated = req.isAuthenticated();
+    let user = null;
+    if (isAuthenticated) {
+      user = await userModel.findOne({ username: req.user.username });
+    }
+    res.render('bsccsit', { title: 'BScCsit / Bachelor in Information Technology', isAuthenticated, user });
+  } catch (err) {
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+// bbm route
+router.get("/bbm", async function (req, res) {
+  try {
+    const isAuthenticated = req.isAuthenticated();
+    let user = null;
+    if (isAuthenticated) {
+      user = await userModel.findOne({ username: req.user.username });
+    }
+    res.render('bbm', { title: 'BBM / Bachelor in Busines Mathmatics', isAuthenticated, user });
+  } catch (err) {
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+// bit route
+router.get("/bit", async function (req, res) {
+  try {
+    const isAuthenticated = req.isAuthenticated();
+    let user = null;
+    if (isAuthenticated) {
+      user = await userModel.findOne({ username: req.user.username });
+    }
+    res.render('bit', { title: 'BIT / Bachelor in Information Technology', isAuthenticated, user });
+  } catch (err) {
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+
+
+
+
+
+
+
+// this is for bca
+router.get("/bca/:changableSemisterRoute", async function (req, res, next) {
   try {
     const changableSemisterRoute = req.params.changableSemisterRoute;
 
-    // Assuming semisterData is defined
-    const semisterContent = semisterData[changableSemisterRoute];
+    // Assuming bcaData is defined
+    const semisterContent = bcaData[changableSemisterRoute];
 
     if (semisterContent) {
       const user = await userModel.findOne({ username: req.user ? req.user.username : null });
@@ -164,6 +217,77 @@ router.get("/semister/:changableSemisterRoute", async function (req, res, next) 
     res.redirect("/login");
   }
 });
+
+
+
+
+// this is for bsccsit
+router.get("/bsccsit/:changableSemisterRoute", async function (req, res, next) {
+  try {
+    const changableSemisterRoute = req.params.changableSemisterRoute;
+
+    // Assuming bcaData is defined
+    const semisterContent = bsccsitData[changableSemisterRoute];
+
+    if (semisterContent) {
+      const user = await userModel.findOne({ username: req.user ? req.user.username : null });
+      res.render("semister", { isAuthenticated: req.isAuthenticated(), user, semisterContent });
+    } else {
+      res.status(404).send('Semester not found');
+    }
+  } catch (err) {
+    console.error(err);
+    res.redirect("/login");
+  }
+});
+
+// this is for bit
+router.get("/bit/:changableSemisterRoute", async function (req, res, next) {
+  try {
+    const changableSemisterRoute = req.params.changableSemisterRoute;
+
+    // Assuming bcaData is defined
+    const semisterContent = bitData[changableSemisterRoute];
+
+    if (semisterContent) {
+      const user = await userModel.findOne({ username: req.user ? req.user.username : null });
+      res.render("semister", { isAuthenticated: req.isAuthenticated(), user, semisterContent });
+    } else {
+      res.status(404).send('Semester not found');
+    }
+  } catch (err) {
+    console.error(err);
+    res.redirect("/login");
+  }
+});
+
+
+// this is for bbm
+router.get("/bbm/:changableSemisterRoute", async function (req, res, next) {
+  try {
+    const changableSemisterRoute = req.params.changableSemisterRoute;
+
+    // Assuming bcaData is defined
+    const semisterContent = bbmData[changableSemisterRoute];
+
+    if (semisterContent) {
+      const user = await userModel.findOne({ username: req.user ? req.user.username : null });
+      res.render("semister", { isAuthenticated: req.isAuthenticated(), user, semisterContent });
+    } else {
+      res.status(404).send('Semester not found');
+    }
+  } catch (err) {
+    console.error(err);
+    res.redirect("/login");
+  }
+});
+
+
+
+
+
+
+
 
 
 
