@@ -10,27 +10,31 @@
 
 <header>
     <a href="/" id="logo">
-        <h3>Bytes Pedia</h3>
+        <h3>
+            <span class="bytes">Bytes</span>
+            <span class="pedia">Pedia</span>
+        </h3>
         <img src="/images/logo .gif" alt="bytespedia">
     </a>
 
 
     <ul id="center-nav-list">
         <li class="hover-bca-note">
-            <a href="#">Your Semister
+            <a href="#">Your Faculty
                 <i class="ri-arrow-down-s-fill"></i>
             </a>
 
             <ul class="hover-me">
                 <li>
-                    <a href="/allSemisterPastYearQuestions">All Semister Past Year Questions</a>
+                    <a href="/allSemisterPastYearQuestions">All Facultty Past Year Questions</a>
                 </li>
                 <li>
-                    <a href="#">Exam Routine</a>
+                    <a href="#">BCA</a>
+                </li>
+                <li>
+                    <a href="#">BScCsit</a>
                 </li>
             </ul>
-
-
         </li>
 
         <li class="contact">
@@ -78,7 +82,9 @@
     <!-- this is for phoen view only -->
     <div class="phonoe-view-nav-list ">
         <a href="/">home</a>
-        <a href="/allSemisterPastYearQuestions">all semister past year questions</a>
+        <a href="/allSemisterPastYearQuestions">all facultty past year questions</a>
+        <a href="#">BCA</a>
+        <a href="#">BScCsit</a>
         <a href="/developer">Developers</a>
         <% if(isAuthenticated) {%>
             <a class="feedback-form-button">Feedback

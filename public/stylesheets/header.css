@@ -63,6 +63,119 @@ a.user-profile-picture img {
     color: crimson;
 }
 
+
+
+
+
+
+
+header #navbar-buttons input {
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+
+#center-nav-list {
+    position: relative;
+    width: fit-content;
+    white-space: nowrap;
+    display: none;
+}
+
+li.contact {
+    margin-left: 2rem;
+}
+
+
+#center-nav-list>* ul {
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+    transition: .3s ease-in;
+    z-index: -1;
+    top: 20vw;
+    left: 20vw;
+    opacity: 0;
+
+}
+
+
+
+#center-nav-list>* ul li {
+    padding: 7px 20px;
+    border-radius: 5px;
+    background: #dadada;
+    transition: .2s linear;
+    background: hsl(0, 0%, 95%);
+    z-index: 9;
+
+}
+
+#center-nav-list>* ul li:hover {
+    background: hsl(0, 0%, 100%);
+    filter: drop-shadow(-1px 1px 3px rgba(0, 0, 0, 0.672));
+    color: #747373;
+}
+
+
+#center-nav-list li.hover-bca-note:hover .hover-me {
+    display: flex;
+    transition: .3s ease-in-out;
+
+    z-index: 8;
+    top: 100%;
+    left: 0;
+    opacity: 1;
+    width: fit-content;
+}
+
+.phonoe-view-nav-list {
+    display: none;
+}
+
+
+#feedback-form {
+    background: red;
+    margin-top: 6rem;
+    position: fixed;
+    z-index: 9;
+    height: 50vh;
+    width: 40%;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    background: #222;
+    color: #222;
+    padding: 1rem;
+    height: fit-content;
+    border-radius: 10px;
+    gap: .5rem;
+    display: none;
+    z-index: 99999;
+
+
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: black 1px solid;
+
+    background: linear-gradient(-45deg, hsla(120, 100%, 95%, rgba(251, 208, 217, 0.028)3%rgba(255, 255, 204, 0.091)0%, 90%));
+
+}
+
 #feedback-submit-button {
     background: hsl(0, 0%, 95%);
     filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.377));
@@ -110,117 +223,6 @@ a.user-profile-picture img {
 
 
 
-
-
-
-
-
-header #navbar-buttons input {
-    padding: 5px 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 300;
-    cursor: pointer;
-}
-
-
-#center-nav-list {
-    position: relative;
-    width: fit-content;
-    white-space: nowrap;
-    display: none;
-}
-
-li.contact {
-    margin-left: 2rem;
-}
-
-
-#center-nav-list>* ul {
-    position: absolute;
-    top: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 150%;
-    padding-top: 10px;
-    transition: .3s ease-in;
-    z-index: -1;
-    top: 20vw;
-    left: 20vw;
-    opacity: 0;
-}
-
-
-
-#center-nav-list>* ul li {
-    padding: 7px 20px;
-    border-radius: 5px;
-    background: #dadada;
-    transition: .2s linear;
-    background: hsl(0, 0%, 95%);
-
-}
-
-#center-nav-list>* ul li:hover {
-    background: hsl(0, 0%, 100%);
-    filter: drop-shadow(-1px 1px 3px rgba(0, 0, 0, 0.672));
-    color: #747373;
-}
-
-
-#center-nav-list li.hover-bca-note:hover .hover-me {
-    display: flex;
-    transition: .3s ease-in-out;
-
-    z-index: 1;
-    top: 100%;
-    left: 0;
-    opacity: 1;
-
-}
-
-.phonoe-view-nav-list {
-    display: none;
-}
-
-
-#feedback-form {
-    background: red;
-    margin-top: 6rem;
-    position: fixed;
-    z-index: 9;
-    height: 50vh;
-    width: 40%;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    background: #222;
-    color: #222;
-    padding: 1rem;
-    height: fit-content;
-    border-radius: 10px;
-    gap: .5rem;
-    display: none;
-    z-index: 99999;
-
-
-
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border: black 1px solid;
-
-    background: linear-gradient(-45deg, hsla(120, 100%, 95%, rgba(251, 208, 217, 0.028)3%rgba(255, 255, 204, 0.091)0%, 90%));
-
-}
-
 #feedback-form h2 {
     text-align: center;
     padding: 1rem 0;
@@ -260,7 +262,7 @@ li.contact {
     text-transform: capitalize;
     background-image: url("/images/writing.gif");
     background-repeat: no-repeat;
-    background-size:cover;    
+    background-size: cover;
     background-position: center;
     filter: grayscale(100%);
     font-size: large;
@@ -319,7 +321,7 @@ li.contact {
         display: flex;
         flex-direction: column;
         gap: 1.3rem;
-        height: calc(100vh - 6rem);
+        height: calc(100vh - 4rem);
         align-items: center;
         width: 100%;
         margin: 0 auto;
