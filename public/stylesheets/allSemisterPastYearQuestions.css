@@ -2,9 +2,53 @@
     width: 100%;
     min-height: 100vh;
     padding: 0 7%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 1rem;
 }
 
-.all-semister-div-container {
+.bca-semister-container h2 {
+    color: green;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    border-bottom: 1px solid crimson;
+    width: fit-content;
+}
+
+.semister-container {
+    padding: 1rem 0;
+    border-radius: 10px;
+    /* From https://css.glass */
+    background: rgba(237, 133, 133, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid rgb(255, 255, 255);
+    border-bottom: 3px solid green;
+}
+
+.semister-container:nth-child(2) {
+    border-bottom: 3px solid red;
+}
+
+.semister-container:nth-child(3) {
+    border-bottom: 3px solid purple;
+
+}
+
+.semister-container:nth-child(4) {
+    border-bottom: 3px solid hotpink;
+
+}
+
+.semister-container:nth-child(5) {
+    border-bottom: 3px solid green;
+
+}
+
+.bca-past-year-semister-questions-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -12,7 +56,7 @@
     margin-top: 2rem;
 }
 
-.all-semister-div-container .question-sem-div {
+.bca-past-year-semister-questions-container .question-sem-div {
     width: 30%;
     /* background: #dadada; */
     display: flex;
@@ -20,18 +64,18 @@
     gap: .2rem;
 }
 
-.all-semister-div-container .question-sem-div h3 {
+.bca-past-year-semister-questions-container .question-sem-div h3 {
     color: crimson;
     padding-left: .5rem;
 }
 
-.all-semister-div-container .question-sem-div ul {
+.bca-past-year-semister-questions-container .question-sem-div ul {
     display: flex;
     flex-direction: column;
     gap: .5rem;
 }
 
-.all-semister-div-container .question-sem-div ul li {
+.bca-past-year-semister-questions-container .question-sem-div ul li {
     border-radius: 1rem;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 5px #888888;
@@ -42,35 +86,63 @@
 
 }
 
-.all-semister-div-container .question-sem-div ul li span {
+.bca-past-year-semister-questions-container .question-sem-div ul li span {
     color: green;
     margin-right: 1rem;
 }
 
-.all-semister-div-container .question-sem-div ul li span.question-year {
+.bca-past-year-semister-questions-container .question-sem-div ul li span.question-year {
     display: flex;
     align-items: center;
-    gap:1.2rem;
+    gap: 1.2rem;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
 
-.all-semister-div-container .question-sem-div ul li a {
+.bca-past-year-semister-questions-container .question-sem-div ul li a {
     color: slateblue;
     border-bottom: 1px solid green;
 }
 
-.all-semister-div-container .question-sem-div ul li a:hover {
+.bca-past-year-semister-questions-container .question-sem-div ul li a:hover {
     color: blue;
 }
 
 @media (max-width:920px) {
     #allSemisterPastYearQuestions {
-        padding: 7rem 7%;
+        padding: 7rem 0%;
+        padding-bottom: 1rem;
+    }
+
+    .semister-container {
+        width: 100%;
+        padding: 5px 8px;
+    }
+
+    .bca-semister-container h2 {
+        color: green;
+        margin-top: initial;
+        margin-left: initial;
+        border-bottom: initial;
+        font-size: medium;
+    }
+    .bca-past-year-semister-questions-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .bca-past-year-semister-questions-container .question-sem-div ul li {
+        border: 1px solid #1111115b;
+        box-shadow: 2px 2px 5px #8888883b;
+
     }
 
 
-    .all-semister-div-container .question-sem-div {
+    .bca-past-year-semister-questions-container .question-sem-div {
         width: 100%;
     }
 
