@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <% include header.ejs%>
+    <%- include ('header');%>
+
 
 
 
@@ -73,7 +74,8 @@
             </div>
 
         </div>
-        <% include footer.ejs%>
+        <%- include ('footer');%>
+
 
             <script>
                 document.querySelector(".edit-profile-button").addEventListener("click", function () {

@@ -13,7 +13,8 @@
 </head>
 
 <body>
-    <% include header.ejs%>
+    <%- include ('header');%>
+
 
         <div id="content-body">
             <form action="/signup" id="signup-form" class="signup-form form" method="post">
@@ -49,7 +50,8 @@
             </form>
         </div>
 
-        <% include footer.ejs%>
+        <%- include ('footer');%>
+
 
             <script src="/javascripts/signup.js"></script>
 </body>
