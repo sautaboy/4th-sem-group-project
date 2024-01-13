@@ -289,9 +289,6 @@ router.get("/bbm/:changableSemisterRoute", async function (req, res, next) {
 
 
 
-
-
-
 // Assuming you have a route for bookmarking subjects
 router.post("/bookmark", isLoggedIn, async function (req, res, next) {
   try {
