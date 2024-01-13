@@ -45,7 +45,7 @@
 
         <li class="contact">
             <% if(isAuthenticated) {%>
-                <a class="feedback-form-button">Feedback
+                <a class="feedback-form-button">Give Us Feedback
                     <%}%>
         </li>
         <br>
@@ -66,17 +66,22 @@
     <div id="navbar-buttons">
         <% if (isAuthenticated) { %>
             <a href="/user" class="user-profile-picture">
-                <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'" width="200">
-
+                <% if (user.image) { %>
+                    <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'" width="200">
+                    <% } else { %>
+                        <!-- Display a default profile image if user.image is not available -->
+                        <img src="/images/user.png" alt="Default Profile Image" width="200">
+                        <% } %>
             </a>
             <% } else { %>
                 <a href="/login">
                     <input type="submit" value="Log In">
                 </a>
                 <a href="/signup">
-                    <input type="submit" value=" Sign Up">
+                    <input type="submit" value="Sign Up">
                 </a>
                 <% } %>
+
     </div>
 
 
@@ -89,8 +94,6 @@
     <div class="phonoe-view-nav-list ">
         <a href="/">home</a>
         <a href="/allSemisterPastYearQuestions">all facultty past year questions</a>
-        <a href="#">BCA</a>
-        <a href="#">BScCsit</a>
         <a href="/developer">Developers</a>
         <% if(isAuthenticated) {%>
             <a class="feedback-form-button">Feedback
@@ -106,52 +109,18 @@
 
                     <ul class="semister-list">
                         <li>
-                            <a href="/semister/firstSemister">
-                                first Semister
-                            </a>
+                            <a href="/bca">BCA</a>
                         </li>
                         <li>
-
-                            <a href="/semister/secondSemister">
-                                Second Semister
-                            </a>
+                            <a href="/bsccsit">BScCsit</a>
                         </li>
 
                         <li>
-
-                            <a href="/semister/thirdSemister">
-                                Third Semister
-                            </a>
+                            <a href="/bit">BIT</a>
                         </li>
 
                         <li>
-
-                            <a href="/semister/fourthSemister">
-                                Fourth Semister
-                            </a>
-                        </li>
-
-                        <li>
-
-                            <a href="/semister/fifthSemister">
-                                Fifth Semister
-                            </a>
-                        </li>
-
-                        <a href="/semister/sixthSemister">
-                            Sixth Semister
-                        </a>
-
-                        <li>
-
-                            <a href="/semister/seventhSemister">
-                                Seventh Semister
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/semister/eightSemister">
-                                Eight Semister
-                            </a>
+                            <a href="/bbm">bbm</a>
                         </li>
                     </ul>
                 </li>
@@ -161,16 +130,19 @@
             <div class="phone-view-buttons">
                 <% if (isAuthenticated) { %>
                     <a href="/user" class="user-profile-picture">
-                        <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'s Profile Image"
-                            width="200">
-
+                        <% if (user.image) { %>
+                            <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'" width="200">
+                            <% } else { %>
+                                <!-- Display a default profile image if user.image is not available -->
+                                <img src="/images/user.png" alt="Default Profile Image" width="200">
+                                <% } %>
                     </a>
                     <% } else { %>
                         <a href="/login">
                             <input type="submit" value="Log In">
                         </a>
                         <a href="/signup">
-                            <input type="submit" value=" Sign Up">
+                            <input type="submit" value="Sign Up">
                         </a>
                         <% } %>
             </div>

@@ -193,11 +193,6 @@ router.get("/bit", async function (req, res) {
 
 
 
-
-
-
-
-
 // this is for bca
 router.get("/bca/:changableSemisterRoute", async function (req, res, next) {
   try {
@@ -208,7 +203,7 @@ router.get("/bca/:changableSemisterRoute", async function (req, res, next) {
 
     if (semisterContent) {
       const user = await userModel.findOne({ username: req.user ? req.user.username : null });
-      res.render("semister", { isAuthenticated: req.isAuthenticated(), user, semisterContent });
+      res.render("semister", { isAuthenticated: req.isAuthenticated(), user, semisterContent, changableSemisterRoute });
     } else {
       res.status(404).send('Semester not found');
     }
@@ -217,9 +212,6 @@ router.get("/bca/:changableSemisterRoute", async function (req, res, next) {
     res.redirect("/login");
   }
 });
-
-
-
 
 // this is for bsccsit
 router.get("/bsccsit/:changableSemisterRoute", async function (req, res, next) {
@@ -231,7 +223,7 @@ router.get("/bsccsit/:changableSemisterRoute", async function (req, res, next) {
 
     if (semisterContent) {
       const user = await userModel.findOne({ username: req.user ? req.user.username : null });
-      res.render("semister", { isAuthenticated: req.isAuthenticated(), user, semisterContent });
+      res.render("semister", { isAuthenticated: req.isAuthenticated(), user, semisterContent, changableSemisterRoute });
     } else {
       res.status(404).send('Semester not found');
     }
@@ -251,7 +243,7 @@ router.get("/bit/:changableSemisterRoute", async function (req, res, next) {
 
     if (semisterContent) {
       const user = await userModel.findOne({ username: req.user ? req.user.username : null });
-      res.render("semister", { isAuthenticated: req.isAuthenticated(), user, semisterContent });
+      res.render("semister", { isAuthenticated: req.isAuthenticated(), user, semisterContent, changableSemisterRoute });
     } else {
       res.status(404).send('Semester not found');
     }
@@ -260,7 +252,6 @@ router.get("/bit/:changableSemisterRoute", async function (req, res, next) {
     res.redirect("/login");
   }
 });
-
 
 // this is for bbm
 router.get("/bbm/:changableSemisterRoute", async function (req, res, next) {
@@ -272,7 +263,7 @@ router.get("/bbm/:changableSemisterRoute", async function (req, res, next) {
 
     if (semisterContent) {
       const user = await userModel.findOne({ username: req.user ? req.user.username : null });
-      res.render("semister", { isAuthenticated: req.isAuthenticated(), user, semisterContent });
+      res.render("semister", { isAuthenticated: req.isAuthenticated(), user, semisterContent, changableSemisterRoute });
     } else {
       res.status(404).send('Semester not found');
     }
@@ -281,13 +272,6 @@ router.get("/bbm/:changableSemisterRoute", async function (req, res, next) {
     res.redirect("/login");
   }
 });
-
-
-
-
-
-
-
 
 // Assuming you have a route for bookmarking subjects
 router.post("/bookmark", isLoggedIn, async function (req, res, next) {
@@ -314,7 +298,6 @@ router.post("/bookmark", isLoggedIn, async function (req, res, next) {
     res.status(500).send('Internal Server Error');
   }
 });
-
 
 // Assume you have a route like '/removeBookmark' that handles bookmark removal
 router.post('/removeBookmark', isLoggedIn, async function (req, res, next) {

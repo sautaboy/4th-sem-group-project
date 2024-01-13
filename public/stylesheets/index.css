@@ -49,9 +49,6 @@
 
 }
 
-.first-page .left-side .typewriter-container h2 {
-    color: crimson;
-}
 
 .first-page .left-side .typewriter-container h1 {
     letter-spacing: -1px;
@@ -376,6 +373,7 @@
 }
 
 
+
 .second-page .semister-name-container a:hover {
     scale: 1.1;
     filter: drop-shadow(-1px 1px 3px rgba(0, 0, 0, 0.672));
@@ -400,6 +398,17 @@
     #content-body {
         padding: 7rem 10px 1rem 10px;
         text-align: left;
+    }
+
+    .first-page .left-side .typewriter-container h1 {
+        letter-spacing: -1px;
+        color: crimson;
+        font-size: x-large;
+    }
+
+    .first-page .left-side .typewriter-container h1 span {
+        color: green;
+        font-size: x-large;
     }
 
     .left-and-right-side {

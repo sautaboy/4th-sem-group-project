@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>user profile</title>
+    <title>
+        <%= user.username%>
+    </title>
     <link rel="stylesheet" href="/stylesheets/user.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
@@ -25,7 +27,7 @@
                         <img src="/images/userPhoto/<%= user.image %>" alt="<%= user.name %>'s Profile Image"
                             width="200">
                         <% } else { %>
-                            <p>Upload Yoor Profile Pricture.</p>
+                            <p>Upload Your Profile Pricture.</p>
                             <% } %>
                 </div>
 
@@ -55,7 +57,7 @@
 
             <div class="bookmarks">
                 <h2>Your Book Marks</h2>
-                
+
                 <ul class="bookmark-list">
                     <% user.bookmarks.forEach(bookmark=> { %>
                         <li>
