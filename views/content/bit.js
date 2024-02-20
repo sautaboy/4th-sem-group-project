@@ -6,11 +6,12 @@ const semisterData = {
         subThirdPdfUrl: '',
         subFourPdfUrl: 'https://drive.google.com/file/d/1N8VyNmFLBX56WtwkqIj566hlGGja4Sal/preview',
         subFivePdfUrl: '',
-        subOne: "bit Subject",
-        subTwo: "Social Science",
-        subThree: "Math",
-        subFour: "Digital Logic",
-        subFive: "English",
+
+        subOne: "Introduction to Information Technology",
+        subTwo: "C Programming",
+        subThree: "Digital Logic",
+        subFour: "Basic Mathematics",
+        subFive: "Sociology ",
 
         // past year questions lisnk
         firstLink: "https://drive.google.com/drive/folders/1JkSEC87BT-EMT3JVUxBzwnfwGo5r60dR?usp=drive_link",
@@ -42,11 +43,11 @@ const semisterData = {
         subFourPdfUrl: 'dsa.pdf',
 
 
-        subOne: "c Programming",
-        subTwo: "Math II",
-        subThree: "English II",
-        subFour: "Accounting",
-        subFive: "Micro Processer",
+        subOne: "Microprocessor and Computer Architecture",
+        subTwo: "Discrete Structure ",
+        subThree: "Object Oriented Programming",
+        subFour: "Basic Statistics ",
+        subFive: "Economics",
 
         // past year questions lisnk
         firstLink: "https://drive.google.com/drive/folders/1L1TTW7SBmkDvdxf3AaU49gXp5RwAm6Pu?usp=sharing",
@@ -75,11 +76,11 @@ const semisterData = {
 
 
         title: '+2 in Science',
-        subOne: "Subject Name",
-        subTwo: "Subject Name",
-        subThree: "Subject Name",
-        subFour: "Subject Name",
-        subFive: "Subject Name",
+        subOne: "Data Structures and Algorithms",
+        subTwo: "Database Management System",
+        subThree: "Numerical Methods ",
+        subFour: "Operating Systems",
+        subFive: "Principles of Management ",
 
         // 
         firstLink: "https://drive.google.com/drive/folders/1GgpDxBsIHhUjX6B3tnH4ys87YESZmfU5?usp=sharing",
@@ -109,13 +110,12 @@ const semisterData = {
         seventhPdfUrl: 'dsa.pdf',
 
 
-        title: '+2 in Science',
-        pdfUrl: 'seminar.pdf',
-        subOne: "Subject Name",
-        subTwo: "Subject Name",
-        subThree: "Subject Name",
-        subFour: "Subject Name",
-        subFive: "Subject Name",
+
+        subOne: "Web Technology I",
+        subTwo: "Artificial Intelligence",
+        subThree: "Systems Analysis and Design 3",
+        subFour: "Network and Data Communications",
+        subFive: "Operations Research",
 
 
         // 
@@ -144,13 +144,12 @@ const semisterData = {
         seventhPdfUrl: 'dsa.pdf',
 
 
-        title: '+2 in Science',
-        pdfUrl: 'seminar.pdf',
-        subOne: "Subject Name",
-        subTwo: "Subject Name",
-        subThree: "Subject Name",
-        subFour: "Subject Name",
-        subFive: "Subject Name",
+
+        subOne: "Web Technology II ",
+        subTwo: "Software Engineering",
+        subThree: "Information Security ",
+        subFour: "Computer Graphics",
+        subFive: "Technical Writing ",
 
         // 
         firstLink: "https://drive.google.com/file/d/1taDAOj-hVZ0pDb6WJZb3TtYSlIGFCJbJ/view?usp=sharing",
@@ -169,13 +168,12 @@ const semisterData = {
         seventhPdfUrl: 'dsa.pdf',
 
 
-        title: '+2 in Science',
-        pdfUrl: 'seminar.pdf',
-        subOne: "Subject Name",
-        subTwo: "Subject Name",
-        subThree: "Subject Name",
-        subFour: "Subject Name",
-        subFive: "Subject Name",
+
+        subOne: "NET Centric Computing",
+        subTwo: "Database Administration",
+        subThree: "Management Information System",
+        subFour: "Research Methodology",
+        subFive: "",
 
 
         // 
@@ -199,13 +197,12 @@ const semisterData = {
         seventhPdfUrl: 'dsa.pdf',
 
 
-        title: '+2 in Science',
-        pdfUrl: 'seminar.pdf',
-        subOne: "Subject Name",
-        subTwo: "Subject Name",
-        subThree: "Subject Name",
-        subFour: "Subject Name",
-        subFive: "Subject Name",
+
+        subOne: "Advanced Java Programming",
+        subTwo: "Software Project Management",
+        subThree: "E-commerce ",
+        subFour: "",
+        subFive: "",
 
         // 
         firstLink: "https://drive.google.com/drive/folders/14yWvhSK5FniY2mrZGC0rF2Cae6eewIWZ?usp=sharing",
@@ -232,13 +229,12 @@ const semisterData = {
         seventhPdfUrl: 'dsa.pdf',
 
 
-        title: '+2 in Science',
-        pdfUrl: 'seminar.pdf',
-        subOne: "Subject Name",
-        subTwo: "Subject Name",
-        subThree: "Subject Name",
-        subFour: "Subject Name",
-        subFive: "Subject Name",
+
+        subOne: "Network and System Administration",
+        subTwo: "E Governance",
+        subThree: "",
+        subFour: "",
+        subFive: "",
 
 
         // 

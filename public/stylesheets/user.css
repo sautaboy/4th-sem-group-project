@@ -43,9 +43,12 @@ h3.user-full-name {
 .edit-profile-button-and-logout-button-container input {
     width: 9rem;
     border-radius: 4px;
-    padding: 5px 10px;
+    padding: 7px 10px;
     cursor: pointer;
     text-transform: capitalize;
+    border: none;
+    background: #D0A2F7;
+    color: #fff;
 }
 
 
@@ -77,24 +80,30 @@ h3.user-full-name {
 
 
 .bookmarks li {
-    width: calc(100% / 8);
+    min-width: calc(100% / 5);
     height: 100px;
-    background-color: #dadada;
+    background-color: #E5D4FF;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 8px 8px 0 0;
+    border-radius: 10px;
     flex-direction: column;
+    padding: 10px;
+    gap: 10px;
 }
 
 .bookmarks li button {
     width: 100%;
     padding: 3px 0;
-    text-transform: uppercase;
+    text-transform: capitalize;
     border-radius: 0px;
-    border: 1px solid black;
+    border: none;
     cursor: pointer;
+    border-radius: 10px;
+    padding: 7px;
+    color: #fff;
+    background: hsl(0, 40%, 50%);
 }
 
 .bookmarks li a {
@@ -103,7 +112,8 @@ h3.user-full-name {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px 8px 0 0;
+    color: green;
+    font-size: 18px;
 }
 
 
@@ -119,10 +129,10 @@ h3.user-full-name {
         width: 100%;
     }
 
-    .bookmarks .bookmark-list
-    {
+    .bookmarks .bookmark-list {
         justify-content: center;
     }
+
     .user-profile .user-profile-img-wrap {
         width: 15vh;
         height: 15vh;

@@ -1,4 +1,4 @@
-
+// bca
 const semisterData = {
     firstSemister: {
         subOnePdfUrl: '',
@@ -43,13 +43,13 @@ const semisterData = {
     secondSemister: {
 
         // pdf file url
-        subOnePdfUrl: 'dsa.pdf',
-        subTwoPdfUrl: 'dsa.pdf',
-        subThirdPdfUrl: 'dsa.pdf',
-        subFourPdfUrl: 'dsa.pdf',
+        subOnePdfUrl: 'https://drive.google.com/file/d/1N8VyNmFLBX56WtwkqIj566hlGGja4Sal/preview',
+        subTwoPdfUrl: '',
+        subThirdPdfUrl: '',
+        subFourPdfUrl: '',
 
 
-        subOne: "c Programming",
+        subOne: "C Programming",
         subTwo: "Math II",
         subThree: "English II",
         subFour: "Accounting",
@@ -70,23 +70,23 @@ const semisterData = {
     },
     thirdSemister: {
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
 
 
         title: '+2 in Science',
-        subOne: "Subject Name",
-        subTwo: "Subject Name",
-        subThree: "Subject Name",
-        subFour: "Subject Name",
-        subFive: "Subject Name",
+        subOne: "Data Structures and Algorithms",
+        subTwo: "Probability and Statistics",
+        subThree: "System Analysis and Design",
+        subFour: "OOP in Java",
+        subFive: "Web Technology",
 
         // 
         firstLink: "https://drive.google.com/drive/folders/1GgpDxBsIHhUjX6B3tnH4ys87YESZmfU5?usp=sharing",
@@ -107,22 +107,20 @@ const semisterData = {
     fourthSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
-        title: '+2 in Science',
-        pdfUrl: 'seminar.pdf',
-        subOne: "Subject Name",
-        subTwo: "Subject Name",
-        subThree: "Subject Name",
-        subFour: "Subject Name",
-        subFive: "Subject Name",
+        subOne: "Operating System",
+        subTwo: "Numerical Methods",
+        subThree: "Software Engineering	",
+        subFour: "Scripting Language",
+        subFive: "Database Management System",
 
 
         // 
@@ -142,22 +140,21 @@ const semisterData = {
     , fifthSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
         title: '+2 in Science',
-        pdfUrl: 'seminar.pdf',
-        subOne: "Subject Name",
-        subTwo: "Subject Name",
-        subThree: "Subject Name",
-        subFour: "Subject Name",
-        subFive: "Subject Name",
+        subOne: "MIS and E-Business",
+        subTwo: "DotNet Technology	",
+        subThree: "Computer Networking",
+        subFour: "Introduction to Management",
+        subFive: "Computer Graphics and Animation",
 
         // 
         firstLink: "https://drive.google.com/file/d/1taDAOj-hVZ0pDb6WJZb3TtYSlIGFCJbJ/view?usp=sharing",
@@ -167,22 +164,21 @@ const semisterData = {
     , sixthSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
         title: '+2 in Science',
-        pdfUrl: 'seminar.pdf',
-        subOne: "Subject Name",
-        subTwo: "Subject Name",
-        subThree: "Subject Name",
-        subFour: "Subject Name",
-        subFive: "Subject Name",
+        subOne: "Mobile Programming",
+        subTwo: "Distributed System	",
+        subThree: "Applied Economics",
+        subFour: "Advanced Java Programming",
+        subFive: "Network Programming",
 
 
         // 
@@ -197,22 +193,18 @@ const semisterData = {
     , seventhSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
         title: '+2 in Science',
-        pdfUrl: 'seminar.pdf',
-        subOne: "Subject Name",
-        subTwo: "Subject Name",
-        subThree: "Subject Name",
-        subFour: "Subject Name",
-        subFive: "Subject Name",
+        subOne: "Cyber Law and Professional Ethics",
+        subTwo: "Cloud Computing",
 
         // 
         firstLink: "https://drive.google.com/drive/folders/14yWvhSK5FniY2mrZGC0rF2Cae6eewIWZ?usp=sharing",
@@ -230,22 +222,17 @@ const semisterData = {
     eightSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
-        title: '+2 in Science',
-        pdfUrl: 'seminar.pdf',
-        subOne: "Subject Name",
-        subTwo: "Subject Name",
-        subThree: "Subject Name",
-        subFour: "Subject Name",
-        subFive: "Subject Name",
+        subOne: "Operations Research",
+        subTwo: "Cloud Computing",
 
 
         // 

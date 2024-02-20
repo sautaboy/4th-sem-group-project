@@ -5,7 +5,6 @@
 
 .form {
     width: fit-content;
-    /* background: var(--button-background); */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -15,19 +14,13 @@
     width: 40%;
     border-radius: 5px;
     overflow: hidden;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.242);
+
     border-radius: 16px;
-    box-shadow: rgb(145, 191, 241) 0px 20px 30px -10px;
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.402);
-    border: 1px solid gray;
-
     animation: Shake 0.5s linear infinite;
-
-
+    background: #E5D4FF;
 }
+
 
 p.error-message {
     color: crimson;
@@ -79,6 +72,7 @@ p.error-message {
     align-items: center;
     justify-content: center;
     color: #fff;
+    background: hwb(267 55% 0%);
 }
 
 .form label input {
@@ -97,25 +91,25 @@ p.error-message {
     border: .5px solid rgba(0, 0, 0, 0.342);
     border-left: none;
     letter-spacing: 1px;
-
+    background: #F1EAFF;
 }
 
 .form input.submit-button {
     height: 3rem;
     cursor: pointer;
     letter-spacing: 1px;
-    background: var(--purple);
     border-radius: 10px;
     border: none;
     color: #fff;
     letter-spacing: 1px;
     font-weight: bold;
-    background: green;
+    background: #D0A2F7;
+    transition: .3s ease-in-out;
 }
 
 .form input.submit-button:hover {
 
-    background: hsl(197, 86%, 22%);
+    background: hsl(272, 84%, 70%);
 
 }
 
