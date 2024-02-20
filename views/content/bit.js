@@ -41,8 +41,6 @@ const semisterData = {
         subTwoPdfUrl: 'dsa.pdf',
         subThirdPdfUrl: 'dsa.pdf',
         subFourPdfUrl: 'dsa.pdf',
-
-
         subOne: "Microprocessor and Computer Architecture",
         subTwo: "Discrete Structure ",
         subThree: "Object Oriented Programming",

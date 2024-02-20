@@ -18,4 +18,9 @@
         width: 100%;
         font-size: medium;
     }
+
+    .semister-name-container h2 {
+        text-wrap: nowrap;
+        margin-top: 10px;
+    }
 }

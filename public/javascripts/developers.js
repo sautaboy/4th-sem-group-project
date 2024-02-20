@@ -10,7 +10,7 @@ const developers = [
         name: 'aavash',
         images:
             [
-                "/images/Developers Photos/aavash1.jpg", "/images/Developers Photos/aavash2.jpg", "/images/Developers Photos/aavash3.jpg", "/images/Developers Photos/aavash4.jpg", "/images/Developers Photos/aavash5.jpg"
+                "/images/Developers Photos/aavash1.jpg", "/images/Developers Photos/aavash2.jpg", "/images/Developers Photos/aavash3.jpg", "/images/Developers Photos/aavash4.jpg"
             ]
     },
     {

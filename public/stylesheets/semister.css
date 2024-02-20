@@ -120,12 +120,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 2rem;
+        font-size: 3rem;
         width: 2rem;
         top: 6rem;
         border-radius: 5px 0 0 5px;
         color: crimson;
-        background: hsl(0, 0%, 90%);
+        background: #E5D4FF;
+
     }
 
     #content-body {

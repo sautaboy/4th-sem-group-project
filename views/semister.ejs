@@ -325,12 +325,12 @@
 
                         // Set the initial color based on the bookmarked state
                         if (isBookmarked) {
-                            eachButton.style.color = "red";
+                            eachButton.style.color = "#F1EAFF";
                         }
 
                         // Add click event listener to each bookmark button
                         eachButton.addEventListener("click", function (e) {
-                            eachButton.style.color = "red";
+                            eachButton.style.color = "#fff";
 
                             // Set the bookmarked state in localStorage for this specific button
                             localStorage.setItem(buttonKey, true);
