@@ -352,21 +352,33 @@ router.get("/editprofile", isLoggedIn, async function (req, res, next) {
 });
 
 
-router.post("/signup", function (req, res, next) {
+router.post("/signup", async function (req, res, next) {
+  try {
+    // Check if the username already exists in the database
+    const existingUser = await userModel.findOne({ username: req.body.username }).exec();
+    if (existingUser) {
+      // If the username already exists, send a response with an error message
+      // return res.status(400).send('Username is already taken');
+      res.render("usernametaken")
+    }
 
-  const userData = new userModel({
-    username: req.body.username,
-    name: req.body.name,
-    email: req.body.email,
+    // If the username is not taken, proceed with creating the new user
+    const userData = new userModel({
+      username: req.body.username,
+      name: req.body.name,
+      email: req.body.email,
+    });
 
-  })
-  userModel.register(userData, req.body.password)
-    .then(function () {
-      passport.authenticate("local")(req, res, function () {
-        res.redirect("/user")
-      })
-    })
+    await userModel.register(userData, req.body.password);
+    passport.authenticate("local")(req, res, function () {
+      res.redirect("/user");
+    });
+  } catch (error) {
+    // Handle any errors that occur during the process
+    next(error);
+  }
 });
+
 
 
 
