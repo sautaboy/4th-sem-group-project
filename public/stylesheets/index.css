@@ -1,6 +1,5 @@
 #content-body {
-    padding: 0 7%;
-
+    padding: 4rem 7%;
     width: 100%;
     height: auto;
     display: flex;
@@ -11,11 +10,12 @@
 
 .first-page {
     width: 100%;
-    min-height: calc(100vh - 6rem);
+    min-height: calc(100vh - 15rem);
     display: flex;
     gap: 10px;
     flex-direction: column;
     position: relative;
+    border-bottom: 3px solid rgba(152, 151, 151, 0.759);
 }
 
 .left-and-right-side {
@@ -23,6 +23,7 @@
     height: 100%;
     width: 100%;
     justify-content: space-between;
+
 }
 
 .first-page .left-side,
@@ -33,11 +34,13 @@
     margin-top: 1.8rem;
 }
 
+
 .first-page .left-side {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .first-page .left-side .typewriter-container {
@@ -49,10 +52,38 @@
 
 }
 
+h1.get-your-all-faculty-notes {
+    text-transform: capitalize;
+    font-size: 3.1rem;
+    color: #333;
+    border-bottom: 1px solid lightgray;
+    width: fit-content;
+    margin-bottom: 2.3rem;
+    margin-top: -2rem;
+}
+
+span.get-your-fac-paragraph {
+    font-size: 1.3em;
+    text-transform: capitalize;
+}
+
+button.past-year-questions-button {
+    position: absolute;
+    top: 110%;
+    left: 0%;
+    margin-top: 1.5rem;
+    transform: translate(-0%, -50%);
+}
+
+
+
 
 .first-page .left-side .typewriter-container h1 {
     letter-spacing: -1px;
     color: crimson;
+    font-size: 3.2rem;
+    /* text-wrap: nowrap; */
+
 }
 
 .first-page .left-side .typewriter-container h1 span {
@@ -72,10 +103,10 @@
 }
 
 .first-page .left-side .typewriter-container p {
-    line-height: 30px;
+    /* line-height: 30px; */
+    margin-top: 1rem;
     width: 90%;
-    font-weight: 300;
-    color: rgb(88, 47, 55);
+    font-size: 1.5em;
 }
 
 .first-page .right-side {
@@ -261,10 +292,8 @@
     align-items: flex-start;
     padding: 10% 0 10% 0;
     position: relative;
-
-
-
 }
+
 
 .second-page .introduction {
     width: auto;

@@ -178,11 +178,12 @@ li.contact {
 
 
     /* From https://css.glass */
-    background: rgba(255, 255, 255, 0);
+    /* background: rgba(255, 255, 255, 0.148); */
+    background: #F1EAFF;
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
     border: black 1px solid;
     background: linear-gradient(-45deg, hsla(120, 100%, 95%, rgba(251, 208, 217, 0.028)3%rgba(255, 255, 204, 0.091)0%, 90%));
 
@@ -279,6 +280,13 @@ li.contact {
     letter-spacing: 2px;
     background: transparent;
     background-image: url("/images/writing.gif");
+
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#feedback-form textarea:focus {
+    background-image: none;
 }
 
 #feedback-form button {

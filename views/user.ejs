@@ -61,9 +61,14 @@
                 <ul class="bookmark-list">
                     <% user.bookmarks.forEach(bookmark=> { %>
                         <li>
-                            <a href="<%= bookmark.url %>" target="_blank">
+                            <a>
                                 <%= bookmark.title %>
                             </a>
+
+                            <a class="view-this-button" href="<%= bookmark.url %>" target="_blank">
+                                View This
+                            </a>
+
                             <button class="remove-bookmark" data-title="<%= bookmark.title %>"
                                 data-url="<%= bookmark.url %>">
                                 Remove this

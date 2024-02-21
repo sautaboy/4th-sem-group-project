@@ -33,25 +33,15 @@
               <h3>
                 Find: <span id="typewriter-text"></span>
               </h3>
-              <p class="text">
-                Welcome to <strong>BytesPedia</strong> , your go-to platform for semester-wise educational notes. We're
-                passionate about simplifying learning, offering meticulously curated notes for each semester. Whether
-                you're a registered user enjoying personalized features like bookmarking or a guest user benefiting from
-                direct downloads, our goal is to empower every student's academic journey.
-              </p>
-              <p class="text">
-                For those seeking an organized study approach, registered users can take advantage of our bookmarking
-                feature, creating a personalized study plan with ease. Not registered? No worries! All users, logged in
-                or not, can seamlessly download and view notes directly from our website. Explore our collection,
-                enhance your understanding of complex concepts, and make your academic experience smoother with
-                <span class="bytes index">Bytes</span> <span class="pedia index">Pedia </span>
 
+              <p class="text">
+                Welcome to <strong>BytesPedia</strong> , your go-to platform for semester-wise educational notes for
+                BCA. We're
+                offering simplifying learning, hand written notes and Past Year Question Paper.Our goal is to provide
+                combine place to provide better learning exerience and go to place for all notes and Questions Papers.
               </p>
-              <p>
-                Your success matters to us. For questions, suggestions, or support, reach out to our dedicated team.
-                Thank you for choosing <span class="bytes index">Bytes</span> <span class="pedia index">Pedia </span>
-                where learning is made simple and accessible for everyone.
-              </p>
+              <button class="past-year-questions-button">Past Year Questions</button>
+
 
             </div>
 
@@ -70,31 +60,7 @@
 
         <!-- carousel is here -->
 
-        <div class="wrapper">
-          <h1>
-            " People Feedback "
-          </h1>
-          <!-- left arrow -->
-          <i class="ri-arrow-left-s-line"></i>
 
-
-          <ul class="carousel">
-            <% feedback.reverse().forEach(function(e){ %>
-              <a href="#" class="card">
-                <div class="img">
-                  <img src="/images/userPhoto/<%= e.user.image%>" alt="<%= e.user.name %>'" width="200">
-                </div>
-                <h2>
-                  <%= e.user.username%>
-                </h2>
-                <span class="feedback-comment">
-                  <%= e.comment%>
-                </span>
-              </a>
-              <% }) %>
-          </ul>
-          <i class="ri-arrow-right-s-line"></i>
-        </div>
 
       </div>
 
@@ -106,13 +72,13 @@
 
       <div class="second-page" id="semister-list-link">
         <div class="introduction">
-          <p>Welcome to our
-            <span class="bytes index">Bytes</span> <span class="pedia index">Pedia </span>
-            Click on your specific semester link to discover
-            subjects and access notes
-            tailored for your academic needs. Navigate seamlessly through past-year questions for each subject,
-            enhancing your preparation. It's your one-stop destination for organized study materials and exam resources.
-            Explore, learn, and excel in your BCA journey with ease.
+
+          <h1 class="get-your-all-faculty-notes">get your all faculty notes.</h1>
+          <p>
+            <span class="get-your-fac-paragraph">
+              here you can find all your faculty list then you can select your faculty and find questions and notes
+              there.
+            </span>
             <span class="img">
               <img src="/images/girl reading book gif.gif" alt="gir is reading a book giffy">
             </span>
@@ -138,6 +104,33 @@
             bbm
           </a>
         </div>
+      </div>
+
+
+      <div class="wrapper">
+        <h1>
+          " People Feedback "
+        </h1>
+        <!-- left arrow -->
+        <i class="ri-arrow-left-s-line"></i>
+
+
+        <ul class="carousel">
+          <% feedback.reverse().forEach(function(e){ %>
+            <a href="#" class="card">
+              <div class="img">
+                <img src="/images/userPhoto/<%= e.user.image%>" alt="<%= e.user.name %>'" width="200">
+              </div>
+              <h2>
+                <%= e.user.username%>
+              </h2>
+              <span class="feedback-comment">
+                <%= e.comment%>
+              </span>
+            </a>
+            <% }) %>
+        </ul>
+        <i class="ri-arrow-right-s-line"></i>
       </div>
     </div>
 

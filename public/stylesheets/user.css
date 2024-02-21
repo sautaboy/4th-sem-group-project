@@ -81,7 +81,7 @@ h3.user-full-name {
 
 .bookmarks li {
     min-width: calc(100% / 5);
-    height: 100px;
+    min-height: 100px;
     background-color: #E5D4FF;
     display: flex;
     align-items: center;
@@ -93,7 +93,8 @@ h3.user-full-name {
     gap: 10px;
 }
 
-.bookmarks li button {
+.bookmarks li button,
+.bookmark-list li a.view-this-button {
     width: 100%;
     padding: 3px 0;
     text-transform: capitalize;
@@ -103,7 +104,11 @@ h3.user-full-name {
     border-radius: 10px;
     padding: 7px;
     color: #fff;
-    background: hsl(0, 40%, 50%);
+    background: hsl(0, 70%, 50%);
+}
+
+.bookmark-list li a.view-this-button {
+    background: hsl(120, 60%, 25%);
 }
 
 .bookmarks li a {
@@ -112,8 +117,9 @@ h3.user-full-name {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: green;
+    color: blue;
     font-size: 18px;
+
 }
 
 

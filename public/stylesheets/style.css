@@ -1,3 +1,8 @@
+@font-face {
+  font-family: bytespedia;
+  src: url(/Fonts/NeueHaasDisplayMediu.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +10,7 @@
   text-decoration: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  /* font-family: bytespedia; */
 }
 
 img {
@@ -35,4 +41,19 @@ body {
   color: green;
   font-size: 24px;
 
+}
+
+button {
+  width: fit-content;
+  padding: 10px 20px;
+  background: #D0A2F7;
+  border-radius: 10px;
+  border: none;
+  color: #222;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: hsl(272, 84%, 70%);
 }
