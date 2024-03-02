@@ -10,7 +10,6 @@ const subjectData = {
         pdfUrl: 'dsa.pdf',
     },
     ms: {
-        title: '+2 in Science',
         pdfUrl: 'seminar.pdf',
         subOne: "Subject Name",
         subTwo: "Subject Name",
@@ -20,7 +19,6 @@ const subjectData = {
 
     },
     dbms: {
-        title: '+2 in Science',
         pdfUrl: 'seminar.pdf',
         subOne: "Subject Name",
         subTwo: "Subject Name",

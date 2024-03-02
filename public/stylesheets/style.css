@@ -3,6 +3,16 @@
   src: url(/Fonts/NeueHaasDisplayMediu.ttf);
 }
 
+@font-face {
+  font-family: h1;
+  src: url(/Fonts/h1.ttf)
+}
+
+@font-face {
+  font-family: p;
+  src: url(/Fonts/paragraph.ttf)
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -41,6 +51,14 @@ body {
   color: green;
   font-size: 24px;
 
+}
+
+h1 {
+  font-family: h1;
+}
+
+p {
+  font-family: p;
 }
 
 button {

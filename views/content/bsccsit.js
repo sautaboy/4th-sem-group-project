@@ -2,10 +2,10 @@
 const semisterData = {
     firstSemister: {
         subOnePdfUrl: '',
-        subTwoPdfUrl: '',
-        subThirdPdfUrl: '',
-        subFourPdfUrl: 'https://drive.google.com/file/d/1N8VyNmFLBX56WtwkqIj566hlGGja4Sal/preview',
-        subFivePdfUrl: '',
+        subTwoPdfUrl: 'https://drive.google.com/file/d/1wX3YvgDNWyYMTfLaLoFsvmaDCIU88nd_/preview',
+        subThirdPdfUrl: 'https://drive.google.com/file/d/1KJ3_XwJpU2Z5LnEw3GkHO-R582EPsjPz/preview',
+        subFourPdfUrl: 'https://drive.google.com/file/d/1OGSjgAYLKaFB5GmDBygBLXVcTN_rpTYx/preview',
+        subFivePdfUrl: 'https://drive.google.com/file/d/1FN5simRlYOogfBn-XFF7TpJgY01eagX5/preview',
 
         subOne: "Introduction to Information Technology",
         subTwo: "C Programming",
@@ -14,33 +14,31 @@ const semisterData = {
         subFive: "Physics",
 
         // past year questions lisnk
-        firstLink: "https://drive.google.com/drive/folders/1JkSEC87BT-EMT3JVUxBzwnfwGo5r60dR?usp=drive_link",
+        firstLink: "https://drive.google.com/file/d/1xUSruaKxDRmH42_TLjj60-utlRdKVmTg/view?usp=drive_link",
 
-        secondLink: "https://drive.google.com/drive/folders/1-nuj_ZAaXJNheQ1hopLtvW-V31zJEAoQ?usp=drive_link",
+        secondLink: "https://drive.google.com/file/d/1TVpAWkmXlTlDqR5HU7ifZ05Z6Cw5Q9BJ/view?usp=sharing",
 
-        thirdLink: "https://drive.google.com/drive/folders/1_a2KYu6ntxzWZqatSrv64N6gOFRV-E0S?usp=sharing",
+        thirdLink: "https://drive.google.com/file/d/1HtWpO9nKZaXHc4tJ6GGxfy2GZxNH3Spr/view?usp=drive_link",
 
-        fourthLink: "https://drive.google.com/drive/folders/1NeMz-WLEeq0LRhT8LxQ7SkrdwioaMsqo?usp=drive_link",
-
-        fifthLink: "https://drive.google.com/drive/folders/1k9nbnBfUpq9IKO2rEZw06sOheTRIHWrP?usp=drive_link",
-        sixthLink: "https://drive.google.com/file/d/1cbbFxqmYFtulwTmJ0uMoOhsBtbtAghhU/view?usp=drive_link",
+        fourthLink: "https://drive.google.com/file/d/1FSjeJ372LLi_NAkanaiuYCAKQ2x6Nh4y/view?usp=drive_link",
 
 
-        firstLinkDate: "2019",
-        secondLinkDate: "2020",
-        thirdLinkDate: "2019 NCCS",
-        fourthLinkDate: "2019 ACHS",
-        fifthLinkDate: "2020 Mechi",
-        sixthLinkDate: "2021"
+
+        firstLinkDate: "2074",
+        secondLinkDate: "2077",
+        thirdLinkDate: "2078",
+        fourthLinkDate: "2079",
 
     },
     secondSemister: {
 
         // pdf file url
-        subOnePdfUrl: 'dsa.pdf',
-        subTwoPdfUrl: 'dsa.pdf',
-        subThirdPdfUrl: 'dsa.pdf',
-        subFourPdfUrl: 'dsa.pdf',
+        subOnePdfUrl: 'https://drive.google.com/file/d/15d9sBhbbjKOgPP4-SaNP1GAYljd92NSc/preview',
+        subTwoPdfUrl: 'https://drive.google.com/file/d/1OQMYF-iIIwHVO0kJOQ-yaOS9-FiMYsy9/preview',
+        subThirdPdfUrl: 'https://docs.google.com/presentation/d/12VLbztSiJ43cXiMtroqqRtnRbf66ekDY/edit?usp=drive_link&ouid=115954627837133760863&rtpof=true&sd=true',
+        subFourPdfUrl: 'https://drive.google.com/file/d/1BAlsSUf3accdwE5AGwFOKOyAZeVXzCqR/preview',
+        subFivePdfUrl: 'https://drive.google.com/file/d/1HLaMmImS3fqtIHsEmMDrkumMd5vZVD_w/preview',
+
 
 
         subOne: "Discrete Structure",
@@ -50,32 +48,27 @@ const semisterData = {
         subFive: "Statistics I",
 
         // past year questions lisnk
-        firstLink: "https://drive.google.com/drive/folders/1L1TTW7SBmkDvdxf3AaU49gXp5RwAm6Pu?usp=sharing",
+        firstLink: "https://drive.google.com/file/d/1a8fGgOIXSjp33W1iPwct8wbwNxNejQ5R/preview",
 
-        secondLink: "https://drive.google.com/drive/folders/1gXNRqct-t8d4A2sB_slAAyW0gZ1JNSVa?usp=sharing",
-        thirdLink: "https://drive.google.com/file/d/1p2Ct9Xv_wm1_GWqDqwr5VbgGO_NSORKL/view?usp=drive_link",
+        secondLink: "https://drive.google.com/file/d/1P1NyuCHkBqrZMZPvPKYho0LmKdT1g9ZI/preview",
 
-        firstLinkDate: "2018",
-        secondLinkDate: "2020",
-        thirdLinkDate: "2021"
+        firstLinkDate: "2079",
+        secondLinkDate: "2078",
 
 
 
     },
     thirdSemister: {
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        subOnePdfUrl: 'https://drive.google.com/file/d/1VSpWgYeV08pO9e5qBr6_1cqOVead2W4i/preview',
+        subTwoPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        subFivePdfUrl: 'https://drive.google.com/file/d/1VSpWgYeV08pO9e5qBr6_1cqOVead2W4i/preview',
 
 
 
 
-        title: '+2 in Science',
         subOne: "Data Structure and Algorithm",
         subTwo: "Numerical Method",
         subThree: "Computer Architecture",
@@ -83,31 +76,24 @@ const semisterData = {
         subFive: "Statistics II",
 
         // 
-        firstLink: "https://drive.google.com/drive/folders/1GgpDxBsIHhUjX6B3tnH4ys87YESZmfU5?usp=sharing",
+        firstLink: "https://drive.google.com/file/d/1NbezMYwl-0MpZwloAk18xu1udrd3ciF9/view?usp=drive_link",
 
-        secondLink: "https://drive.google.com/drive/folders/1LtsdbYDBAR07ZaUFFV5cb50fsV4Pmc57?usp=sharing",
-
-        thirdLink: "https://drive.google.com/drive/folders/1Z6bkvagQiVpJl5D4hohI1LtQKmYY2QMo?usp=sharing",
-
-        fourthLink: "https://drive.google.com/drive/folders/1V1El6roMwzklrYyQW_aAyutjriGMLuq9?usp=sharing"
-        ,
-        firstLinkDate: "2019",
-        secondLinkDate: "2020",
-        thirdLinkDate: "2023 Nagarjuna",
-        fourthLinkDate: "2023 NCCS"
+        secondLink: "https://drive.google.com/file/d/1juOebMpMUhPFg3obhwSPb8afR-iIhZRK/view?usp=drive_link",
+        firstLinkDate: "2078",
+        secondLinkDate: "2079",
 
 
     },
     fourthSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
         subOne: "Theory of Computation",
@@ -118,15 +104,17 @@ const semisterData = {
 
 
         // 
-        firstLink: "https://drive.google.com/drive/folders/1xlMFSTCo8p3Dd1jlcvKGF23FTFzXIcaQ?usp=drive_link",
+        firstLink: "",
 
-        secondLink: "https://drive.google.com/file/d/1y27mkde-EkJcBSJx5K0l4lmA06gkbWnT/view?usp=drive_link",
+        secondLink: "",
 
-        thirdLink: "https://drive.google.com/drive/folders/1ZiOLTeToBPXpf33qnTxNhV-2ToHbMIPc?usp=drive_link"
+        thirdLink: ""
         ,
-        firstLinkDate: "2023",
-        secondLinkDate: "2019",
-        thirdLinkDate: "2020",
+        fourthLink: "",
+        firstLinkDate: "2080",
+        secondLinkDate: "2076",
+        thirdLinkDate: "2078",
+        fourthLinkDate: "2079"
 
 
 
@@ -134,13 +122,13 @@ const semisterData = {
     , fifthSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
 
@@ -151,20 +139,29 @@ const semisterData = {
         subFive: "Web Technology",
 
         // 
-        firstLink: "https://drive.google.com/file/d/1taDAOj-hVZ0pDb6WJZb3TtYSlIGFCJbJ/view?usp=sharing",
-        firstLinkDate: "2018",
+        firstLink: "https://drive.google.com/file/d/1pG890KKKhUwl8VbxQ72HD4VIgMDBu-q1/view?usp=drive_link",
+
+        secondLink: "https://drive.google.com/file/d/1j4OZN3KaPp9K1-L8D9waZeVMNRjdLf3E/view?usp=drive_link",
+
+        thirdLink: "https://drive.google.com/file/d/1j4OZN3KaPp9K1-L8D9waZeVMNRjdLf3E/view?usp=drive_link"
+        ,
+        fourthLink: "https://drive.google.com/file/d/1N0Cd-MaAXCTYHJcijQYH9VYfj2_5MX5I/view?usp=drive_link",
+        firstLinkDate: "2080",
+        secondLinkDate: "2076",
+        thirdLinkDate: "2078",
+        fourthLinkDate: "2079"
 
     }
     , sixthSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
 
@@ -176,24 +173,28 @@ const semisterData = {
 
 
         // 
-        firstLink: "https://drive.google.com/drive/folders/1Gyobi0HQAA39n6dQjM1GpOmGf5eNHM87?usp=sharing",
+        firstLink: "https://drive.google.com/file/d/1De9hteIkbpk7OYNk7dkxaZoA5OGQfAs6/view?usp=drive_link",
 
-        secondLink: "https://drive.google.com/drive/folders/1DFAKQUR-CXV5bieN1a9HxnMwApSJpYkK?usp=sharing",
+        secondLink: "https://drive.google.com/file/d/1SmNIGXbFKyin6yG4vOLhHDEtRDoD8dQi/view?usp=drive_link",
+        thirdLink: "https://drive.google.com/drive/folders/1uUn4sBVqsdi47UHXaJy-iDzpigew0CDf?usp=sharing",
 
-        firstLinkDate: "2021",
-        secondLinkDate: "2023",
+
+        firstLinkDate: "2075",
+        secondLinkDate: "2080",
+        thirdLinkDate: "2078",
+
 
     }
     , seventhSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
 
@@ -204,28 +205,26 @@ const semisterData = {
         subFive: "",
 
         // 
-        firstLink: "https://drive.google.com/drive/folders/14yWvhSK5FniY2mrZGC0rF2Cae6eewIWZ?usp=sharing",
-        firstLinkDate: "2018 ",
+        firstLink: "https://drive.google.com/file/d/1WxdRBmbr9gBNFJ0rJq2N0kqYM2T_DUxj/view?usp=drive_link",
 
-        secondLink: "https://drive.google.com/drive/folders/1SYA13lGqgao2i-7iPoZW-rjryrJpRBtX?usp=sharing",
-
-        thirdLink: "https://drive.google.com/drive/folders/10RUyAJJLvVUAq2Xf5gIINEkbK1iR6hM9?usp=sharing",
+        secondLink: "https://drive.google.com/file/d/1h2xJ4ZdvC_X1vM3ZVQBJXBY38nCCSpcM/view?usp=drive_link",
+        thirdLink: "https://drive.google.com/drive/folders/1r_cKgLZo-tWAmB0Y9rrD71WIywje5-LO?usp=drive_link",
 
 
-        firstLinkDate: "2018",
-        secondLinkDate: "2023 NCCS",
-        thirdLinkDate: "2023 Nagaarjuna"
+        firstLinkDate: "2079",
+        secondLinkDate: "2080",
+        thirdLinkDate: "2078"
     },
     eightSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
 

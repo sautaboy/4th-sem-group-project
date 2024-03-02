@@ -38,10 +38,10 @@ const semisterData = {
     secondSemister: {
 
         // pdf file url
-        subOnePdfUrl: 'dsa.pdf',
-        subTwoPdfUrl: 'dsa.pdf',
-        subThirdPdfUrl: 'dsa.pdf',
-        subFourPdfUrl: 'dsa.pdf',
+        subOnePdfUrl: '',
+        subTwoPdfUrl: '',
+        subThirdPdfUrl: '',
+        subFourPdfUrl: '',
 
 
         subOne: "	Financial Accounting",
@@ -65,13 +65,13 @@ const semisterData = {
     },
     thirdSemister: {
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
 
@@ -102,13 +102,13 @@ const semisterData = {
     fourthSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
         title: '+2 in Science',
@@ -137,13 +137,13 @@ const semisterData = {
     , fifthSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
         title: '+2 in Science',
@@ -162,13 +162,13 @@ const semisterData = {
     , sixthSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
         title: '+2 in Science',
@@ -192,13 +192,13 @@ const semisterData = {
     , seventhSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
         subOne: "	E-Commerce",
@@ -223,13 +223,13 @@ const semisterData = {
     eightSemister: {
 
         // question pdf url
-        firstPdfUrl: 'dsa.pdf',
-        secondPdfUrl: 'dsa.pdf',
-        thirdPdfUrl: 'dsa.pdf',
-        fourthPdfUrl: 'dsa.pdf',
-        fifthPdfUrl: 'dsa.pdf',
-        sixthPdfUrl: 'dsa.pdf',
-        seventhPdfUrl: 'dsa.pdf',
+        firstPdfUrl: '',
+        secondPdfUrl: '',
+        thirdPdfUrl: '',
+        fourthPdfUrl: '',
+        fifthPdfUrl: '',
+        sixthPdfUrl: '',
+        seventhPdfUrl: '',
 
 
         subOne: "Business Strategy",
