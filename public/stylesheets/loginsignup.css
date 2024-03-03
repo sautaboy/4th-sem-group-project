@@ -22,11 +22,21 @@
 }
 
 
-p.error-message {
-    color: crimson;
-    text-align: justify;
-    letter-spacing: -1px;
+
+.usernameAvailable {
+    position: absolute;
+    right: 5px;
+    font-size: small;
+    letter-spacing: 1px;
+    color: red;
 }
+
+.onkeyupErrorMessage {
+    text-align: center;
+    height: 10px;
+    letter-spacing: 1px;
+}
+
 
 
 

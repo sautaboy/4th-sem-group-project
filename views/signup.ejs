@@ -16,9 +16,8 @@
 
 <body>
     <%- include ('header');%>
-
-
         <div id="content-body">
+
             <form action="/signup" id="signup-form" class="signup-form form" method="post">
                 <h1>Sign Up</h1>
                 <div class=" submitted-field">
@@ -26,8 +25,11 @@
                         <i class="ri-user-fill"></i>
                         <input type="text" name="username" onkeyup="characterCheck()" id="username"
                             placeholder="Username">
-                    </label>
 
+                        <!--  -->
+                        <p class="usernameAvailable">
+                        </p>
+                    </label>
 
                     <label for="name">
                         <i class="ri-user-heart-line"></i>
@@ -50,21 +52,45 @@
 
                     <input type="submit" value="Sign Up" class="submit-button">
                     <a href="#" class="log-in-button">log in</a>
-                    <p class="error"></p>
+                    <div>
+                        <p class="onkeyupErrorMessage">
+                            <%= message%>
+                        </p>
+                    </div>
                 </div>
             </form>
         </div>
 
         <%- include ('footer');%>
-
-
             <script src="/javascripts/signup.js"></script>
 
 
+            <!-- jquery implementation -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
             <script>
+                // Add event listener to username input field
+                $('#username').on('input', function () {
+                    // Get the value of the username input field
+                    const username = $(this).val();
+
+                    // Send an AJAX request to the server to check username availability
+                    $.ajax({
+                        url: '/checkUsername',
+                        method: 'POST',
+                        data: { username: username },
+                        success: function (response) {
+                            // Update the display area with the response message
+                            $('.usernameAvailable').text(response.message);
+                        }
+                    });
+                });
+            </script>
 
 
-
+            <script>
                 document.querySelector("#signup-form").addEventListener("click", function (e) {
                     if (document.querySelector("input[name=username]").value.length >= 15) {
                         e.preventDefault();
@@ -82,7 +108,7 @@
                         e.preventDefault();
 
                     }
-                    else if (document.querySelector("input[name=email]").value.length >= 25) {
+                    else if (document.querySelector("input[name=email]").value.length >= 50) {
                         e.preventDefault();
                     }
 
@@ -102,48 +128,49 @@
                 })
 
 
-                document.querySelector(".error").style.color = "red"
+                document.querySelector(".onkeyupErrorMessage").style.color = "red"
 
 
                 function characterCheck() {
                     if (document.querySelector("input[name=username]").value.length >= 15) {
-                        document.querySelector(".error").innerText = "Username is too long"
+                        document.querySelector(".onkeyupErrorMessage").innerText = "Username is too long"
 
                     }
                     else if (document.querySelector("input[name=username]").value.length <= 3) {
-                        document.querySelector(".error").innerText = "Username is too short"
+                        document.querySelector(".onkeyupErrorMessage").innerText = "Username is too short"
 
                     }
                     else if (document.querySelector("input[name=name]").value.length >= 15) {
-                        document.querySelector(".error").innerText = "Name is too long"
+                        document.querySelector(".onkeyupErrorMessage").innerText = "Name is too long"
                     }
 
                     else if (document.querySelector("input[name=name]").value.length <= 3) {
-                        document.querySelector(".error").innerText = "Name is too short"
+                        document.querySelector(".onkeyupErrorMessage").innerText = "Name is too short"
 
                     }
-                    else if (document.querySelector("input[name=email]").value.length >= 25) {
-                        document.querySelector(".error").innerText = "Email is too long"
+                    else if (document.querySelector("input[name=email]").value.length >= 50) {
+                        document.querySelector(".onkeyupErrorMessage").innerText = "Email is too long"
                     }
 
                     else if (document.querySelector("input[name=email]").value.length <= 3) {
-                        document.querySelector(".error").innerText = "Invalid Email"
+                        document.querySelector(".onkeyupErrorMessage").innerText = "Invalid Email"
 
                     }
 
                     else if (document.querySelector("input[name=password]").value.length >= 15) {
-                        document.querySelector(".error").innerText = "Password is too long"
+                        document.querySelector(".onkeyupErrorMessage").innerText = "Password is too long"
                     }
 
                     else if (document.querySelector("input[name=password]").value.length <= 3) {
-                        document.querySelector(".error").innerText = "Password is too short"
+                        document.querySelector(".onkeyupErrorMessage").innerText = "Password is too short"
 
                     }
                     else {
-                        document.querySelector(".error").innerText = ""
+                        document.querySelector(".onkeyupErrorMessage").innerText = ""
                     }
                 }
             </script>
+
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-  var express = require('express');
+var express = require('express');
 var router = express.Router();
 const userModel = require("./users");
 const passport = require('passport');
@@ -177,7 +177,7 @@ router.get("/bbm", async function (req, res) {
   }
 });
 
-// bit routes
+// bit route
 router.get("/bit", async function (req, res) {
   try {
     const isAuthenticated = req.isAuthenticated();
@@ -327,7 +327,9 @@ router.post('/removeBookmark', isLoggedIn, async function (req, res, next) {
 
 
 // Assuming you have a route for the signup page
-router.get('/signup', function (req, res, next) {
+router.get('/signup', async function (req, res, next) {
+  // const user = await userModel.findOne({ username: req.user.username });
+
   // Check if the user is authenticated
   if (req.isAuthenticated()) {
     // If authenticated, redirect to the user's profile page
@@ -335,8 +337,58 @@ router.get('/signup', function (req, res, next) {
   }
 
   // If not authenticated, render the signup page
-  res.render('signup', { isAuthenticated: req.isAuthenticated() });
+  res.render('signup', { isAuthenticated: req.isAuthenticated(), message: null });
 });
+
+
+
+
+router.post('/signup', async function (req, res, next) {
+  try {
+    // Check if the username already exists in the database
+    const existingUser = await userModel.findOne({ username: req.body.username }).exec();
+    if (existingUser) {
+      // If the username already exists, render the signup page with an error message
+      return res.render('signup', { isAuthenticated: false, message: 'Username already exists' });
+    }
+
+    // If the username is not taken, proceed with creating the new user
+    const userData = new userModel({
+      username: req.body.username,
+      name: req.body.name,
+      email: req.body.email,
+    });
+
+    await userModel.register(userData, req.body.password);
+    passport.authenticate('local')(req, res, function () {
+      res.redirect('/user');
+    });
+  } catch (error) {
+    // Handle any errors that occur during the process
+    next(error);
+  }
+});
+
+// checking username without reloading pagre
+router.post('/checkUsername', async function (req, res) {
+  try {
+    // Check if the username already exists in the database
+    const existingUser = await userModel.findOne({ username: req.body.username }).exec();
+    if (existingUser) {
+      // If the username already exists, send a response indicating that it's taken
+      return res.json({ message: 'Username already exists' });
+    }
+
+    // If the username is not taken, send a response indicating that it's available
+    res.json({ message: '' });
+  } catch (error) {
+    // Handle any errors
+    console.error(error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+
 
 
 
@@ -351,33 +403,46 @@ router.get("/editprofile", isLoggedIn, async function (req, res, next) {
   }
 });
 
-
-router.post("/signup", async function (req, res, next) {
+router.post("/editprofile", isLoggedIn, uploads.single('image'), async function (req, res, next) {
   try {
-    // Check if the username already exists in the database
-    const existingUser = await userModel.findOne({ username: req.body.username }).exec();
-    if (existingUser) {
-      // If the username already exists, send a response with an error message
-      // return res.status(400).send('Username is already taken');
-      res.render("usernametaken")
+    // Find the user by username
+    const user = await userModel.findOne({ username: req.session.passport.user });
+
+    // Update user information based on the provided fields
+    if (req.body.username) {
+      user.username = req.body.username;
     }
 
-    // If the username is not taken, proceed with creating the new user
-    const userData = new userModel({
-      username: req.body.username,
-      name: req.body.name,
-      email: req.body.email,
-    });
+    if (req.body.name) {
+      user.name = req.body.name;
+    }
 
-    await userModel.register(userData, req.body.password);
-    passport.authenticate("local")(req, res, function () {
-      res.redirect("/user");
-    });
-  } catch (error) {
-    // Handle any errors that occur during the process
-    next(error);
+    if (req.body.bio) {
+      user.bio = req.body.bio;
+    }
+
+    // If a new avatar is uploaded, update the image field
+    if (req.file) {
+      const userphoto = new userPhotoModel({
+        filename: req.file.filename,
+        originalname: req.file.originalname,
+        path: req.file.path,
+      });
+      user.image = req.file.filename;
+
+      // Save the user photo
+      await userphoto.save();
+    }
+
+    // Save the updated user
+    await user.save();
+    res.redirect("/user");
+  } catch (err) {
+    console.error(err);
+    res.redirect("/user");
   }
 });
+
 
 
 
@@ -421,45 +486,7 @@ router.post('/logout', function (req, res, next) {
     res.redirect('/');
   });
 });
-router.post("/editprofile", isLoggedIn, uploads.single('image'), async function (req, res, next) {
-  try {
-    // Find the user by username
-    const user = await userModel.findOne({ username: req.session.passport.user });
 
-    // Update user information based on the provided fields
-    if (req.body.username) {
-      user.username = req.body.username;
-    }
-
-    if (req.body.name) {
-      user.name = req.body.name;
-    }
-
-    if (req.body.bio) {
-      user.bio = req.body.bio;
-    }
-
-    // If a new avatar is uploaded, update the image field
-    if (req.file) {
-      const userphoto = new userPhotoModel({
-        filename: req.file.filename,
-        originalname: req.file.originalname,
-        path: req.file.path,
-      });
-      user.image = req.file.filename;
-
-      // Save the user photo
-      await userphoto.save();
-    }
-
-    // Save the updated user
-    await user.save();
-    res.redirect("/user");
-  } catch (err) {
-    console.error(err);
-    res.redirect("/user");
-  }
-});
 
 
 

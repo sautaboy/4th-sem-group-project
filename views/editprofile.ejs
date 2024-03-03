@@ -24,8 +24,12 @@
                 <div class="submitted-field">
                     <label for="">
                         <i class="ri-user-fill"></i>
-                        <input type="text" name="username" onkeyup="checkChar()" id="" placeholder="Username"
+                        <input type="text" name="username" onkeyup="checkChar()" id="username" placeholder="Username"
                             value="<%= user.username%>">
+
+                        <p class="usernameAvailable">
+
+                        </p>
                     </label>
                     <label for="">
                         <i class="ri-user-heart-line"></i>
@@ -51,6 +55,36 @@
         </div>
 
         <%- include ('footer');%>
+
+
+
+            <script>
+                $(document).ready(function () {
+                    // Add event listener to username input field
+                    $('#username').on('input', function () {
+                        // Get the value of the username input field
+                        const username = $(this).val();
+
+                        // Send an AJAX request to the server to check username availability
+                        $.ajax({
+                            url: '/checkUsername',
+                            method: 'POST',
+                            data: { username: username },
+                            success: function (response) {
+                                // Update the display area with the response message
+                                $('.usernameAvailable').text(response.message);
+
+                                // Enable or disable the submit button based on response text
+                                if (response.message === 'Username already exists') {
+                                    $('.submit-button').prop('disabled', true); // Username available, enable submit button
+                                } else {
+                                    $('.submit-button').prop('disabled', false); // Username not available, disable submit button
+                                }
+                            }
+                        });
+                    });
+                });
+            </script>
 
 
 

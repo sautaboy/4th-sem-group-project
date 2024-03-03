@@ -1,0 +1,10 @@
+{
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorStyle": "line-thin",
+    "editor.wordWrapColumn": 100,
+    "editor.minimap.autohide": false,
+    "editor.minimap.maxColumn": 123,
+    "editor.minimap.showSlider": "mouseover",
+    "editor.minimap.side": "right"
+}
