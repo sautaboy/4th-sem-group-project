@@ -177,7 +177,7 @@ router.get("/bbm", async function (req, res) {
   }
 });
 
-// bit route
+// bit routes
 router.get("/bit", async function (req, res) {
   try {
     const isAuthenticated = req.isAuthenticated();

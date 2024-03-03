@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/loginsignup.css">
-  <link rel="shortcut icon" href="/favicon/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon/android-chrome-192x192.png" type="image/x-icon">
 
 
 </head>
@@ -24,20 +24,18 @@
                 <div class="submitted-field">
                     <label for="">
                         <i class="ri-user-fill"></i>
-                        <input type="text" name="username" id="" placeholder="Username" value="<%= user.username%>">
+                        <input type="text" name="username" onkeyup="checkChar()" id="" placeholder="Username"
+                            value="<%= user.username%>">
                     </label>
                     <label for="">
                         <i class="ri-user-heart-line"></i>
-                        <input type="text" name="name" id="" placeholder="Full name" value="<%= user.name%>">
+                        <input type="text" name="name" id="" onkeyup="checkChar()" placeholder="Full name"
+                            value="<%= user.name%>">
                     </label>
-                    <!-- <label for="">
-                        <i class="ri-lock-unlock-fill"></i>
-                        <input type="password" name="password" id="" placeholder="Password">
-                    </label> -->
-
                     <label for="">
                         <i class="ri-lock-unlock-fill"></i>
-                        <input type="text" name="bio" id="" placeholder="Your Bio" value="<%= user.bio%>">
+                        <input type="text" name="bio" onkeyup="checkChar()" placeholder="Your Bio" id="bio"
+                            value="<%= user.bio%>">
                     </label>
 
                     <label for="">
@@ -46,7 +44,8 @@
                         <input type="file" name="image" id="" hidden>
                     </label>
 
-                    <input type="submit" value="Update " class="submit-button">
+                    <input type="submit" value="Update" class="submit-button">
+                    <p class="error"> </p>
                 </div>
             </form>
         </div>
@@ -59,6 +58,56 @@
                 document.querySelector(".choose-image-button").addEventListener("click", function () {
                     document.querySelector("input[type=file]").click();
                 })
+
+                document.querySelector(".signup-form.form").addEventListener("click", function (e) {
+                    if (document.querySelector("input[name=bio]").value.length >= 30) {
+
+                        e.preventDefault()
+                    }
+                    else if (document.querySelector("input[name=name]").value.length >= 15) {
+                        e.preventDefault()
+
+                    }
+                    else if (document.querySelector("input[name=username]").value.length >= 15) {
+                        e.preventDefault()
+                    }
+                    else if (document.querySelector("input[name=name]").value.length <= 3) {
+                        e.preventDefault()
+
+                    }
+                    else if (document.querySelector("input[name=username]").value.length <= 3) {
+                        e.preventDefault()
+
+                    }
+                })
+
+
+                document.querySelector(".error").style.color = "red"
+
+                function checkChar() {
+                    if (document.querySelector("input[name=bio]").value.length >= 30) {
+
+                        document.querySelector(".error").innerText = "Text Limit Cross !"
+                    }
+                    else if (document.querySelector("input[name=name]").value.length >= 15) {
+                        document.querySelector(".error").innerText = "Name is too long"
+
+                    }
+                    else if (document.querySelector("input[name=username]").value.length >= 15) {
+                        document.querySelector(".error").innerText = "username is too long"
+                    }
+                    else if (document.querySelector("input[name=name]").value.length <= 3) {
+                        document.querySelector(".error").innerText = "Name is too short"
+
+                    }
+                    else if (document.querySelector("input[name=username]").value.length <= 3) {
+                        document.querySelector(".error").innerText = "username is too short"
+
+                    }
+                    else {
+                        document.querySelector(".error").innerText = ""
+                    }
+                }
             </script>
 </body>
 
