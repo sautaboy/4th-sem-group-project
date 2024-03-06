@@ -32,7 +32,7 @@ document.querySelector("#feedback-form").addEventListener("click", function (e) 
     if (feedback.value === '' || feedback.value == null || feedback.value.trim().length <= 10) {
         e.preventDefault();
     }
-    else if (feedback.value.trim().length > 30) {
+    else if (feedback.value.trim().length > 80) {
         e.preventDefault();
     }
 });
@@ -40,7 +40,7 @@ function handleKeyWordLength() {
     if (feedback.value === '' || feedback.value == null || feedback.value.trim().length <= 10) {
         feedbackError.textContent = "You must give one sentence Suggestion !"
     }
-    else if (feedback.value.trim().length > 30) {
+    else if (feedback.value.trim().length > 80) {
         feedbackError.textContent = "Text Limit Crossed !!!"
     }
     else {

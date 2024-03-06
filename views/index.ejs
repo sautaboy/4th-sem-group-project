@@ -28,19 +28,18 @@
 
             <div class="typewriter-container">
               <div class="text">
-                <h1>Welcome To <span>" Bytes</span> Pedia "</h1>
+                <h1>Welcome To
+                  <br>
+                  <span>Bytes</span> Pedia
+                </h1>
               </div>
 
               <h3>
-                Find: <span id="typewriter-text"></span>
+                <span id="typewriter-text">
+
+                </span>
               </h3>
 
-              <p class="text">
-                Welcome to <strong>BytesPedia</strong> , your go-to platform for semester-wise educational notes for
-                BCA. We're
-                offering simplifying learning, hand written notes and Past Year Question Paper.Our goal is to provide
-                combine place to provide better learning exerience and go to place for all notes and Questions Papers.
-              </p>
               <button class="past-year-questions-button">
                 <a href="/allSemisterPastYearQuestions">Past Years Questions</a>
               </button>
@@ -76,16 +75,7 @@
       <div class="second-page" id="semister-list-link">
         <div class="introduction">
 
-          <h1 class="get-your-all-faculty-notes">get your all faculty notes.</h1>
-          <p>
-            <span class="get-your-fac-paragraph">
-              here you can find all your faculty list then you can select your faculty and find questions and notes
-              there.
-            </span>
-            <span class="img">
-              <img src="/images/girl reading book gif.gif" alt="gir is reading a book giffy">
-            </span>
-          </p>
+          <h1 class="get-your-all-faculty-notes">Choose Your <br>Faculty...</h1>
 
           <div class="dancing-boy-wrap">
             <img src="/images/dancing boy.gif" alt="dancing boy image">
@@ -93,7 +83,6 @@
         </div>
 
         <div class="semister-name-container">
-          <h2>Go To Your faculty</h2>
           <a href="/bca">
             bca
           </a>
@@ -114,15 +103,13 @@
         <h1>
           " People Feedback "
         </h1>
-        <!-- left arrow -->
-        <i class="ri-arrow-left-s-line"></i>
 
 
         <ul class="carousel">
           <% feedback.reverse().forEach(function(e){ %>
             <a href="#" class="card">
               <div class="img">
-                <img src="/images/userPhoto/<%= e.user.image%>" alt="<%= e.user.name %>'" width="200">
+                <img src="/images/userPhoto/<%= e.user.image%>" alt="<%= e.user.name %>'">
               </div>
               <h2>
                 <%= e.user.username%>
@@ -133,7 +120,6 @@
             </a>
             <% }) %>
         </ul>
-        <i class="ri-arrow-right-s-line"></i>
       </div>
     </div>
 

@@ -64,18 +64,28 @@ router.get('/', async function (req, res, next) {
 
 // feedback
 router.post("/feedback", isLoggedIn, async function (req, res, next) {
+  try {
+    const user = await userModel.findOne({ username: req.user.username });
 
-  const user = await userModel.findOne({ username: req.user.username });
-  const feedback = feedbackModel.create({
-    comment: req.body.comment,
-    user: user._id
-  })
+    // Create a new feedback document
+    const feedback = await feedbackModel.create({
+      comment: req.body.comment,
+      user: user._id
+    });
 
+    // Push the feedback ID into the user's feedback array
+    user.feedback.push(feedback._id);
 
-  user.feedback.push((feedback)._id);
-  user.save()
-  res.redirect("/")
+    // Save the updated user document
+    await user.save();
+
+    res.redirect("/");
+  } catch (error) {
+    // Handle errors, e.g., send an error response
+    res.status(500).send("Internal Server Error");
+  }
 });
+
 
 /* GET allSemisterPastYearQuestions page. */
 router.get('/allSemisterPastYearQuestions', async function (req, res, next) {
